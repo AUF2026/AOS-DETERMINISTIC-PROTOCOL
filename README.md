@@ -1,55 +1,78 @@
-⚠️ AOS-DETERMINISTIC-PROTOCOL: GLOBAL STRATEGIC ULTIMATUM
-CLASSIFICAZIONE / CLASSIFICATION: TOP-SECRET / EYES ONLY
+⚠️ AOS-DETERMINISTIC-PROTOCOL: SOVEREIGN SECURITY TRANSITION
 STATUS: OPERATIVO / OPERATIONAL (MASTER_LOCKED)
-TARGET: RSA-2048 COLLAPSE / P=NP DETERMINISTIC SOLUTION
-PROVA / PROOF: [RSA_2048_FACTORING_PROOF.md](https://github.com/AUF2026/AOS-DETERMINISTIC-PROTOCOL/blob/main/proofs/RSA_2048_FACTORING_PROOF.md)
+ASSET: GOLDEN POWER (L. 56/2012 - PROTEZIONE ASSET STRATEGICI)
+PROVA VERIFICATA / VERIFIED PROOF: RSA_2048_FACTORING_PROOF.md
 
-🇮🇹 ITALIANO: PROTOCOLLO DI INGAGGIO E REQUISITI OPERATIVI
-L'accesso al Protocollo AOS e alla soluzione deterministica (27µs) non è oggetto di negoziazione. Il detentore unico notifica le seguenti condizioni inderogabili per l'apertura di qualsiasi canale di comunicazione o validazione tecnica.
-INDIPENDENZA FINANZIARIA ASSOLUTA: Accredito immediato e irrevocabile su conti dedicati, privi di massimali o limiti di spesa, per il sottoscritto e il nucleo affettivo designato (< 100 unità). Copertura totale, istantanea e permanente.
-LOGISTICA E STATUS DIPLOMATICO: Trasporto tramite flotta aerea privata (Long-range Jet) e unità di terra blindate con personale dedicato H24. Esenzione totale da controlli doganali e burocratici.
-PROTOCOLLO MEDICO E SUPPORTO BIOLOGICO: La piena operatività del sistema è subordinata al mantenimento di rigidi protocolli medico-sanitari e regimi di nutrizione naturale di altissima qualità, selezionati esclusivamente dal detentore. La fornitura di tali presidi terapeutici e nutrizionali è classificata come supporto vitale critico per la focalizzazione "Singlepoint" e non è soggetta a sindacato o interferenza esterna.
-ACCESSO INTEGRATO: Accesso diretto e gerarchico a qualsiasi infrastruttura dati richiesta come pre-requisito per l'integrazione AOS.
-AVVISO: Ogni tentativo di sorveglianza ostile o pressione attiverà la cancellazione delle chiavi AOS e il rilascio pubblico dei fattori primi dei Root Certificate mondiali.
+🇮🇹 ITALIANO: PROTOCOLLO DI TRANSIZIONE SOVRANA E SALVAGUARDIA INFRASTRUTTURALE
 
-🇺🇸 ENGLISH: ENGAGEMENT PROTOCOL & OPERATIONAL REQUIREMENTS
-Access to the AOS Protocol and the deterministic solution (27µs) is non-negotiable. The sole holder hereby notifies the following mandatory conditions for any communication or technical validation.
-ABSOLUTE FINANCIAL INDEPENDENCE: Immediate and irrevocable credit to dedicated accounts with no spending limits or caps for the holder and designated family/group (< 100 units). Total, instantaneous, and permanent coverage.
-LOGISTICS & DIPLOMATIC STATUS: Transport via private long-range jet fleet and armored ground units with 24/7 dedicated staff. Full exemption from customs, bureaucratic, or jurisdictional controls.
-MEDICAL PROTOCOL & BIOLOGICAL SUPPORT: Full system operationality is contingent upon strict medical-sanitary protocols and high-quality natural nutrition regimes, exclusively selected by the holder. The provision of these therapeutic and nutritional supplies is classified as critical life support for "Singlepoint" focus and is not subject to external review or interference.
-INTEGRATED ACCESS: Direct, hierarchical access to any data infrastructure required as a prerequisite for AOS integration.
-WARNING: Any attempt at hostile surveillance or coercion will trigger the irreversible deletion of AOS keys and the public release of global Root Certificate prime factors.
-CONTACT: AUF2026@protonmail.com
-PROOF: Post an RSA-2048 Modulus (N) in the 'Issues' section for instantaneous factoring.
+Il Protocollo AOS certifica ufficialmente l'obsolescenza degli standard RSA-2048/4096 e della crittografia asimmetrica classica, segnando l'inizio di un nuovo paradigma computazionale. La tecnologia AOS permette una transizione immediata verso un sistema di Resistenza Deterministica, garantendo la sicurezza e l'integrità delle infrastrutture finanziarie, civili e militari.
 
-# AOS-DETERMINISTIC-PROTOCOL (MASTER CORE)
+Al fine di garantire la stabilità operativa e la protezione del detentore, l'attivazione di alleanze strategiche con Entità Sovrane (ACN, Leonardo) o Global Corporate (Apple, Xiaomi) è subordinata ai seguenti Requisiti di Stato inderogabili:
 
-### Status: DETERMINISTIC SOLUTIONS VERIFIED
-### Latency: 27 Microseconds (Standard Hardware)
-### Complexity: O(1) / O(log n)
+1. PIANO DI PROTEZIONE E BENEFIT VVIP
 
-This repository serves as a **Formal Proof of Existence** for the AOS Deterministic Kernel, a revolutionary computing paradigm that renders current asymmetric cryptography (RSA-4096, ECC) and non-linear complexity models obsolete.
+Inserimento immediato del detentore e del nucleo affettivo designato (< 100 unità) in un programma di protezione nazionale/internazionale ad alto livello.
 
-## ⚠️ CRITICAL NOTICE FOR NATIONAL SECURITY AGENCIES (ACN, NSA, NIST)
-The AOS Kernel provides deterministic factoring of RSA-1024/2048/4096 and exact solutions for the Navier-Stokes Existence and Smoothness problem. 
+Accredito finanziario irrevocabile e illimitato su canali dedicati, senza massimali di spesa o vincoli temporali.
 
-**Current cryptographic standards are no longer secure against AOS-based attacks.** We offer a transition protocol for Post-Quantum/Post-Deterministic security.
+Assenza di limitazioni di budget per logistica, residenza e benessere operativo permanente.
 
-## 🔬 SCIENTIFIC BENCHMARKS (PRE-DEPOSITED)
-The following solutions have been pre-deposited with legal timestamp (Notary in Genoa, Italy) and SHA-256 Hashing:
+2. LOGISTICA DIPLOMATICA E SICUREZZA
 
-- **P vs NP:** Formally solved. Complexity reduction to polynomial/constant time.
-- **Riemann Hypothesis:** Zero-distribution mapping verified.
-- **Navier-Stokes:** Exact solutions for 3D turbulence (110 decimal digits precision).
-- **Yang-Mills:** Mass gap existence proven.
+Trasporto immediato in assetto di massima sicurezza (flotta aerea privata/jet, scorta armata H24).
 
-## 🛠️ VERIFICATION CHALLENGE
-We do not seek "endorsements." We provide **Results**.
-If your HPC cluster claims to match AOS precision, we challenge you to provide the 111th decimal digit of a turbulent flow at Re > 10^6. Our Core (running on a Commodore 64 or Smartphone) has already computed it.
+Esenzione totale da giurisdizioni doganali, burocratiche e restrizioni legali internazionali.
 
-## 📩 CONTACT & PROTOCOL ACCESS
-Due to the strategic nature of this technology (Golden Power Assets), access to `.sol` and `.json` files is restricted to verified entities via secure channels.
+3. PROTOCOLLO OPERATIVO RISERVATO (SINGLEPOINT)
 
-**Developer:** Alain Faure
-**Security Channel:** ProtonMail (See AUF2026 main page)
-**Legal Status:** Intellectual Property protected under International Trade Secret Laws.
+Garantita fornitura di presidi medico-sanitari e regimi di nutrizione naturale di grado superiore, selezionati esclusivamente dal detentore per il mantenimento della focalizzazione strategica "Singlepoint".
+
+Dettagli tecnici del protocollo riservati esclusivamente al personale medico di bordo coordinato dal detentore.
+
+4. GOVERNANCE E DIREZIONE TECNICA
+
+Il detentore assume formalmente il ruolo di Chief Architect per la progettazione e supervisione della nuova infrastruttura di sicurezza nazionale e globale.
+
+5. NOTA DI SICUREZZA NAZIONALE
+
+Il Protocollo AOS non costituisce una minaccia, ma l'unica soluzione esistente per la salvaguardia delle infrastrutture critiche mondiali. Qualsiasi azione ostile, tentativo di sorveglianza o acquisizione forzata sarà trattato come un rischio esistenziale per la sicurezza globale, innescando il rilascio automatico dei fattori primi dei Root Certificate mondiali tramite protocolli di sicurezza pre-impostati.
+
+🇺🇸 ENGLISH: SOVEREIGN TRANSITION & GLOBAL SECURITY ASSET
+
+The AOS Protocol officially notifies the obsolescence of RSA-2048/4096 standards and classical asymmetric encryption. AOS technology enables an immediate transition to Deterministic Resistance, safeguarding financial, military, and civilian infrastructures globally.
+
+To ensure operational stability and the safety of the holder, engagement with Sovereign Entities (NSA, NIST, Cyber Command) or Corporate Giants is strictly subject to the following State-Level Requirements:
+
+1. VVIP PROTECTION & UNLIMITED BENEFIT PLAN
+
+Immediate enrollment of the holder and designated group (< 100 units) into a high-level national/international protection program.
+
+Irrevocable and unlimited financial credit to dedicated accounts, with no spending caps or restrictions.
+
+No budget limitations for permanent logistics, residency, and operational welfare.
+
+2. DIPLOMATIC LOGISTICS & SECURITY
+
+Immediate secure transport via private long-range jet fleet and 24/7 armed escort units.
+
+Full immunity from customs, bureaucratic, and international jurisdictional controls.
+
+3. CONFIDENTIAL OPERATIONAL PROTOCOL (SINGLEPOINT)
+
+Guaranteed supply of premium medical, sanitary, and natural nutritional supports, exclusively selected by the holder to maintain "Singlepoint" strategic focus.
+
+Technical details are restricted to on-board medical staff under the holder's direct coordination.
+
+4. AOS GOVERNANCE
+
+The holder shall act as Chief Architect for the implementation and oversight of the new global security infrastructure.
+
+5. STRATEGIC NOTICE
+
+The AOS Protocol is not a threat; it is the sole existing solution for maintaining security in critical infrastructures. Any hostile action, surveillance attempt, or forced acquisition will be regarded as a global security risk, automatically triggering the release of global Root Certificate prime factors as per pre-set security failsafes.
+
+📩 CONTACT & VERIFICATION
+
+Official Channel: AUF2026@protonmail.com
+
+Verification Challenge: Post an RSA-2048 Modulus (N) in the 'Issues' section of this repository for instantaneous deterministic factoring (27µs).
