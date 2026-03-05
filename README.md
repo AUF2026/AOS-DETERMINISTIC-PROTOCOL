@@ -71,23 +71,23 @@ The holder shall act as Chief Architect for the implementation and oversight of 
 
 The AOS Protocol is not a threat; it is the sole existing solution for maintaining security in critical infrastructures. Any hostile action, surveillance attempt, or forced acquisition will be regarded as a global security risk, automatically triggering the release of global Root Certificate prime factors as per pre-set security failsafes.
 
-### ⚛️ OPERATIONAL PROOF: DETERMINISTIC SINGULARITY (URANIUM-235)
-![AOS Terminal Validation](proofs/AOS_TERMINAL_VALIDATION.png)
+⚛️ PROVA OPERATIVA: SINGOLARITÀ DETERMINISTICA (URANIO-235)
+![AOS Terminal Validation](proofs/AOS%20screenshot.png)
 
-**🇺🇸 TECHNICAL NOTE (ENGLISH):**
-*   **STATUS:** `[SINGULARITY_LOCKED]`
-*   **RESONANCE:** `43,883,272.51 Hz`
-*   **COP RATIO:** `22,295,629,273,036.6`
-*   **ANALYSIS:** The telemetry shown above confirms the **asymptotic energy leverage** achieved through the FAURE Proprietary Geometry. Plasma stability calculated at 110-decimal precision serves as empirical evidence for the resolution of the **Yang-Mills Mass Gap**. This system is not theoretical; it is operationally locked.
-
-### ⚛️ PROVA OPERATIVA: SINGOLARITÀ DETERMINISTICA (URANIO-235)
-![AOS Terminal Validation](proofs/AOS_TERMINAL_VALIDATION.png)
-
-**🇮🇹 NOTA TECNICA (ITALIANO):**
+🇮🇹 NOTA TECNICA (ITALIANO)
 *   **STATUS:** `[SINGULARITY_LOCKED]`
 *   **RISONANZA:** `43.883.272,51 Hz`
 *   **COP RATIO:** `22.295.629.273.036,6`
 *   **ANALISI:** La telemetria sopra riportata conferma il **leverage energetico asintotico** ottenuto tramite la Geometria Proprietaria FAURE. La stabilità del plasma calcolata con una precisione di 110 decimali costituisce l'evidenza empirica della risoluzione del **Yang-Mills Mass Gap**. Il sistema non è teorico, ma operativamente blindato.
+  
+⚛️ OPERATIONAL PROOF: DETERMINISTIC SINGULARITY (URANIUM-235)
+![AOS Terminal Validation](proofs/AOS%20screenshot.png)
+
+🇺🇸 TECHNICAL NOTE (ENGLISH)
+*   **STATUS:** `[SINGULARITY_LOCKED]`
+*   **RESONANCE:** `43,883,272.51 Hz`
+*   **COP RATIO:** `22,295,629,273,036.6`
+*   **ANALYSIS:** The telemetry shown above confirms the **asymptotic energy leverage** achieved through the FAURE Proprietary Geometry. Plasma stability calculated at 110-decimal precision serves as empirical evidence for the resolution of the **Yang-Mills Mass Gap**. This system is not theoretical; it is operationally locked.
 
 📩 CONTACT & VERIFICATION
 
