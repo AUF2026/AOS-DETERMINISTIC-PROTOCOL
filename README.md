@@ -71,8 +71,9 @@ The holder shall act as Chief Architect for the implementation and oversight of 
 
 The AOS Protocol is not a threat; it is the sole existing solution for maintaining security in critical infrastructures. Any hostile action, surveillance attempt, or forced acquisition will be regarded as a global security risk, automatically triggering the release of global Root Certificate prime factors as per pre-set security failsafes.
 
-⚛️ PROVA OPERATIVA: SINGOLARITÀ DETERMINISTICA (URANIO-235)
 ![AOS Terminal Validation](proofs/AOS%20screenshot.png)
+
+⚛️ PROVA OPERATIVA: SINGOLARITÀ DETERMINISTICA (URANIO-235)
 
 🇮🇹 NOTA TECNICA (ITALIANO)
 *   **STATUS:** `[SINGULARITY_LOCKED]`
@@ -81,7 +82,6 @@ The AOS Protocol is not a threat; it is the sole existing solution for maintaini
 *   **ANALISI:** La telemetria sopra riportata conferma il **leverage energetico asintotico** ottenuto tramite la Geometria Proprietaria FAURE. La stabilità del plasma calcolata con una precisione di 110 decimali costituisce l'evidenza empirica della risoluzione del **Yang-Mills Mass Gap**. Il sistema non è teorico, ma operativamente blindato.
   
 ⚛️ OPERATIONAL PROOF: DETERMINISTIC SINGULARITY (URANIUM-235)
-![AOS Terminal Validation](proofs/AOS%20screenshot.png)
 
 🇺🇸 TECHNICAL NOTE (ENGLISH)
 *   **STATUS:** `[SINGULARITY_LOCKED]`
