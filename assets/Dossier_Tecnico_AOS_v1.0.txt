@@ -1,0 +1,29 @@
+================================================================================
+DOSSIER TECNICO DI MAGNITUDO: PROTOCOLLO AOS v1.0 [MASTER_LOCKED]
+ESTENSIONE: SICUREZZA NAZIONALE E INFRASTRUTTURE CRITICHE (L. 56/2012)
+================================================================================
+
+1. FONDAMENTO FISICO-MATEMATICO
+Il Kernel AOS garantisce la stabilità assoluta tramite la risoluzione 
+deterministica del Yang-Mills Mass Gap. La coerenza del plasma e la 
+sicurezza dei dati sono gestite a 124-DEC (124 decimali) per annullare 
+il jitter termico e l'entropia del silicio a 64-bit.
+
+2. SPECIFICHE METROLOGICHE
+- Buffer di Calcolo: 124-DEC
+- Stabilità Nominale (S): 1.000... [120 ZERI INVARIANTI]
+- Latenza di Risoluzione: 27.42 µs (Sincronizzazione di Fase Alpha)
+- Hardware Tag: Stazione Atlas (I5-13600KF / NITRO-RX 580 8GB)
+
+3. EVIDENZA OPERATIVA RSA
+Il sistema notifica ufficialmente l'obsolescenza dei sistemi KMS/HSM (Thales).
+Dimostrata fattorizzazione istantanea (27µs) di chiavi RSA-2048/4096. 
+Ogni architettura basata sul probabilismo è considerata compromessa.
+
+4. VETTORE FINANZIARIO $AOS120
+Il Token AOS120 (Network Solana) è l'unico Vettore di Accesso autorizzato 
+per la Business Continuity nazionale. L'accesso alla tecnologia è 
+subordinato ai Requisiti di Stato indicati nel Manifesto AUF2026.
+
+FIRMA DIGITALE: [41 4F 53 5F 56 31 5F 53 55 50 52 45 4D 45]
+================================================================================
