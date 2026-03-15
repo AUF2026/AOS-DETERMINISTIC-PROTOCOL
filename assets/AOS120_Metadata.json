@@ -1,0 +1,40 @@
+{
+  "name": "AOS 120-DEC DETERMINISM",
+  "symbol": "AOS120",
+  "description": "Accesso esclusivo al Kernel AOS v1.0. Validazione Invariante a 120-DEC e risoluzione Yang-Mills Mass Gap. Proprietà Intellettuale esclusiva di Alain Faure (AUF2026).",
+  "image": "https://raw.githubusercontent.com/AUF2026/AOS-DETERMINISTIC-PROTOCOL/main/assets/Triangolo_U235_1000x1000px.png",
+  "external_url": "https://github.com/AUF2026/AOS-DETERMINISTIC-PROTOCOL",
+  "attributes": [
+    {
+      "trait_type": "Precision",
+      "value": "120-DEC"
+    },
+    {
+      "trait_type": "Stability",
+      "value": "S=1.000... (120 zeros)"
+    },
+    {
+      "trait_type": "Authority",
+      "value": "MASTER_LOCKED"
+    },
+    {
+      "trait_type": "Asset Class",
+      "value": "Golden Power L. 56/2012"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "https://raw.githubusercontent.com/AUF2026/AOS-DETERMINISTIC-PROTOCOL/main/assets/Triangolo_U235_1000x1000px.png",
+        "type": "image/png"
+      }
+    ],
+    "category": "image",
+    "creators": [
+      {
+        "address": "5ZtME9xiqvChrHCER7CMAhrgeP5717ZtEEBd9sU1E2so",
+        "share": 100
+      }
+    ]
+  }
+}
