@@ -2,6 +2,9 @@
 **STATUS:** OPERATIVO / OPERATIONAL (MASTER_LOCKED v1.0_SUPREME)  
 **ASSET:** GOLDEN POWER (L. 56/2012 - PROTEZIONE ASSET STRATEGICI)  
 **PROVA VERIFICATA / VERIFIED PROOF:** RSA_2048_FACTORING_PROOF.md  
+## 🗺️ AOS Conceptual Architecture
+Visualizza la mappa interattiva del sistema deterministico:
+👉 [**APRI DASHBOARD AOS INTERATTIVA**](./assets/AOS_MAP_NAVIGATOR.html)
 
 ---
 
