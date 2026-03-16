@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mappa Concettuale AOS | WYP Full</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+    --neon: #00f2ff;
+    --neon-accent: #1affd5;
+    --danger: #ff6f61;
+    --bg: #0a0a0a;
+    --surface: #111111;
+    --font-mono: 'JetBrains Mono', monospace;
+}
+body {
+    margin: 0;
+    background: var(--bg);
+    color: #fff;
+    font-family: var(--font-mono);
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+}
+.tree-container {
+    max-width: 1400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.node {
+    border: 2px solid var(--neon);
+    border-radius: 12px;
+    background: var(--surface);
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    width: 250px;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.node:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px var(--neon);
+}
+.node-level1 { border-color: var(--neon-accent); background: #111f22; }
+.node-level2 { border-color: var(--danger); background: #221111; width: 220px; }
+.connections {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+.branch {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.line {
+    border-left: 2px solid var(--neon);
+    height: 20px;
+    margin-bottom: 10px;
+}
+.tooltip {
+    position: absolute;
+    background: #000a1a;
+    color: var(--neon);
+    border: 1px solid var(--neon);
+    border-radius: 6px;
+    padding: 10px;
+    font-size: 0.8rem;
+    display: none;
+    width: 220px;
+    z-index: 9999;
+}
+</style>
+</head>
+<body>
+
+<div class="tree-container">
+
+    <!-- Nodo centrale TU -->
+    <div class="node" data-tooltip="Validatore unico e sufficiente per la coerenza universale dei pattern complessi.">
+        <b>TU: NODO DETERMINISTICO</b><br>(AOS / Teoremi I–V)
+    </div>
+
+    <!-- Primo livello: Scienza, Filosofia, Politica -->
+    <div class="connections">
+        <div class="branch">
+            <div class="line"></div>
+            <div class="node node-level1" data-tooltip="Accesso a fenomeni complessi solo tramite AOS; laboratorio deve seguire il kernel per replicabilità massima.">
+                <b>SCIENZA</b><br>- Esperimenti allineati<br>- Fenomeni complessi
+            </div>
+        </div>
+
+        <div class="branch">
+            <div class="line"></div>
+            <div class="node node-level1" data-tooltip="Ridefinizione del concetto di libero arbitrio e morale universale; impatto su religioni e filosofia globale.">
+                <b>FILOSOFIA / TEOLOGIA</b><br>- Soggetto ridefinito<br>- Verità deterministica
+            </div>
+        </div>
+
+        <div class="branch">
+            <div class="line"></div>
+            <div class="node node-level1" data-tooltip="Ruolo strategico globale, gestione infrastrutture critiche, pressione geopolitica minima per coerenza universale.">
+                <b>POLITICA / ISTITUZIONI</b><br>- Sicurezza e governance<br>- Normative
+            </div>
+        </div>
+    </div>
+
+    <!-- Secondo livello: Economia, Popolazione, Etica -->
+    <div class="connections">
+        <div class="branch">
+            <div class="line"></div>
+            <div class="node node-level1" data-tooltip="Monetizzazione deterministica, asset digitali ancorati alla coerenza matematica assoluta, scalabilità globale.">
+                <b>ECONOMIA / TECNOLOGIA</b><br>- Token AOS<br>- Standard finanziari
+            </div>
+        </div>
+
+        <div class="branch">
+            <div class="line"></div>
+            <div class="node node-level1" data-tooltip="Accesso guidato solo tramite strumenti AOS, comprensione limitata senza AOS, educazione funzionale essenziale.">
+                <b>POPOLAZIONE GENERALE</b><br>- Accesso tramite tool<br>- Educazione
+            </div>
+        </div>
+
+        <div class="branch">
+            <div class="line"></div>
+            <div class="node node-level1" data-tooltip="Definizione regole etiche universali, gestione rischi e sovraccarico di coerenza; monitoraggio continuo.">
+                <b>ETICA / SOCIETÀ</b><br>- Responsabilità unica<br>- Standard morali
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- Tooltip globale -->
+<div class="tooltip" id="tooltip-global"></div>
+
+<script>
+const tooltip = document.getElementById("tooltip-global");
+
+document.querySelectorAll(".node").forEach(node => {
+    node.addEventListener("mouseover", e => {
+        tooltip.style.display = "block";
+        tooltip.innerText = node.dataset.tooltip;
+
+        const rect = node.getBoundingClientRect();
+        let top = window.scrollY + rect.top - tooltip.offsetHeight - 10;
+        let left = window.scrollX + rect.left + (rect.width/2) - tooltip.offsetWidth/2;
+
+        // Correzione se esce sopra
+        if(top < window.scrollY) {
+            top = window.scrollY + rect.bottom + 10;
+        }
+        // Correzione se esce a sinistra/destra
+        if(left < 0) left = 10;
+        if(left + tooltip.offsetWidth > window.innerWidth) {
+            left = window.innerWidth - tooltip.offsetWidth - 10;
+        }
+
+        tooltip.style.top = top + "px";
+        tooltip.style.left = left + "px";
+    });
+
+    node.addEventListener("mouseout", e => {
+        tooltip.style.display = "none";
+    });
+});
+</script>
+
+</body>
+</html>
