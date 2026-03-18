@@ -1,31 +1,20 @@
 {
-  "name": "AOS 120-DEC DETERMINISM",
+  "name": "AOS MASTER ORACLE",
   "symbol": "AOS120",
-  "description": "Accesso esclusivo al Kernel AOS v1.0. Validazione Invariante a 120-DEC e risoluzione Yang-Mills Mass Gap. Proprietà Intellettuale esclusiva di Alain Faure (AUF2026).",
+  "description": "Accesso al Kernel AOS v1.0. Calcolo Deterministico Base 600-DEC con Output Audit 100-110-120-135 DEC. Asset protetto da Golden Power (L. 56/2012). Proprieta di Alain Faure.",
   "image": "https://raw.githubusercontent.com/AUF2026/AOS-DETERMINISTIC-PROTOCOL/main/assets/Triangolo_U235_1000x1000px.png",
-  "external_url": "https://github.com/AUF2026/AOS-DETERMINISTIC-PROTOCOL",
+  "external_url": "https://github.com/AUF2026/AOS-DETERMINISTIC-PROTOCOL/wiki/07.-Lattice-Universale-e-PoD",
   "attributes": [
-    {
-      "trait_type": "Precision",
-      "value": "120-DEC"
-    },
-    {
-      "trait_type": "Stability",
-      "value": "S=1.000... (120 zeros)"
-    },
-    {
-      "trait_type": "Authority",
-      "value": "MASTER_LOCKED"
-    },
-    {
-      "trait_type": "Asset Class",
-      "value": "Golden Power L. 56/2012"
-    }
+    { "trait_type": "Calculation Base", "value": "600-DEC" },
+    { "trait_type": "Operational Output", "value": "100-135-DEC" },
+    { "trait_type": "Protocol", "value": "Proof of Determinism (PoD)" },
+    { "trait_type": "Jurisdiction", "value": "Zurich / Genova" },
+    { "trait_type": "Authority", "value": "MASTER_LOCKED" }
   ],
   "properties": {
     "files": [
       {
-        "uri": "https://raw.githubusercontent.com/AUF2026/AOS-DETERMINISTIC-PROTOCOL/main/assets/Triangolo_U235_1000x1000px.png",
+        "uri": "https://raw.githubusercontent.com" + "AUF2026/AOS-DETERMINISTIC-PROTOCOL/main/assets/Triangolo_U235_1000x1000px.png",
         "type": "image/png"
       }
     ],
