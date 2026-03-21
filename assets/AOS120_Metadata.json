@@ -1,6 +1,6 @@
 {
   "name": "AOS MASTER ORACLE",
-  "symbol": "AOS120",
+  "symbol": "AOS",
   "description": "Accesso al Kernel AOS v1.0. Calcolo Deterministico Base 600-DEC con Output Audit 100-110-120-135 DEC. Asset protetto da Golden Power (L. 56/2012). Proprieta di Alain Faure.",
   "image": "https://raw.githubusercontent.com/AUF2026/AOS-DETERMINISTIC-PROTOCOL/main/assets/Triangolo_U235_1000x1000px.png",
   "external_url": "https://github.com/AUF2026/AOS-DETERMINISTIC-PROTOCOL/wiki/07.-Lattice-Universale-e-PoD",
