@@ -8,7 +8,7 @@
     { "trait_type": "Calculation Base", "value": "600-DEC" },
     { "trait_type": "Operational Output", "value": "100-135-DEC" },
     { "trait_type": "Protocol", "value": "Proof of Determinism (PoD)" },
-    { "trait_type": "Jurisdiction", "value": "Zurich / Genova" },
+    { "trait_type": "Jurisdiction", "value": "Worldwide/ Zurich / Genova" },
     { "trait_type": "Authority", "value": "MASTER_LOCKED" }
   ],
   "properties": {
