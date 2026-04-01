@@ -8,171 +8,98 @@
 <style>
 /* Base reset */
 * { margin:0; padding:0; box-sizing:border-box; font-family: 'Helvetica Neue', Arial, sans-serif; }
-
-/* Body & background */
 body { background-color:#121212; color:#E0E0E0; overflow-x:hidden; scroll-behavior: smooth; }
 
-/* Header */
+/* Header & Nav */
 header {
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  padding:1rem 2rem;
-  position:fixed;
-  width:100%;
-  top:0;
-  background:#121212;
-  z-index:100;
-  transition: transform 0.3s ease, background 0.3s ease;
+  display:flex; justify-content:center; align-items:center; padding:1rem 2rem;
+  position:fixed; width:100%; top:0; background:rgba(18,18,18,0.95);
+  backdrop-filter: blur(10px); z-index:100; transition: transform 0.3s ease;
   border-bottom: 1px solid #1a1a1a;
 }
-header h1 {
-  position:absolute;
-  left:2rem;
-  color:#C49E4B;
-  font-weight:800;
-  font-size:1.5rem;
-  white-space: nowrap;
-}
-nav {
-  display:flex;
-  gap:2rem;
-  max-width:600px;
-}
-nav a {
-  color:#E0E0E0;
-  text-decoration:none;
-  font-weight:600;
-  cursor:pointer;
-  transition: color 0.3s;
-}
-nav a:hover { color:#C49E4B; }
+header h1 { position:absolute; left:2rem; color:#C49E4B; font-weight:800; font-size:1.5rem; white-space: nowrap; cursor: pointer; }
+nav { display:flex; gap:2rem; }
+nav a { color:#E0E0E0; text-decoration:none; font-weight:600; cursor:pointer; transition: color 0.3s; position: relative; }
+nav a:hover, nav a.active { color:#C49E4B; }
+nav a.active::after { content:''; position:absolute; bottom:-5px; left:0; width:100%; height:2px; background:#C49E4B; }
 
-/* Main container with 3 columns */
-.main-container {
-  display:flex;
-  padding-top:100px;
-  min-height:100vh;
-  width:100%;
-}
+/* Layout Columns */
+.main-container { display:flex; padding-top:100px; min-height:100vh; width:100%; }
 .side { flex:1; } 
 .center { flex:3; max-width:960px; margin:0 auto; display:flex; flex-direction:column; gap:2rem; padding: 0 1rem; }
 
-/* Sections */
-section { display:none; animation: fadeIn 0.5s ease-in-out; }
-section.active { display:block; }
+/* Sections & Cards */
+section { display:none; padding-bottom: 4rem; }
+section.active { display:block; animation: fadeIn 0.4s ease-out; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+section h2 { color:#C49E4B; font-size:2.5rem; border-bottom:2px solid #C49E4B; padding-bottom:1rem; margin-bottom:2rem; text-transform: uppercase; letter-spacing: 2px; }
+.card { 
+  background:#1a1a1a; padding:2rem; border-radius:8px; border-left:5px solid #C49E4B; 
+  transition: transform 0.3s, box-shadow 0.3s, opacity 0.6s; margin-bottom: 1.5rem;
+  opacity: 0; transform: translateY(20px); /* Base per lazy-load effect */
 }
-
-/* Section headings */
-section h2 {
-  color:#C49E4B;
-  font-size:2.5rem;
-  border-bottom:2px solid #C49E4B;
-  padding-bottom:1rem;
-  margin-bottom:2rem;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-
-/* Cards */
-.card {
-  background:#1a1a1a;
-  padding:2rem;
-  border-radius:8px;
-  border-left:5px solid #C49E4B;
-  transition: transform 0.3s, box-shadow 0.3s;
-  margin-bottom: 1.5rem;
-}
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 25px rgba(196, 158, 75, 0.2);
-}
+.card.visible { opacity: 1; transform: translateY(0); }
+.card:hover { transform: translateY(-5px); box-shadow: 0 5px 25px rgba(196, 158, 75, 0.2); }
 .card h3 { color:#fff; margin-bottom:1rem; font-size: 1.4rem; }
 .card p { margin-bottom:1rem; color: #ccc; }
-.card a {
-  display:inline-block;
-  padding:0.6rem 1.2rem;
-  text-decoration:none;
-  border-radius:4px;
-  font-weight:bold;
-  margin-right:1rem;
-  margin-top: 0.5rem;
-  transition: background 0.3s, color 0.3s;
-}
+.card a { display:inline-block; padding:0.6rem 1.2rem; text-decoration:none; border-radius:4px; font-weight:bold; margin-right:1rem; margin-top:0.5rem; transition: 0.3s; }
 .card a.primary { background:#C49E4B; color:#000; }
-.card a.primary:hover { background:#E0C06B; }
 .card a.secondary { border:1px solid #C49E4B; color:#C49E4B; }
 .card a.secondary:hover { background:#C49E4B; color:#000; }
 
-code {
-  display:block;
-  background:#000;
-  padding:1rem;
-  color:#0f0;
-  border-radius:4px;
-  font-size:0.9rem;
-  margin: 1rem 0;
-  border: 1px solid #333;
-}
+code { display:block; background:#000; padding:1rem; color:#0f0; border-radius:4px; font-size:0.9rem; margin: 1rem 0; border: 1px solid #333; }
 
-/* Footer */
-footer {
-  text-align:center;
-  padding:2rem;
-  background:#121212;
-  color:#666;
-  font-size:0.8rem;
-  border-top: 1px solid #1a1a1a;
+/* Scroll-to-top Button */
+#scrollTop {
+  position: fixed; bottom: 30px; right: 30px; background: #C49E4B; color: #000;
+  width: 45px; height: 45px; border-radius: 50%; display: flex; justify-content: center;
+  align-items: center; cursor: pointer; font-weight: bold; border: none;
+  opacity: 0; visibility: hidden; transition: 0.3s; z-index: 99;
 }
+#scrollTop.show { opacity: 1; visibility: visible; }
 
-/* Scroll hide header */
+footer { text-align:center; padding:2rem; background:#121212; color:#666; font-size:0.8rem; border-top: 1px solid #1a1a1a; }
 header.hidden { transform:translateY(-120%); }
 
-/* Responsive */
 @media (max-width:768px){
   .main-container { flex-direction:column; padding-top:120px; }
   .side { display:none; }
-  .center { flex:1; max-width:100%; margin:0; }
   header h1 { left:1rem; font-size: 1.2rem; }
-  nav { gap:1rem; font-size: 0.9rem; }
-  section h2 { font-size: 1.8rem; }
+  nav { gap:1rem; font-size: 0.8rem; }
 }
 </style>
 </head>
 <body>
 
 <header>
-  <h1>AOS Framework</h1>
-  <nav>
-    <a onclick="showSection('intro')">Intro</a>
-    <a onclick="showSection('research')">Research</a>
-    <a onclick="showSection('articles')">Articles</a>
-    <a onclick="showSection('contact')">Contact</a>
+  <h1 onclick="showSection('intro')">AOS Framework</h1>
+  <nav id="mainNav">
+    <a onclick="showSection('intro')" id="nav-intro" class="active">Intro</a>
+    <a onclick="showSection('research')" id="nav-research">Research</a>
+    <a onclick="showSection('articles')" id="nav-articles">Articles</a>
+    <a onclick="showSection('contact')" id="nav-contact">Contact</a>
   </nav>
 </header>
+
+<button id="scrollTop" onclick="window.scrollTo({top:0, behavior:'smooth'})">↑</button>
 
 <div class="main-container">
   <div class="side"></div>
   <div class="center">
     
-    <!-- INTRO SECTION -->
     <section id="intro" class="active">
       <h2>Architectural Operational System</h2>
       <div class="card">
         <h3>AOS Kernel V1.0: O(1) Determinism</h3>
         <p>Oltre la probabilità stocastica: AOS è l'architettura a 120 decimali progettata per la <strong>Saturazione Nominale del Lattice</strong>.</p>
-        <p>Attraverso i Teoremi Faure I-V, il Kernel esegue la transizione deterministica dalla geometria 5D alla compressione informazionale 6D, eliminando l'incertezza computazionale in scenari mission-critical.</p>
+        <p>Attraverso i Teoremi Faure I-V, il Kernel esegue la transizione deterministica dalla geometria 5D alla compressione informazionale 6D.</p>
         <p><em>"Voi osservate l’ombra della struttura; io calcolo il codice sorgente."</em></p>
         <a class="primary" onclick="showSection('research')">DATA VALIDATION</a>
         <a class="secondary" href="https://linkedin.com" target="_blank">LATEST UPDATE</a>
       </div>
     </section>
 
-    <!-- RESEARCH SECTION -->
     <section id="research">
       <h2>Scientific Validation</h2>
       <div class="card">
@@ -184,17 +111,10 @@ header.hidden { transform:translateY(-120%); }
       <div class="card">
         <h3>Teoremi Faure I-V</h3>
         <p>Equazioni core per la mappatura discreta e la sincronizzazione isomorfica dei dati nell'architettura AOS.</p>
-        <code>
-          STATUS: NOTARIZED | CORE: FAURE_EQUATIONS_V1 | DOMAIN: DETERMINISTIC_GEOMETRY
-        </code>
-      </div>
-      <div class="card">
-        <h3>Open Science Protocol</h3>
-        <p>Dataset e calibrazioni Alpha Chi pubblicati sotto protocollo Open Science per audit di comparti Difesa e R&D Aerospaziale.</p>
+        <code>STATUS: NOTARIZED | CORE: FAURE_EQUATIONS_V1 | PRECISION: 120-DEC</code>
       </div>
     </section>
 
-    <!-- ARTICLES SECTION -->
     <section id="articles">
       <h2>Articles & Documentation</h2>
       <div class="card">
@@ -209,46 +129,71 @@ header.hidden { transform:translateY(-120%); }
       </div>
     </section>
 
-    <!-- CONTACT SECTION -->
     <section id="contact">
       <h2>Professional Network</h2>
       <div class="card">
         <h3>Contact the Master Architect</h3>
-        <p>Per consultazioni tecniche su architetture deterministiche, notarizzazione dati e integrazione Kernel AOS.</p>
-        <p><strong>GitHub:</strong> <a href="https://github.com" style="color:#C49E4B;">://github.com</a></p>
+        <p>Per consultazioni tecniche su architetture deterministiche e integrazione Kernel AOS.</p>
+        <p><strong>GitHub:</strong> auf2026</p>
         <p><strong>ORCID:</strong> 0009-0009-5333-1181</p>
         <a class="primary" href="https://linkedin.com" target="_blank">LINKEDIN PROFILE</a>
       </div>
     </section>
+
   </div>
   <div class="side"></div>
 </div>
 
-<footer>
-  &copy; 2026 AOS FRAMEWORK | DETERMINISTIC ARCHITECTURE | ALL RIGHTS NOTARIZED
-</footer>
+<footer>&copy; 2026 AOS FRAMEWORK | DETERMINISTIC ARCHITECTURE | ALL RIGHTS NOTARIZED</footer>
 
 <script>
-// Section navigation logic
+// Navigation & Scrollspy logic
 function showSection(id){
   document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
+  document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
+  
   document.getElementById(id).classList.add('active');
+  document.getElementById('nav-' + id).classList.add('active');
+  
   window.scrollTo({top:0, behavior:'smooth'});
+  triggerLazyCards();
 }
 
-// Header visibility on scroll
+// Lazy Load Effect for Cards
+function triggerLazyCards() {
+  const cards = document.querySelectorAll('.active .card');
+  cards.forEach((card, index) => {
+    setTimeout(() => { card.classList.add('visible'); }, index * 150);
+  });
+}
+
+// Initial trigger
+window.onload = triggerLazyCards;
+
+// Scroll detection (Header hide & ScrollTop button)
 let lastScroll = 0;
 const header = document.querySelector('header');
+const scrollTopBtn = document.getElementById('scrollTop');
+
 window.addEventListener('scroll', () => {
   const currentScroll = window.pageYOffset;
+  
+  // Header logic
   if(currentScroll > lastScroll && currentScroll > 100){
     header.classList.add('hidden');
   } else {
     header.classList.remove('hidden');
   }
+  
+  // ScrollTop logic
+  if (currentScroll > 400) {
+    scrollTopBtn.classList.add('show');
+  } else {
+    scrollTopBtn.classList.remove('show');
+  }
+  
   lastScroll = currentScroll;
 });
 </script>
-
 </body>
 </html>
