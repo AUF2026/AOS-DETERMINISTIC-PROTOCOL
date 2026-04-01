@@ -37,7 +37,7 @@ section h2 { color:#C49E4B; font-size:2.5rem; border-bottom:2px solid #C49E4B; p
 .card { 
   background:#1a1a1a; padding:2rem; border-radius:8px; border-left:5px solid #C49E4B; 
   transition: transform 0.3s, box-shadow 0.3s, opacity 0.6s; margin-bottom: 1.5rem;
-  opacity: 0; transform: translateY(20px); /* Base per lazy-load effect */
+  opacity: 0; transform: translateY(20px); 
 }
 .card.visible { opacity: 1; transform: translateY(0); }
 .card:hover { transform: translateY(-5px); box-shadow: 0 5px 25px rgba(196, 158, 75, 0.2); }
@@ -89,52 +89,56 @@ header.hidden { transform:translateY(-120%); }
   <div class="center">
     
     <section id="intro" class="active">
-      <h2>Architectural Operational System</h2>
+      <h2>Welcome to AOS Framework</h2>
       <div class="card">
-        <h3>AOS Kernel V1.0: O(1) Determinism</h3>
+        <h3>Architectural Operational System</h3>
+        <p>Introducing the deterministic logic architecture that redefines operational reality.</p>
         <p>Oltre la probabilità stocastica: AOS è l'architettura a 120 decimali progettata per la <strong>Saturazione Nominale del Lattice</strong>.</p>
-        <p>Attraverso i Teoremi Faure I-V, il Kernel esegue la transizione deterministica dalla geometria 5D alla compressione informazionale 6D.</p>
+        <p>Attraverso i Teoremi Faure I-V, il Kernel AOS esegue la transizione deterministica dalla geometria 5D alla compressione informazionale 6D, eliminando l'incertezza computazionale in scenari mission-critical.</p>
         <p><em>"Voi osservate l’ombra della struttura; io calcolo il codice sorgente."</em></p>
-        <a class="primary" onclick="showSection('research')">DATA VALIDATION</a>
-        <a class="secondary" href="https://linkedin.com" target="_blank">LATEST UPDATE</a>
+        <a class="primary" onclick="showSection('research')">DISCOVER RESEARCH</a>
       </div>
     </section>
 
     <section id="research">
-      <h2>Scientific Validation</h2>
+      <h2>Scientific Validation & Research</h2>
       <div class="card">
-        <h3>Deterministic Logic & Totum Lattice</h3>
-        <p>Notarizzazione del framework deterministico a 120 decimali. Soluzione operativa della transizione dimensionale e stabilità del lattice.</p>
+        <h3>AOS Kernel V1.0: Deterministic O(1) Logic</h3>
+        <p>Notarizzazione del framework deterministico a 120 decimali. Soluzione della transizione dimensionale e saturazione del lattice.</p>
         <a class="primary" href="https://zenodo.org" target="_blank">ZENODO REPOSITORY</a>
-        <a class="secondary" href="https://orcid.org" target="_blank">ORCID ID</a>
+        <a class="secondary" href="https://orcid.org" target="_blank">ORCID: 0009-0009-5333-1181</a>
       </div>
       <div class="card">
         <h3>Teoremi Faure I-V</h3>
-        <p>Equazioni core per la mappatura discreta e la sincronizzazione isomorfica dei dati nell'architettura AOS.</p>
-        <code>STATUS: NOTARIZED | CORE: FAURE_EQUATIONS_V1 | PRECISION: 120-DEC</code>
+        <p>Equazioni core per la mappatura discreta e la sincronizzazione isomorfica dei dati nel Totum Lattice.</p>
+        <code>DOI: 10.5281/zenodo.[Inserisci_ID_Specifico]</code>
+      </div>
+      <div class="card">
+        <h3>Open Science & Peer Review</h3>
+        <p>Tutti i dataset e le costanti del lattice (Alpha Chi Calibration) sono pubblicati sotto protocollo Open Science per la verifica del comparto Difesa e R&D.</p>
       </div>
     </section>
 
     <section id="articles">
-      <h2>Articles & Documentation</h2>
+      <h2>Articles</h2>
       <div class="card">
         <h3>AOS TOTUM 120-DEC Explained</h3>
-        <p>Analisi della transizione critica dalla geometria astratta alla Compressione Informazionale del Lattice Universale.</p>
-        <a class="primary" href="https://linkedin.com" target="_blank">READ ON LINKEDIN</a>
+        <p>La transizione critica dalla geometria astratta 5D alla Compressione Informazionale del Lattice Universale.</p>
+        <a class="primary" href="https://linkedin.com" target="_blank">LEGGI SU LINKEDIN</a>
       </div>
       <div class="card">
-        <h3>The 5D Paradox Resolution</h3>
-        <p>Come il Kernel AOS risolve la saturazione nominale attraverso il calcolo deterministico O(1).</p>
-        <a class="secondary" href="https://medium.com" target="_blank">READ ON MEDIUM</a>
+        <h3>Medium Archive</h3>
+        <p>Approfondimenti tecnici sul Kernel AOS e il paradosso della 5ª dimensione.</p>
+        <a class="secondary" href="https://medium.com" target="_blank">VISITA MEDIUM</a>
       </div>
     </section>
 
     <section id="contact">
-      <h2>Professional Network</h2>
+      <h2>Contact</h2>
       <div class="card">
-        <h3>Contact the Master Architect</h3>
-        <p>Per consultazioni tecniche su architetture deterministiche e integrazione Kernel AOS.</p>
-        <p><strong>GitHub:</strong> auf2026</p>
+        <h3>Reach out via email or professional networks:</h3>
+        <p><strong>Email:</strong> AUF2026@protonmail.com</p>
+        <p><strong>GitHub:</strong> ://github.com</p>
         <p><strong>ORCID:</strong> 0009-0009-5333-1181</p>
         <a class="primary" href="https://linkedin.com" target="_blank">LINKEDIN PROFILE</a>
       </div>
@@ -144,54 +148,45 @@ header.hidden { transform:translateY(-120%); }
   <div class="side"></div>
 </div>
 
-<footer>&copy; 2026 AOS FRAMEWORK | DETERMINISTIC ARCHITECTURE | ALL RIGHTS NOTARIZED</footer>
+<footer>&copy; 2026 AOS Framework. All Rights Reserved.</footer>
 
 <script>
-// Navigation & Scrollspy logic
 function showSection(id){
   document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
   document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
-  
   document.getElementById(id).classList.add('active');
-  document.getElementById('nav-' + id).classList.add('active');
-  
+  const navLink = document.getElementById('nav-' + id);
+  if(navLink) navLink.classList.add('active');
   window.scrollTo({top:0, behavior:'smooth'});
   triggerLazyCards();
 }
 
-// Lazy Load Effect for Cards
 function triggerLazyCards() {
   const cards = document.querySelectorAll('.active .card');
   cards.forEach((card, index) => {
+    card.classList.remove('visible');
     setTimeout(() => { card.classList.add('visible'); }, index * 150);
   });
 }
 
-// Initial trigger
 window.onload = triggerLazyCards;
 
-// Scroll detection (Header hide & ScrollTop button)
 let lastScroll = 0;
 const header = document.querySelector('header');
 const scrollTopBtn = document.getElementById('scrollTop');
 
 window.addEventListener('scroll', () => {
   const currentScroll = window.pageYOffset;
-  
-  // Header logic
   if(currentScroll > lastScroll && currentScroll > 100){
     header.classList.add('hidden');
   } else {
     header.classList.remove('hidden');
   }
-  
-  // ScrollTop logic
   if (currentScroll > 400) {
     scrollTopBtn.classList.add('show');
   } else {
     scrollTopBtn.classList.remove('show');
   }
-  
   lastScroll = currentScroll;
 });
 </script>
