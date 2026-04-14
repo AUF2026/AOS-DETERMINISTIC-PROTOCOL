@@ -2,73 +2,88 @@
 <html lang="en">
 <!-- AOS_KERNEL_V1.0 | MASTER ARCHITECT: ALAIN FAURE | PRECISION: 120-DEC | STATUS: Q.E.D. -->
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AOS Framework | Alain Faure</title>
-<style>
-/* Base reset */
-* { margin:0; padding:0; box-sizing:border-box; font-family: 'Helvetica Neue', Arial, sans-serif; }
-body { background-color:#121212; color:#E0E0E0; overflow-x:hidden; scroll-behavior: smooth; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AOS Framework | Alain Faure</title>
 
-/* Header & Nav */
-header {
-  display:flex; justify-content:center; align-items:center; padding:1rem 2rem;
-  position:fixed; width:100%; top:0; background:rgba(18,18,18,0.95);
-  backdrop-filter: blur(10px); z-index:100; transition: transform 0.3s ease;
-  border-bottom: 1px solid #1a1a1a;
-}
-header h1 { position:absolute; left:2rem; color:#C49E4B; font-weight:800; font-size:1.5rem; white-space: nowrap; cursor: pointer; }
-nav { display:flex; gap:2rem; }
-nav a { color:#E0E0E0; text-decoration:none; font-weight:600; cursor:pointer; transition: color 0.3s; position: relative; }
-nav a:hover, nav a.active { color:#C49E4B; }
-nav a.active::after { content:''; position:absolute; bottom:-5px; left:0; width:100%; height:2px; background:#C49E4B; }
+    <!-- SCRIPT CRISP INTEGRATO O(1) -->
+    <script type="text/javascript">
+        window.$crisp=[];
+        window.CRISP_WEBSITE_ID="d1a70b76-e109-4314-a8e4-c8c470711ec7";
+        (function(){
+            const d=document;
+            const s=d.createElement("script");
+            s.src="https://client.crisp.chat/l.js";
+            s.async=1;
+            d.getElementsByTagName("head")[0].appendChild(s);
+        })();
+    </script>
 
-/* Layout Columns */
-.main-container { display:flex; padding-top:100px; min-height:100vh; width:100%; }
-.side { flex:1; } 
-.center { flex:3; max-width:960px; margin:0 auto; display:flex; flex-direction:column; gap:2rem; padding: 0 1rem; }
+    <style>
+        /* Base reset */
+        * { margin:0; padding:0; box-sizing:border-box; font-family: 'Helvetica Neue', Arial, sans-serif; }
+        body { background-color:#121212; color:#E0E0E0; overflow-x:hidden; scroll-behavior: smooth; }
 
-/* Sections & Cards */
-section { display:none; padding-bottom: 4rem; }
-section.active { display:block; animation: fadeIn 0.4s ease-out; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        /* Header & Nav */
+        header {
+            display:flex; justify-content:center; align-items:center; padding:1rem 2rem;
+            position:fixed; width:100%; top:0; background:rgba(18,18,18,0.95);
+            backdrop-filter: blur(10px); z-index:100; transition: transform 0.3s ease;
+            border-bottom: 1px solid #1a1a1a;
+        }
+        header h1 { position:absolute; left:2rem; color:#C49E4B; font-weight:800; font-size:1.5rem; white-space: nowrap; cursor: pointer; }
+        nav { display:flex; gap:2rem; }
+        nav a { color:#E0E0E0; text-decoration:none; font-weight:600; cursor:pointer; transition: color 0.3s; position: relative; }
+        nav a:hover, nav a.active { color:#C49E4B; }
+        nav a.active::after { content:''; position:absolute; bottom:-5px; left:0; width:100%; height:2px; background:#C49E4B; }
 
-section h2 { color:#C49E4B; font-size:2.5rem; border-bottom:2px solid #C49E4B; padding-bottom:1rem; margin-bottom:2rem; text-transform: uppercase; letter-spacing: 2px; }
-.card { 
-  background:#1a1a1a; padding:2rem; border-radius:8px; border-left:5px solid #C49E4B; 
-  transition: transform 0.3s, box-shadow 0.3s, opacity 0.6s; margin-bottom: 1.5rem;
-  opacity: 0; transform: translateY(20px); 
-}
-.card.visible { opacity: 1; transform: translateY(0); }
-.card:hover { transform: translateY(-5px); box-shadow: 0 5px 25px rgba(196, 158, 75, 0.2); }
-.card h3 { color:#fff; margin-bottom:1rem; font-size: 1.4rem; }
-.card p { margin-bottom:1rem; color: #ccc; }
-.card a { display:inline-block; padding:0.6rem 1.2rem; text-decoration:none; border-radius:4px; font-weight:bold; margin-right:1rem; margin-top:0.5rem; transition: 0.3s; }
-.card a.primary { background:#C49E4B; color:#000; }
-.card a.secondary { border:1px solid #C49E4B; color:#C49E4B; }
-.card a.secondary:hover { background:#C49E4B; color:#000; }
+        /* Layout Columns */
+        .main-container { display:flex; padding-top:100px; min-height:100vh; width:100%; }
+        .side { flex:1; } 
+        .center { flex:3; max-width:960px; margin:0 auto; display:flex; flex-direction:column; gap:2rem; padding: 0 1rem; }
 
-code { display:block; background:#000; padding:1rem; color:#0f0; border-radius:4px; font-size:0.9rem; margin: 1rem 0; border: 1px solid #333; }
+        /* Sections & Cards */
+        section { display:none; padding-bottom: 4rem; }
+        section.active { display:block; animation: fadeIn 0.4s ease-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
-/* Scroll-to-top Button */
-#scrollTop {
-  position: fixed; bottom: 30px; right: 30px; background: #C49E4B; color: #000;
-  width: 45px; height: 45px; border-radius: 50%; display: flex; justify-content: center;
-  align-items: center; cursor: pointer; font-weight: bold; border: none;
-  opacity: 0; visibility: hidden; transition: 0.3s; z-index: 99;
-}
-#scrollTop.show { opacity: 1; visibility: visible; }
+        section h2 { color:#C49E4B; font-size:2.5rem; border-bottom:2px solid #C49E4B; padding-bottom:1rem; margin-bottom:2rem; text-transform: uppercase; letter-spacing: 2px; }
+        
+        .card { 
+            background:#1a1a1a; padding:2rem; border-radius:8px; border-left:5px solid #C49E4B; 
+            transition: transform 0.3s, box-shadow 0.3s, opacity 0.6s; margin-bottom: 1.5rem;
+            opacity: 0; transform: translateY(20px); 
+        }
+        .card.visible { opacity: 1; transform: translateY(0); }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 5px 25px rgba(196, 158, 75, 0.2); }
+        .card h3 { color:#fff; margin-bottom:1rem; font-size: 1.4rem; }
+        .card p { margin-bottom:1rem; color: #ccc; }
+        .card a { display:inline-block; padding:0.6rem 1.2rem; text-decoration:none; border-radius:4px; font-weight:bold; margin-right:1rem; margin-top:0.5rem; transition: 0.3s; }
+        .card a.primary { background:#C49E4B; color:#000; }
+        .card a.secondary { border:1px solid #C49E4B; color:#C49E4B; }
+        .card a.secondary:hover { background:#C49E4B; color:#000; }
 
-footer { text-align:center; padding:2rem; background:#121212; color:#666; font-size:0.8rem; border-top: 1px solid #1a1a1a; }
-header.hidden { transform:translateY(-120%); }
+        code { display:block; background:#000; padding:1rem; color:#0f0; border-radius:4px; font-size:0.9rem; margin: 1rem 0; border: 1px solid #333; }
 
-@media (max-width:768px){
-  .main-container { flex-direction:column; padding-top:120px; }
-  .side { display:none; }
-  header h1 { left:1rem; font-size: 1.2rem; }
-  nav { gap:1rem; font-size: 0.8rem; }
-}
-</style>
+        /* Scroll-to-top Button */
+        #scrollTop {
+            position: fixed; bottom: 30px; right: 30px; background: #C49E4B; color: #000;
+            width: 45px; height: 45px; border-radius: 50%; display: flex; justify-content: center;
+            align-items: center; cursor: pointer; font-weight: bold; border: none;
+            opacity: 0; visibility: hidden; transition: 0.3s; z-index: 99;
+        }
+        #scrollTop.show { opacity: 1; visibility: visible; }
+
+        footer { text-align:center; padding:2rem; background:#121212; color:#666; font-size:0.8rem; border-top: 1px solid #1a1a1a; }
+        header.hidden { transform:translateY(-120%); }
+
+        @media (max-width:768px){
+            .main-container { flex-direction:column; padding-top:120px; }
+            .side { display:none; }
+            header h1 { left:1rem; font-size: 1.2rem; }
+            nav { gap:1rem; font-size: 0.8rem; }
+        }
+    </style>
 </head>
 <body>
 
@@ -104,43 +119,29 @@ header.hidden { transform:translateY(-120%); }
       <h2>Scientific Validation & Research</h2>
       <div class="card">
         <h3>AOS Kernel V1.0: Deterministic O(1) Logic</h3>
-        <p>Notarizzazione del framework deterministico a 120 decimali. Soluzione della transizione dimensionale e saturazione del lattice.</p>
-        <a class="primary" href="https://zenodo.org" target="_blank">ZENODO REPOSITORY</a>
-        <a class="secondary" href="https://orcid.org" target="_blank">ORCID: 0009-0009-5333-1181</a>
+        <p>ORCID: 0009-0009-5333-1181</p>
+        <a class="primary" href="https://orcid.org" target="_blank">ORCID PROFILE</a>
       </div>
       <div class="card">
         <h3>Teoremi Faure I-V</h3>
-        <p>Equazioni core per la mappatura discreta e la sincronizzazione isomorfica dei dati nel Totum Lattice.</p>
-        <code>DOI: 10.5281/zenodo.[Inserisci_ID_Specifico]</code>
-      </div>
-      <div class="card">
-        <h3>Open Science & Peer Review</h3>
-        <p>Tutti i dataset e le costanti del lattice (Alpha Chi Calibration) sono pubblicati sotto protocollo Open Science per la verifica del comparto Difesa e R&D.</p>
+        <code>DOI: 10.5281/zenodo.14815181</code>
       </div>
     </section>
 
     <section id="articles">
       <h2>Articles</h2>
-      <div class="card">
-        <h3>AOS TOTUM 120-DEC Explained</h3>
-        <p>La transizione critica dalla geometria astratta 5D alla Compressione Informazionale del Lattice Universale.</p>
-        <a class="primary" href="https://linkedin.com" target="_blank">LEGGI SU LINKEDIN</a>
-      </div>
-      <div class="card">
-        <h3>Medium Archive</h3>
-        <p>Approfondimenti tecnici sul Kernel AOS e il paradosso della 5ª dimensione.</p>
-        <a class="secondary" href="https://medium.com" target="_blank">VISITA MEDIUM</a>
+      <div id="articles-list">
+        <p style="color:#C49E4B">Initializing Medium Lattice Sync...</p>
       </div>
     </section>
 
     <section id="contact">
       <h2>Contact</h2>
       <div class="card">
-        <h3>Reach out via email or professional networks:</h3>
         <p><strong>Email:</strong> AUF2026@protonmail.com</p>
         <p><strong>GitHub:</strong> ://github.com</p>
         <p><strong>ORCID:</strong> 0009-0009-5333-1181</p>
-        <a class="primary" href="https://linkedin.com" target="_blank">LINKEDIN PROFILE</a>
+        <a class="primary" href="https://www.linkedin.com/in/alain-faure-ge/" target="_blank">LINKEDIN PROFILE</a>
       </div>
     </section>
 
@@ -165,30 +166,54 @@ function triggerLazyCards() {
   const cards = document.querySelectorAll('.active .card');
   cards.forEach((card, index) => {
     card.classList.remove('visible');
-    setTimeout(() => { card.classList.add('visible'); }, index * 150);
+    setTimeout(() => { card.classList.add('visible'); }, index * 100);
   });
 }
 
-window.onload = triggerLazyCards;
+async function fetchMedium() {
+  const container = document.getElementById('articles-list');
+  const user = "@auf2026";
+  const api = `https://rss2json.com{user}`;
+
+  try {
+    const response = await fetch(api);
+    const data = await response.json();
+    if(data.status === 'ok') {
+      container.innerHTML = '';
+      data.items.forEach(post => {
+        const snippet = post.description.replace(/<[^>]*>?/gm, '').substring(0, 160) + '...';
+        const card = document.createElement('div');
+        card.className = 'card visible';
+        card.innerHTML = `
+          <h3>${post.title}</h3>
+          <p>${snippet}</p>
+          <a class="secondary" href="${post.link}" target="_blank">READ ARTICLE</a>
+        `;
+        container.appendChild(card);
+      });
+    }
+  } catch (e) {
+    container.innerHTML = "<p style='color:#C49E4B'>Sync Error: Manual Access Required.</p>";
+  }
+}
+
+window.onload = () => {
+    fetchMedium();
+    triggerLazyCards();
+};
 
 let lastScroll = 0;
-const header = document.querySelector('header');
-const scrollTopBtn = document.getElementById('scrollTop');
-
-window.addEventListener('scroll', () => {
-  const currentScroll = window.pageYOffset;
-  if(currentScroll > lastScroll && currentScroll > 100){
-    header.classList.add('hidden');
-  } else {
-    header.classList.remove('hidden');
-  }
-  if (currentScroll > 400) {
-    scrollTopBtn.classList.add('show');
-  } else {
-    scrollTopBtn.classList.remove('show');
-  }
-  lastScroll = currentScroll;
-});
+window.onscroll = function() {
+    let currentScroll = window.pageYOffset;
+    const header = document.querySelector('header');
+    const btn = document.getElementById('scrollTop');
+    if (currentScroll > 100) {
+        btn.classList.add('show');
+        if (currentScroll > lastScroll) header.classList.add('hidden');
+        else header.classList.remove('hidden');
+    } else btn.classList.remove('show');
+    lastScroll = currentScroll;
+};
 </script>
 </body>
 </html>
