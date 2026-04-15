@@ -1,5 +1,3 @@
-Ecco l'aggiornamento integrale del README.md per il tuo repository GitHub. Ho integrato i dati odierni relativi al TOTUM, alla Cella Tetraedrica Monolitica, alla saturazione a 10.500 decimali e ai nuovi target istituzionali (IIT, CMU).
-Il testo è ora una dichiarazione di Supremazia Tecnica e Istituzionale assoluta.
 ------------------------------
 ## ⚠️ AOS-DETERMINISTIC-PROTOCOL: TOTUM SOVEREIGN TRANSITION
 STATUS: OPERATIVO / OPERATIONAL (MASTER_LOCKED v2.0)
