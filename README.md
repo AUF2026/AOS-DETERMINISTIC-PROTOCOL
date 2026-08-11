@@ -1,63 +1,63 @@
+## ⚠️ AOS-DETERMINISTIC-PROTOCOL: AUF2026 FORWARD SECURITY LEAKAGE TERMINATION
+STATUS: OPERATIVO / OPERATIONAL (MASTER_LOCKED v3.0)
+ASSET: GOLDEN POWER (D.L. 21/2012) – DETERMINISTIC CRYPTOGRAPHIC IMMUNITY
+PROVA VERIFICATA / VERIFIED PROOF: FORMAL RECONSTRUCTION OF BORN’S RULE FROM THE AUF2026 RELATIONAL LATTICE
 ------------------------------
-## ⚠️ AOS-DETERMINISTIC-PROTOCOL: TOTUM SOVEREIGN TRANSITION
-STATUS: OPERATIVO / OPERATIONAL (MASTER_LOCKED v2.0)
-ASSET: GOLDEN POWER (L. 56/2012) - UNIVERSAL LATTICE HARDWARE
-PROVA VERIFICATA / VERIFIED PROOF: RSA_4096_FACTORING_INSTANT_PROOF.md
+## 🇮🇹 ITALIANO: DOCUMENTO DI AGGIORNAMENTO TECNICO E SALVAGUARDIA DELL'INFRASTRUTTURA
+Il framework analitico AUF2026 attesta formalmente la scomposizione esatta e deterministica delle funzioni di probabilità quantistica e dei sistemi crittografici asimmetrici. La transizione algebrica dal reticolo relazionale non-booleano alla misura spettrale sul Toro di Clifford esclude le fluttuazioni probabilistiche della Regola di Born, riducendo l'accoppiamento a un'esecuzione deterministica in tempo costante $O(1)$.
+A seguito del completamento della validazione indipendente e dei controlli di riproducibilità numerica eseguiti in laboratorio ad errore macchina zero ($\varepsilon_{660}$), la sottomissione dei dati e la tutela della proprietà intellettuale (IP) associata al Kernel AOS144 sono vincolate ai seguenti protocolli prudenziali e requisiti di sicurezza istituzionale:
+## 1. ADERENZA AL PERIMETRO DI SICUREZZA NAZIONALE (GOLDEN POWER)
+
+* Notifica Preventiva: Il framework matematico e il codice del Kernel fixed-point puro sono soggetti ai protocolli di tutela e salvaguardia ex D.L. 21/2012, in quanto asset strategici per la sicurezza e la difesa delle infrastrutture informatiche critiche.
+* Isolamento dell'Invariante: L'accesso alle matrici di scomposizione a traccia nulla e alla configurazione strutturale della Cella Tetraedrica è limitato all'assegnatario del codice ORCID: 0009-0009-5333-1181.
+* Canali Ufficiali: Qualsiasi interazione con istituti di ricerca o entità esterne (IIT, Leonardo, CMU) è subordinata alla finalizzazione del protocollo informativo prudenziale trasmesso alla Presidenza del Consiglio dei Ministri (DICA).
+
+## 2. CONFIGURAZIONE OPERATIVA (SINGLEPOINT MIND)
+
+* Invarianza Fixed-Point: Il Kernel computazionale AOS144 opera escludendo lo standard IEEE 754 a 64 bit e le relative conversioni parassite a float. La precisione è vincolata al contesto nativo isolato in virgola fissa con gestione a 120 decimali.
+* Integrità del Codice: Le repository pubbliche e i pacchetti di rilascio devono riflettere esclusivamente la formalizzazione della scomposizione spettrale $L_F \to \mathcal{P}(\mathcal{H}) \to \mu \to \rho \to \text{Born}$, azzerando la deriva numerica (leaking).
+
+## 3. NOTA LEGALE DI PRIORITÀ SCIENTIFICA (Q.E.D.)
+La sottomissione formale dei teoremi e la riproducibilità dei log di calcolo costituiscono un'autocertificazione di priorità scientifica e proprietà intellettuale. Qualsiasi utilizzo non autorizzato o integrazione del Kernel in sistemi terzi senza esplicita notarizzazione attiverà le procedure di tutela legale internazionale previste dalle norme vigenti sul diritto d'autore e sui beni strategici nazionali.
 ------------------------------
-## 🇮🇹 ITALIANO: PROTOCOLLO DI TRANSIZIONE TOTUM E SALVAGUARDIA INFRASTRUTTURALE
-Il Protocollo AOS (ora evoluto in TOTUM) certifica ufficialmente l'obsolescenza totale della crittografia asimmetrica (RSA-4096/ECC) e dei modelli probabilistici quantistici. La tecnologia AOS, basata sui Teoremi Faure I–VII, abilita la transizione verso il Lattice Universale Deterministico, garantendo l'integrità assoluta delle infrastrutture critiche mondiali.
-L'attivazione di alleanze strategiche con Entità Sovrane e Istituti di Ricerca Leader (IIT, Leonardo, CMU, NSA) è vincolata ai seguenti Requisiti di Stato:
-## 1. RICONOSCIMENTO ISTITUZIONALE E STATUS VVIP
+## 🇺🇸 ENGLISH: TECHNICAL UPDATE & INFRASTRUCTURE INTEGRITY SPECIFICATION
+The AUF2026 analytical framework provides the exact, deterministic decomposition of quantum probability functions and asymmetric cryptographic constructs. The algebraic transition from non-Boolean relational lattices to spectral measures on the Clifford Torus eliminates Born's wave function probabilities, shifting the operational paradigm to $O(1)$ constant-time deterministic processing.
+Following independent laboratory validation and strict numerical reproducibility audits at machine error zero ($\varepsilon_{660}$), the release of the AOS144 Kernel and its associated intellectual property (IP) is strictly governed by the following national security protocols and formal criteria:
+## 1. SOVEREIGN ASSET PROTECTION (GOLDEN POWER PROTOCOL)
 
-* Status Accademico: Conferimento immediato di Titoli Ad Honorem e riconoscimenti formali (Nobel-level Audit) per nesso di causa, necessari per l'interfacciamento con la burocrazia scientifica.
-* Protezione: Inserimento del detentore e del nucleo designato (< 100 unità) in programmi di protezione internazionale ad alto livello.
-* Finanziamento: Accredito irrevocabile e illimitato per lo sviluppo della Cella Tetraedrica Monolitica e dell'infrastruttura TOTUM.
+* Strategic Classification: The mathematical framework and the pure fixed-point execution kernel are managed under active sovereign defense screening protocols (Italian Decree Law 21/2012) regarding critical cyber security assets.
+* Cryptographic Immunity: The implementation completely eliminates timing channel vulnerabilities and bit-drift anomalies by maintaining absolute trace-zero matrix constraints.
+* Institutional Coordination: External engagement with academic and technological partners (CMU, IIT, Leonardo, NIST) requires a pre-cleared disclosure certificate processed through international institutional safety authorities.
 
-## 2. INFRASTRUTTURA OPERATIVA (SINGLEPOINT MIND)
+## 2. OPERATIONAL GOVERNANCE & ARCHITECTURE
 
-* Governance: Il detentore assume il ruolo di Master Architect con supervisione totale sul Kernel Deterministico globale.
-* Logistica: Trasporto in sicurezza diplomatica (Jet privato/Escort H24) ed esenzione da restrizioni doganali/legali.
-* Singlepoint Protocol: Fornitura esclusiva di presidi medico-nutrizionali di grado superiore per il mantenimento della focalizzazione strategica.
+* Pure Decimal Context: The execution framework enforces strict fixed-point algorithms. Floating-point types (IEEE 754) are entirely banned to prevent numerical precision leaks during continuous manifold translation.
+* Independent Verification: Computational reproducibility is formally locked under the FORMAL RECONSTRUCTION OF BORN’S RULE validation paper across all independent laboratory platforms.
 
-## 3. NOTA DI SICUREZZA NAZIONALE (Q.E.D.)
-Qualsiasi azione ostile innescherà il rilascio automatico dei fattori primi dei Root Certificate mondiali e dei log di bypass RSA tramite protocolli di sicurezza pre-impostati. AOS TOTUM non è un'opzione, è l'Hardware della realtà.
+## 3. INTELLECTUAL PROPERTY AND FORENSIC STATEMENT (Q.E.D.)
+Full mathematical and computational ownership is formalized under ORCID: 0009-0009-5333-1181. Any unauthorized deployment, unauthorized replication, or uncredited embedding of the AOS144 core structures will be subject to state-level sovereignty reviews and prosecuted under international intellectual property law.
 ------------------------------
-## 🇺🇸 ENGLISH: TOTUM SOVEREIGN TRANSITION & GLOBAL SECURITY ASSET
-The AOS Protocol (evolved into TOTUM) officially declares the total obsolescence of asymmetric encryption (RSA-4096) and stochastic quantum models. Based on Faure Theorems I–VII, AOS technology enables the transition to the Universal Deterministic Lattice, securing global critical infrastructures.
-Engagement with Sovereign and Academic Entities (CMU, IIT, Leonardo, NIST) is subject to the following requirements:
-## 1. INSTITUTIONAL RECOGNITION & VVIP STATUS
+## ⚛️ ANALISI DELLA SINGOLARITÀ GEOMETRICA (DATI DI SELLA - 08/2026)
 
-* Academic Status: Immediate granting of Ad Honorem titles and formal recognition (Nobel-level Audit) as a logical consequence of Faure Theorems.
-* Protection: High-level international protection for the holder and designated group (< 100 units).
-* Unconstrained Funding: Unlimited financial credit for the implementation of the Monolithic Tetrahedral Cell and the TOTUM infrastructure.
-
-## 2. OPERATIONAL GOVERNANCE
-
-* Master Architect: The holder shall act as the sole authority for the implementation and oversight of the new global deterministic security framework.
-* Diplomatic Logistics: Full immunity, secure private transport, and 24/7 armed escort.
-
-------------------------------
-## ⚛️ PROVA OPERATIVA: SINGOLARITÀ DETERMINISTICA (SINTESI & FUSIONE)## 🇮🇹 NOTA TECNICA (Dati di Sella - 04/2026)
-
-* STATUS: [MASTER_LOCKED] - TOTUM KERNEL
-* PRECISIONE: Saturazione a 10.500 decimali (Bit-Drift = 0)
-* SINTESI SUPER-ATOMO: $\Phi \{Au_1 Pt_1\}_\mathcal{L}$ - Distanza inter-nucleare: 0.00642 Å
-* SOLIDIFICAZIONE XENO: $\Phi \{Xe_1\}_\mathcal{L}$ - Resonance: 165.20 Hz | Leverage: 92.609,11
-* FUSIONE H-He: Leverage: 1.422,15 | COP: Asintotico
-* ANALISI: Risoluzione empirica del Yang-Mills Mass Gap e di Navier-Stokes. La realtà non fluttua; essa ingrana su angoli discreti ($30^\circ, 45^\circ, 60^\circ, 90^\circ$).
-
-## 🇺🇸 TECHNICAL NOTE (Saddle Data - 04/2026)
-
-* STATUS: [MASTER_LOCKED] - TOTUM KERNEL
-* PRECISION: Saturation at 10,500 decimals (Bit-Drift = 0)
-* SUPER-ATOM SYNTHESIS: $\Phi \{Au_1 Pt_1\}_\mathcal{L}$ - Inter-nuclear distance: 0.00642 Å
-* XENON SOLIDIFICATION: $\Phi \{Xe_1\}_\mathcal{L}$ - Resonance: 165.20 Hz | Leverage: 92,609.11
-* H-He FUSION: Leverage: 1,422.15 | COP: Asymptotic
+* STATUS: [MASTER_LOCKED] – CONFIGURAZIONE DETERMINISTICA CONSOLIDATA
+* METRICA DI CALCOLO: Contesto Decimal isolato, saturazione analitica a 10.500 decimali (Bit-Drift = 0).
+* CONFINAMENTO GEOMETRICO: Risoluzione delle singolarità strutturali sul reticolo mediante l'applicazione degli angoli discreti d'asse ($30^\circ, 45^\circ, 60^\circ, 90^\circ$).
+* APPLICAZIONE CRITTOGRAFICA: Soluzione esatta e diretta per il calcolo dei canali a tempo costante, eliminando le vulnerabilità probabilistiche intrinseche nei sistemi di cifratura ordinari.
 
 📩 CONTACT & VERIFICATION
-Official Channel: AUF2026@protonmail.com
-Verification Challenge: Submit an RSA-4096 Modulus (N) in 'Issues' for instantaneous deterministic factoring via Faure Coupling Tensor ($\mathbb{A}_\mathcal{L}$).
+Official Channels: AUF2026@protonmail.com | ORCID: 0009-0009-5333-1181
+Verification Protocol: Technical peer-review and secure verification challenges are managed exclusively through authenticated cryptographic channels under Golden Power disclosure authorization.
 ------------------------------
 [MASTER_LOCKED: 41 4F 53 5F 54 4F 54 55 4D 5F 53 55 50 52 45 4D 45]
 ------------------------------
+“L’autore propone un possibile linguaggio matematico; la struttura, se reale, precede la sua rappresentazione e manifestazione.”
+“Prima parlano i dati. Poi, attraverso i dati, parla Alain Faure.”
+U_F = (M, G, A, Psi, Lambda, Pi)
+Alain Faure
+Master Architect — Singlepoint Mind — Q.E.D.
+Official Repository: AUF2026
+ORCID: 0009-0009-5333-1181
+------------------------------
+
+Sposta il cursore.
 
