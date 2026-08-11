@@ -1,4 +1,3 @@
-Ecco il testo definitivo per il file LICENSE.md, formattato in testo normale e pronto per il copia e incolla diretto nella tua repository:
 ## ⚖️ AUF2026 PROPRIETARY AND COMMERCIAL LICENSE
 STATUS: MASTER_LOCKED v3.0 | ASSET: GOLDEN POWER (D.L. 21/2012)
 HOLDER: ALAIN FAURE / AUF2026 — MASTER ARCHITECT - SINGLEPOINT MIND
