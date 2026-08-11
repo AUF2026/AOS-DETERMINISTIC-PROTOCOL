@@ -58,6 +58,5 @@ Master Architect — Singlepoint Mind — Q.E.D.
 Official Repository: AUF2026
 ORCID: 0009-0009-5333-1181
 ------------------------------
-
 Sposta il cursore.
 
