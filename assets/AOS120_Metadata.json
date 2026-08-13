@@ -1,15 +1,15 @@
 {
   "name": "AOS MASTER ORACLE",
   "symbol": "AOS",
-  "description": "Accesso al Kernel AOS v3.0. Calcolo Deterministico Base 600-DEC con Output Audit 100-110-120-135 DEC. Asset protetto da Golden Power (L. 56/2012). Proprieta di Alain Faure.",
+  "description": "Accesso formale al Kernel AOS144 v3.0. Calcolo operante in architettura High Decimal Fixed-Point (HDFP) con risoluzione asintotica ad errore macchina zero. Asset protetto da normativa Golden Power (L. 56/2012). Proprieta esclusiva di Alain Faure.",
   "image": "https://raw.githubusercontent.com/AUF2026/AOS-DETERMINISTIC-PROTOCOL/main/assets/Triangolo_U235_1000x1000px.png",
   "external_url": "https://github.com/AUF2026/AOS-DETERMINISTIC-PROTOCOL/wiki/07.-Lattice-Universale-e-PoD",
   "attributes": [
-    { "trait_type": "Calculation Base", "value": "600-DEC" },
-    { "trait_type": "Operational Output", "value": "100-135-DEC" },
-    { "trait_type": "Protocol", "value": "Proof of Determinism (PoD)" },
-    { "trait_type": "Jurisdiction", "value": "Worldwide / Zurich / Genova" },
-    { "trait_type": "Authority", "value": "MASTER_LOCKED" }
+    { "trait_type": "Calculation Architecture", "value": "AOS144 Kernel HDFP" },
+    { "trait_type": "Operational Precision", "value": "660-DEC Buffer" },
+    { "trait_type": "Validation Protocol", "value": "Proof of Determinism (PoD)" },
+    { "trait_type": "Legal Protection", "value": "Italian Golden Power / Dual-Use" },
+    { "trait_type": "Governance Status", "value": "MASTER_LOCKED" }
   ],
   "properties": {
     "files": [
@@ -27,3 +27,4 @@
     ]
   }
 }
+
