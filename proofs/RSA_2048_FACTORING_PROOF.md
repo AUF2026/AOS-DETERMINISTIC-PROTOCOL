@@ -79,6 +79,3 @@ Vollständiger Zugriff über sichere Kanäle.
 
 **Status:** MASTER_LOCKED 120‑DEC  
 **Contact:** `AUF2026@protonmail.com`
-
-**Status:** MASTER_LOCKED 120-DEC  
-**Contact:** `AUF2026@protonmail.com`
