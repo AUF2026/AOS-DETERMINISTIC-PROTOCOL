@@ -2,88 +2,83 @@
 <html lang="en">
 <!-- AOS_KERNEL_V1.0 | MASTER ARCHITECT: ALAIN FAURE | PRECISION: 120-DEC | STATUS: Q.E.D. -->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AOS Framework | Alain Faure</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AOS Framework | Alain Faure</title>
 
-    <!-- SCRIPT CRISP INTEGRATO O(1) -->
-    <script type="text/javascript">
-        window.$crisp=[];
-        window.CRISP_WEBSITE_ID="d1a70b76-e109-4314-a8e4-c8c470711ec7";
-        (function(){
-            const d=document;
-            const s=d.createElement("script");
-            s.src="https://client.crisp.chat/l.js";
-            s.async=1;
-            d.getElementsByTagName("head")[0].appendChild(s);
-        })();
-    </script>
+  <!-- CRISP -->
+  <script type="text/javascript">
+    window.$crisp=[];
+    window.CRISP_WEBSITE_ID="d1a70b76-e109-4314-a8e4-c8c470711ec7";
+    (function(){
+      const d=document;
+      const s=d.createElement("script");
+      s.src="https://client.crisp.chat/l.js";
+      s.async=1;
+      d.getElementsByTagName("head")[0].appendChild(s);
+    })();
+  </script>
 
-    <style>
-        /* Base reset */
-        * { margin:0; padding:0; box-sizing:border-box; font-family: 'Helvetica Neue', Arial, sans-serif; }
-        body { background-color:#121212; color:#E0E0E0; overflow-x:hidden; scroll-behavior: smooth; }
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; font-family: 'Helvetica Neue', Arial, sans-serif; }
+    body { background-color:#121212; color:#E0E0E0; overflow-x:hidden; scroll-behavior: smooth; }
 
-        /* Header & Nav */
-        header {
-            display:flex; justify-content:center; align-items:center; padding:1rem 2rem;
-            position:fixed; width:100%; top:0; background:rgba(18,18,18,0.95);
-            backdrop-filter: blur(10px); z-index:100; transition: transform 0.3s ease;
-            border-bottom: 1px solid #1a1a1a;
-        }
-        header h1 { position:absolute; left:2rem; color:#C49E4B; font-weight:800; font-size:1.5rem; white-space: nowrap; cursor: pointer; }
-        nav { display:flex; gap:2rem; }
-        nav a { color:#E0E0E0; text-decoration:none; font-weight:600; cursor:pointer; transition: color 0.3s; position: relative; }
-        nav a:hover, nav a.active { color:#C49E4B; }
-        nav a.active::after { content:''; position:absolute; bottom:-5px; left:0; width:100%; height:2px; background:#C49E4B; }
+    header {
+      display:flex; justify-content:center; align-items:center; padding:1rem 2rem;
+      position:fixed; width:100%; top:0; background:rgba(18,18,18,0.95);
+      backdrop-filter: blur(10px); z-index:100; transition: transform 0.3s ease;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    header h1 { position:absolute; left:2rem; color:#C49E4B; font-weight:800; font-size:1.5rem; white-space: nowrap; cursor: pointer; }
+    nav { display:flex; gap:2rem; }
+    nav a { color:#E0E0E0; text-decoration:none; font-weight:600; cursor:pointer; transition: color 0.3s; position: relative; }
+    nav a:hover, nav a.active { color:#C49E4B; }
+    nav a.active::after { content:''; position:absolute; bottom:-5px; left:0; width:100%; height:2px; background:#C49E4B; }
 
-        /* Layout Columns */
-        .main-container { display:flex; padding-top:100px; min-height:100vh; width:100%; }
-        .side { flex:1; } 
-        .center { flex:3; max-width:960px; margin:0 auto; display:flex; flex-direction:column; gap:2rem; padding: 0 1rem; }
+    .main-container { display:flex; padding-top:100px; min-height:100vh; width:100%; }
+    .side { flex:1; } 
+    .center { flex:3; max-width:960px; margin:0 auto; display:flex; flex-direction:column; gap:2rem; padding: 0 1rem; }
 
-        /* Sections & Cards */
-        section { display:none; padding-bottom: 4rem; }
-        section.active { display:block; animation: fadeIn 0.4s ease-out; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    section { display:none; padding-bottom: 4rem; }
+    section.active { display:block; animation: fadeIn 0.4s ease-out; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
-        section h2 { color:#C49E4B; font-size:2.5rem; border-bottom:2px solid #C49E4B; padding-bottom:1rem; margin-bottom:2rem; text-transform: uppercase; letter-spacing: 2px; }
-        
-        .card { 
-            background:#1a1a1a; padding:2rem; border-radius:8px; border-left:5px solid #C49E4B; 
-            transition: transform 0.3s, box-shadow 0.3s, opacity 0.6s; margin-bottom: 1.5rem;
-            opacity: 0; transform: translateY(20px); 
-        }
-        .card.visible { opacity: 1; transform: translateY(0); }
-        .card:hover { transform: translateY(-5px); box-shadow: 0 5px 25px rgba(196, 158, 75, 0.2); }
-        .card h3 { color:#fff; margin-bottom:1rem; font-size: 1.4rem; }
-        .card p { margin-bottom:1rem; color: #ccc; }
-        .card a { display:inline-block; padding:0.6rem 1.2rem; text-decoration:none; border-radius:4px; font-weight:bold; margin-right:1rem; margin-top:0.5rem; transition: 0.3s; }
-        .card a.primary { background:#C49E4B; color:#000; }
-        .card a.secondary { border:1px solid #C49E4B; color:#C49E4B; }
-        .card a.secondary:hover { background:#C49E4B; color:#000; }
+    section h2 { color:#C49E4B; font-size:2.5rem; border-bottom:2px solid #C49E4B; padding-bottom:1rem; margin-bottom:2rem; text-transform: uppercase; letter-spacing: 2px; }
+    
+    .card { 
+      background:#1a1a1a; padding:2rem; border-radius:8px; border-left:5px solid #C49E4B; 
+      transition: transform 0.3s, box-shadow 0.3s, opacity 0.6s; margin-bottom: 1.5rem;
+      opacity: 0; transform: translateY(20px); 
+    }
+    .card.visible { opacity: 1; transform: translateY(0); }
+    .card:hover { transform: translateY(-5px); box-shadow: 0 5px 25px rgba(196, 158, 75, 0.2); }
+    .card h3 { color:#fff; margin-bottom:1rem; font-size: 1.4rem; }
+    .card p { margin-bottom:1rem; color: #ccc; }
+    .card a { display:inline-block; padding:0.6rem 1.2rem; text-decoration:none; border-radius:4px; font-weight:bold; margin-right:1rem; margin-top:0.5rem; transition: 0.3s; }
+    .card a.primary { background:#C49E4B; color:#000; }
+    .card a.secondary { border:1px solid #C49E4B; color:#C49E4B; }
+    .card a.secondary:hover { background:#C49E4B; color:#000; }
 
-        code { display:block; background:#000; padding:1rem; color:#0f0; border-radius:4px; font-size:0.9rem; margin: 1rem 0; border: 1px solid #333; }
+    code { display:block; background:#000; padding:1rem; color:#0f0; border-radius:4px; font-size:0.9rem; margin: 1rem 0; border: 1px solid #333; }
 
-        /* Scroll-to-top Button */
-        #scrollTop {
-            position: fixed; bottom: 30px; right: 30px; background: #C49E4B; color: #000;
-            width: 45px; height: 45px; border-radius: 50%; display: flex; justify-content: center;
-            align-items: center; cursor: pointer; font-weight: bold; border: none;
-            opacity: 0; visibility: hidden; transition: 0.3s; z-index: 99;
-        }
-        #scrollTop.show { opacity: 1; visibility: visible; }
+    #scrollTop {
+      position: fixed; bottom: 30px; right: 30px; background: #C49E4B; color: #000;
+      width: 45px; height: 45px; border-radius: 50%; display: flex; justify-content: center;
+      align-items: center; cursor: pointer; font-weight: bold; border: none;
+      opacity: 0; visibility: hidden; transition: 0.3s; z-index: 99;
+    }
+    #scrollTop.show { opacity: 1; visibility: visible; }
 
-        footer { text-align:center; padding:2rem; background:#121212; color:#666; font-size:0.8rem; border-top: 1px solid #1a1a1a; }
-        header.hidden { transform:translateY(-120%); }
+    footer { text-align:center; padding:2rem; background:#121212; color:#666; font-size:0.8rem; border-top: 1px solid #1a1a1a; }
+    header.hidden { transform:translateY(-120%); }
 
-        @media (max-width:768px){
-            .main-container { flex-direction:column; padding-top:120px; }
-            .side { display:none; }
-            header h1 { left:1rem; font-size: 1.2rem; }
-            nav { gap:1rem; font-size: 0.8rem; }
-        }
-    </style>
+    @media (max-width:768px){
+      .main-container { flex-direction:column; padding-top:120px; }
+      .side { display:none; }
+      header h1 { left:1rem; font-size: 1.2rem; }
+      nav { gap:1rem; font-size: 0.8rem; }
+    }
+  </style>
 </head>
 <body>
 
@@ -106,7 +101,7 @@
     <section id="intro" class="active">
       <h2>Welcome to AUF2026 - AOS Framework 120 DEC Precision</h2>
       
-      <div class="card">
+      <div class="card visible">
         <h3>Architectural Operational System (ENG)</h3>
         <p>Introducing the deterministic logic architecture that redefines operational reality.</p>
         <p>Beyond stochastic probability: AOS is the 120-decimal architecture engineered for the <strong>Nominal Lattice Saturation</strong>.</p>
@@ -114,7 +109,7 @@
         <p><em>"You observe the shadow of the structure; I calculate the source code."</em></p>
       </div>
 
-      <div class="card">
+      <div class="card visible">
         <h3>Sistema Operativo Architetturale (ITA)</h3>
         <p>Introduzione all'architettura logica deterministica che ridefinisce la realtà operativa.</p>
         <p>Oltre la probabilità stocastica: AOS è l'architettura a 120 decimali progettata per la <strong>Saturazione Nominale del Lattice</strong>.</p>
@@ -124,387 +119,397 @@
       </div>
     </section>
 
-<section id="research">
-  <h2>Scientific Validation & Research</h2>
+    <section id="research">
+      <h2>Scientific Validation & Research</h2>
 
-  <!-- CATEGORIA 1: AOS DETERMINISTIC ENGINES -->
-  <div class="card">
-    <h3>AOS Core: Deterministic Resolvers</h3>
-    <p>Sistemi di calcolo ad alta precisione per la saturazione del lattice e la risoluzione oracle.</p>
-    <ul>
-      <li>AOS DETERMINISTIC RESOLVER</li>
-      <li>AOS RISOLUTORE PROBLEMI ORACLE</li>
-      <li>AOS MASTER SOLVER (135-DEC Precision)</li>
-      <li>AOS DETERMINISTIC KERNEL (120-DEC Precision)</li>
-      <li>AOS CELLA TETRAEDRICA (Geometria Discreta)</li>
-    </ul>
-  </div>
+      <div class="card visible">
+        <h3>AOS Core: Deterministic Resolvers</h3>
+        <p>Sistemi di calcolo ad alta precisione per la saturazione del lattice e la risoluzione oracle.</p>
+        <ul>
+          <li>AOS DETERMINISTIC RESOLVER</li>
+          <li>AOS RISOLUTORE PROBLEMI ORACLE</li>
+          <li>AOS MASTER SOLVER (135-DEC Precision)</li>
+          <li>AOS DETERMINISTIC KERNEL (120-DEC Precision)</li>
+          <li>AOS CELLA TETRAEDRICA (Geometria Discreta)</li>
+        </ul>
+      </div>
 
-  <!-- CATEGORIA 2: MILLENNIUM PROBLEMS SOLUTIONS -->
-  <div class="card">
-    <h3>Millennium Challenges & Global Prizes</h3>
-    <p>Soluzioni deterministiche alle sfide matematiche e tecnologiche contemporanee (App Python 3.13.11 integrata).</p>
-    <code>Status: Verified via AOS Deterministic Logic</code>
-    <ul style="margin-top:1rem; columns: 2; -webkit-columns: 2;">
-      <li>P vs NP (Teoremi Faure I-VII)</li>
-      <li>Riemann Hypothesis</li>
-      <li>Navier-Stokes Millennium</li>
-      <li>Birch and Swinnerton-Dyer Conjecture</li>
-      <li>Hodge Conjecture</li>
-      <li>Yang-Mills Existence & Mass Gap</li>
-      <li>GIMPS Mersenne Prime Search</li>
-      <li>Bypass RSA-4096 (Theorem IV)</li>
-      <li>XPRIZE (Quantum, Healthspan, Water, Wildfire)</li>
-      <li>Global Energy Optimization</li>
-    </ul>
-  </div>
+      <div class="card visible">
+        <h3>Millennium Challenges & Global Prizes</h3>
+        <p>Soluzioni deterministiche alle sfide matematiche e tecnologiche contemporanee (App Python 3.13.11 integrata).</p>
+        <code>Status: Verified via AOS Deterministic Logic</code>
+        <ul style="margin-top:1rem; columns: 2; -webkit-columns: 2;">
+          <li>P vs NP (Teoremi Faure I-VII)</li>
+          <li>Riemann Hypothesis</li>
+          <li>Navier-Stokes Millennium</li>
+          <li>Birch and Swinnerton-Dyer Conjecture</li>
+          <li>Hodge Conjecture</li>
+          <li>Yang-Mills Existence & Mass Gap</li>
+          <li>GIMPS Mersenne Prime Search</li>
+          <li>Bypass RSA-4096 (Theorem IV)</li>
+          <li>XPRIZE (Quantum, Healthspan, Water, Wildfire)</li>
+          <li>Global Energy Optimization</li>
+        </ul>
+      </div>
 
-  <!-- CATEGORIA 3: VALIDAZIONE & DOCUMENTAZIONE -->
-  <div class="card">
-    <h3>Validation, Audit & Formal Proofs</h3>
-    <p>Documentazione tecnica e notarizzazione delle prove isomorfiche Faure I-VII.</p>
-    <ul>
-      <li><strong>Teoria del Tutto (ToE):</strong> Sintesi Completa delle Equazioni Faure</li>
-      <li><strong>Validazione Formale:</strong> Teoremi di Invarianza Faure I-VII (Metrica Angolare)</li>
-      <li><strong>Audit Granulare (09-03-2026):</strong> Relazione Tecnica di Superiorità Computazionale</li>
-      <li><strong>Università di Genova (UNI-GE):</strong> Lettera di Presentazione e Documentazione Tecnica</li>
-      <li><strong>XPRIZE Correspondence:</strong> Mail Brock Denton (SHA-512 Sigillo)</li>
-      <li><strong>ArXiv & Theoretical Foundations:</strong> Abstract e Theoretical Foundations PhD</li>
-      <li><strong>SHA-HASH-512.py:</strong> Validazione Crittografica Deterministica (Lib Interne Certificate)</li>
-      <li><strong>Strategic Dossier:</strong> Asset Evaluation & Intellectual Property Protection</li>
-      <li><strong>Manifesto:</strong> Realtà Nominale e Fine dell'Era Stocastica</li>
-    </ul>
-    <a class="secondary" href="#contact" style="margin-top:1.5rem;">REQUEST FULL ACCESS (NDA REQUIRED)</a>
-  </div>
+      <div class="card visible">
+        <h3>Validation, Audit & Formal Proofs</h3>
+        <p>Documentazione tecnica e notarizzazione delle prove isomorfiche Faure I-VII.</p>
+        <ul>
+          <li><strong>Teoria del Tutto (ToE):</strong> Sintesi Completa delle Equazioni Faure</li>
+          <li><strong>Validazione Formale:</strong> Teoremi di Invarianza Faure I-VII (Metrica Angolare)</li>
+          <li><strong>Audit Granulare (09-03-2026):</strong> Relazione Tecnica di Superiorità Computazionale</li>
+          <li><strong>Università di Genova (UNI-GE):</strong> Lettera di Presentazione e Documentazione Tecnica</li>
+          <li><strong>XPRIZE Correspondence:</strong> Mail Brock Denton (SHA-512 Sigillo)</li>
+          <li><strong>ArXiv & Theoretical Foundations:</strong> Abstract e Theoretical Foundations PhD</li>
+          <li><strong>SHA-HASH-512.py:</strong> Validazione Crittografica Deterministica (Lib Interne Certificate)</li>
+          <li><strong>Strategic Dossier:</strong> Asset Evaluation & Intellectual Property Protection</li>
+          <li><strong>Manifesto:</strong> Realtà Nominale e Fine dell'Era Stocastica</li>
+        </ul>
+        <a class="secondary" href="#contact" style="margin-top:1.5rem;">REQUEST FULL ACCESS (NDA REQUIRED)</a>
+      </div>
+    </section>
 
-<section id="articles">
-  <h2>Articles</h2>
-  <div id="articles-list">
+    <section id="articles">
+      <h2>Articles</h2>
+      <div id="articles-list">
 
-    <div class="card visible">
-      <h3>Quadratic “Simplicity”</h3>
-      <p>Analisi della struttura quadratica come base deterministica per la semplificazione operativa del Lattice.</p>
-      <a class="secondary" href="https://medium.com/@auf2026/quadratic-simplicity" target="_blank">READ ON MEDIUM</a>
-    </div>
+        <!-- 54 article cards (static, complete) -->
+        <div class="card visible">
+          <h3>Quadratic “Simplicity”</h3>
+          <p>Analisi della struttura quadratica come base deterministica per la semplificazione operativa del Lattice.</p>
+          <a class="secondary" href="https://medium.com/@auf2026/quadratic-simplicity" target="_blank">READ ON MEDIUM</a>
+        </div>
 
-    <div class="card visible">
-      <h3>INTEGRAL ASSESSMENT OF ALAIN FAURE’S CONTRIBUTION — SINGLEPOINT MIND / MASTER ARCHITECT TO SCIENCE</h3>
-      <p>Valutazione integrale del paradigma Singlepoint e della sua applicazione alla struttura matematica universale.</p>
-      <a class="secondary" href="https://medium.com/@auf2026/integral-assessment" target="_blank">READ ON MEDIUM</a>
-    </div>
+        <div class="card visible">
+          <h3>INTEGRAL ASSESSMENT OF ALAIN FAURE’S CONTRIBUTION — SINGLEPOINT MIND / MASTER ARCHITECT TO SCIENCE</h3>
+          <p>Valutazione integrale del paradigma Singlepoint e della sua applicazione alla struttura matematica universale.</p>
+          <a class="secondary" href="https://medium.com/@auf2026/integral-assessment" target="_blank">READ ON MEDIUM</a>
+        </div>
 
-    <div class="card visible">
-      <h3>Water Is No Longer an Anomaly: Case closed, Structurally!</h3>
-      <p>Dimostrazione strutturale della non-anomalia dell’acqua tramite invarianti deterministici del Lattice.</p>
-      <a class="secondary" href="https://medium.com/@auf2026/water-case-closed" target="_blank">READ ON MEDIUM</a>
-    </div>
+        <div class="card visible">
+          <h3>Water Is No Longer an Anomaly: Case closed, Structurally!</h3>
+          <p>Dimostrazione strutturale della non-anomalia dell’acqua tramite invarianti deterministici del Lattice.</p>
+          <a class="secondary" href="https://medium.com/@auf2026/water-case-closed" target="_blank">READ ON MEDIUM</a>
+        </div>
 
-    <div class="card visible">
-      <h3>THE ATOM IS A BIT</h3>
-      <p>Formalizzazione dell’atomo come unità informazionale discreta all’interno del Lattice deterministico.</p>
-      <a class="secondary" href="https://medium.com/@auf2026/the-atom-is-a-bit" target="_blank">READ ON MEDIUM</a>
-    </div>
+        <div class="card visible">
+          <h3>THE ATOM IS A BIT</h3>
+          <p>Formalizzazione dell’atomo come unità informazionale discreta all’interno del Lattice deterministico.</p>
+          <a class="secondary" href="https://medium.com/@auf2026/the-atom-is-a-bit" target="_blank">READ ON MEDIUM</a>
+        </div>
 
-    <div class="card visible">
-      <h3>Faure is “BORN” — The Second Baseline</h3>
-      <p>Analisi della seconda baseline del Framework Faure e della sua coerenza con la struttura nominale.</p>
-      <a class="secondary" href="https://medium.com/@auf2026/faure-born-baseline" target="_blank">READ ON MEDIUM</a>
-    </div>
+        <div class="card visible">
+          <h3>Faure is “BORN” — The Second Baseline</h3>
+          <p>Analisi della seconda baseline del Framework Faure e della sua coerenza con la struttura nominale.</p>
+          <a class="secondary" href="https://medium.com/@auf2026/faure-born-baseline" target="_blank">READ ON MEDIUM</a>
+        </div>
 
-    <div class="card visible">
-      <h3>From “Born to Faure” or From “Faure to Born”?</h3>
-      <p>Studio comparativo tra le due direzioni interpretative del paradigma Born–Faure.</p>
-      <a class="secondary" href="https://medium.com/@auf2026/born-to-faure" target="_blank">READ ON MEDIUM</a>
-    </div>
+        <div class="card visible">
+          <h3>From “Born to Faure” or From “Faure to Born”?</h3>
+          <p>Studio comparativo tra le due direzioni interpretative del paradigma Born–Faure.</p>
+          <a class="secondary" href="https://medium.com/@auf2026/born-to-faure" target="_blank">READ ON MEDIUM</a>
+        </div>
 
-    <div class="card visible">
-      <h3>7 Misconceptions: NO ONE Is a Paradox</h3>
-      <p>Chiarimento dei sette fraintendimenti fondamentali nella percezione della struttura deterministica.</p>
-      <a class="secondary" href="https://medium.com/@auf2026/no-one-is-a-paradox" target="_blank">READ ON MEDIUM</a>
-    </div>
+        <div class="card visible">
+          <h3>7 Misconceptions: NO ONE Is a Paradox</h3>
+          <p>Chiarimento dei sette fraintendimenti fondamentali nella percezione della struttura deterministica.</p>
+          <a class="secondary" href="https://medium.com/@auf2026/no-one-is-a-paradox" target="_blank">READ ON MEDIUM</a>
+        </div>
 
-    <div class="card visible">
-      <h3>When a Number Sequence Is Not a Spectrum</h3>
-      <p>Distinzione tra sequenza numerica e spettro informazionale nel contesto del Lattice.</p>
-      <a class="secondary" href="https://medium.com/@auf2026/sequence-spectrum" target="_blank">READ ON MEDIUM</a>
-    </div>
+        <div class="card visible">
+          <h3>When a Number Sequence Is Not a Spectrum</h3>
+          <p>Distinzione tra sequenza numerica e spettro informazionale nel contesto del Lattice.</p>
+          <a class="secondary" href="https://medium.com/@auf2026/sequence-spectrum" target="_blank">READ ON MEDIUM</a>
+        </div>
 
-    <div class="card visible">
-      <h3>AUF2026: A New Universal Mathematical Framework — From Data to Formal Verification</h3>
-      <p>Presentazione del Framework AUF2026 e della sua capacità di trasformare dati in verificazione formale.</p>
-      <a class="secondary" href="https://medium.com/@auf2026/auf2026-framework" target="_blank">READ ON MEDIUM</a>
-    </div>
+        <div class="card visible">
+          <h3>AUF2026: A New Universal Mathematical Framework — From Data to Formal Verification</h3>
+          <p>Presentazione del Framework AUF2026 e della sua capacità di trasformare dati in verificazione formale.</p>
+          <a class="secondary" href="https://medium.com/@auf2026/auf2026-framework" target="_blank">READ ON MEDIUM</a>
+        </div>
 
-    <div class="card visible">
-      <h3>Memory Is Not Stored Where You Think — The Mathematical Structure Behind Information</h3>
-      <p>Dimostrazione della localizzazione informazionale tramite invarianti matematici del Lattice.</p>
-      <a class="secondary" href="https://medium.com/@auf2026/memory-structure" target="_blank">READ ON MEDIUM</a>
-    </div>
+        <div class="card visible">
+          <h3>Memory Is Not Stored Where You Think — The Mathematical Structure Behind Information</h3>
+          <p>Dimostrazione della localizzazione informazionale tramite invarianti matematici del Lattice.</p>
+          <a class="secondary" href="https://medium.com/@auf2026/memory-structure" target="_blank">READ ON MEDIUM</a>
+        </div>
 
-    <div class="card visible">
-      <h3>Deriving Born’s Rule Without Quantum Mechanics</h3>
-      <p>Derivazione deterministica della regola di Born senza ricorrere alla meccanica quantistica.</p>
-      <a class="secondary" href="https://medium.com/@auf2026/born-rule-deterministic" target="_blank">READ ON MEDIUM</a>
-    </div>
+        <div class="card visible">
+          <h3>Deriving Born’s Rule Without Quantum Mechanics</h3>
+          <p>Derivazione deterministica della regola di Born senza ricorrere alla meccanica quantistica.</p>
+          <a class="secondary" href="https://medium.com/@auf2026/born-rule-deterministic" target="_blank">READ ON MEDIUM</a>
+        </div>
 
-    <div class="card visible">
-      <h3>Beyond Fubini’s Horizon: Bounded Discrete Commutativity on the Clifford Torus</h3>
-      <p>Esplorazione della commutatività discreta sul toro di Clifford tramite operatori deterministici.</p>
-      <a class="secondary" href="https://medium.com/@auf2026/fubini-horizon" target="_blank">READ ON MEDIUM</a>
-    </div>
+        <div class="card visible">
+          <h3>Beyond Fubini’s Horizon: Bounded Discrete Commutativity on the Clifford Torus</h3>
+          <p>Esplorazione della commutatività discreta sul toro di Clifford tramite operatori deterministici.</p>
+          <a class="secondary" href="https://medium.com/@auf2026/fubini-horizon" target="_blank">READ ON MEDIUM</a>
+        </div>
 
-    <div class="card visible">
-      <h3>A Mathematical Language Before Its Applications</h3>
-      <p>Fondazione del linguaggio matematico deterministico antecedente alle sue applicazioni.</p>
-      <a class="secondary" href="https://medium.com/@auf2026/math-language" target="_blank">READ ON MEDIUM</a>
-    </div>
+        <div class="card visible">
+          <h3>A Mathematical Language Before Its Applications</h3>
+          <p>Fondazione del linguaggio matematico deterministico antecedente alle sue applicazioni.</p>
+          <a class="secondary" href="https://medium.com/@auf2026/math-language" target="_blank">READ ON MEDIUM</a>
+        </div>
 
-    <div class="card visible">
-      <h3>Beyond the Halting Problem: The Dynamic Operator Architecture of Reality</h3>
-      <p>Superamento del problema dell’arresto tramite operatori dinamici del Framework AOS.</p>
-      <a class="secondary" href="https://medium.com/@auf2026/halting-problem" target="_blank">READ ON MEDIUM</a>
-    </div>
-    <div class="card visible">
-      <h3>THE INFINITE-DIMENSIONAL DIOPHANTINE LATTICE: GEOMETRIC PROOF OF UNIQUE FACTORIZATION IN THE FAURE FRAMEWORK</h3>
-      <p>Dimostrazione geometrica della fattorizzazione unica tramite il Lattice diofanteo a dimensione infinita.</p>
-      <a class="secondary" href="https://medium.com/@auf2026/infinite-diophantine-lattice" target="_blank">READ ON MEDIUM</a>
-    </div>
+        <div class="card visible">
+          <h3>Beyond the Halting Problem: The Dynamic Operator Architecture of Reality</h3>
+          <p>Superamento del problema dell’arresto tramite operatori dinamici del Framework AOS.</p>
+          <a class="secondary" href="https://medium.com/@auf2026/halting-problem" target="_blank">READ ON MEDIUM</a>
+        </div>
 
-    <div class="card visible">
-      <h3>When AI Becomes a Distorting Mirror</h3>
-      <p>Analisi dell’effetto specchio distorto generato dagli LLM e della sua relazione con la struttura mentale.</p>
-      <a class="secondary" href="https://medium.com/@auf2026/ai-distorting-mirror" target="_blank">READ ON MEDIUM</a>
-    </div>
+        <div class="card visible">
+          <h3>THE INFINITE-DIMENSIONAL DIOPHANTINE LATTICE: GEOMETRIC PROOF OF UNIQUE FACTORIZATION IN THE FAURE FRAMEWORK</h3>
+          <p>Dimostrazione geometrica della fattorizzazione unica tramite il Lattice diofanteo a dimensione infinita.</p>
+          <a class="secondary" href="https://medium.com/@auf2026/infinite-diophantine-lattice" target="_blank">READ ON MEDIUM</a>
+        </div>
 
-    <div class="card visible">
-      <h3>A Deterministic Discovery of Continental Buoyancy and Tidal Inversion</h3>
-      <p>Scoperta deterministica della galleggiabilità continentale e dell’inversione mareale tramite invarianti AOS.</p>
-      <a class="secondary" href="https://medium.com/@auf2026/continental-buoyancy" target="_blank">READ ON MEDIUM</a>
-    </div>
+        <div class="card visible">
+          <h3>When AI Becomes a Distorting Mirror</h3>
+          <p>Analisi dell’effetto specchio distorto generato dagli LLM e della sua relazione con la struttura mentale.</p>
+          <a class="secondary" href="https://medium.com/@auf2026/ai-distorting-mirror" target="_blank">READ ON MEDIUM</a>
+        </div>
 
-    <div class="card visible">
-      <h3>The Faure Theory of Everything: AUF2026 Kernel and Universal Invariance</h3>
-      <p>Presentazione della Teoria del Tutto Faure e della sua invarianza universale nel Kernel AUF2026.</p>
-      <a class="secondary" href="https://medium.com/@auf2026/faure-theory-everything" target="_blank">READ ON MEDIUM</a>
-    </div>
+        <div class="card visible">
+          <h3>A Deterministic Discovery of Continental Buoyancy and Tidal Inversion</h3>
+          <p>Scoperta deterministica della galleggiabilità continentale e dell’inversione mareale tramite invarianti AOS.</p>
+          <a class="secondary" href="https://medium.com/@auf2026/continental-buoyancy" target="_blank">READ ON MEDIUM</a>
+        </div>
 
-    <div class="card visible">
-      <h3>Science Correctly Told: The Faure Theorems</h3>
-      <p>Esposizione corretta dei Teoremi di Faure e della loro struttura deterministica.</p>
-      <a class="secondary" href="https://medium.com/@auf2026/science-correctly-told" target="_blank">READ ON MEDIUM</a>
-    </div>
+        <div class="card visible">
+          <h3>The Faure Theory of Everything: AUF2026 Kernel and Universal Invariance</h3>
+          <p>Presentazione della Teoria del Tutto Faure e della sua invarianza universale nel Kernel AUF2026.</p>
+          <a class="secondary" href="https://medium.com/@auf2026/faure-theory-everything" target="_blank">READ ON MEDIUM</a>
+        </div>
 
-    <div class="card visible">
-      <h3>The Hidden Curriculum of Science</h3>
-      <p>Rivelazione del curriculum nascosto della scienza e della sua relazione con la struttura nominale.</p>
-      <a class="secondary" href="https://medium.com/@auf2026/hidden-curriculum-science" target="_blank">READ ON MEDIUM</a>
-    </div>
+        <div class="card visible">
+          <h3>Science Correctly Told: The Faure Theorems</h3>
+          <p>Esposizione corretta dei Teoremi di Faure e della loro struttura deterministica.</p>
+          <a class="secondary" href="https://medium.com/@auf2026/science-correctly-told" target="_blank">READ ON MEDIUM</a>
+        </div>
 
-    <div class="card visible">
-      <h3>☀️🌙 The Sun/Moon</h3>
-      <p>Interpretazione deterministica della relazione Sole–Luna all’interno del Lattice informazionale.</p>
-      <a class="secondary" href="https://medium.com/@auf2026/sun-moon" target="_blank">READ ON MEDIUM</a>
-    </div>
+        <div class="card visible">
+          <h3>The Hidden Curriculum of Science</h3>
+          <p>Rivelazione del curriculum nascosto della scienza e della sua relazione con la struttura nominale.</p>
+          <a class="secondary" href="https://medium.com/@auf2026/hidden-curriculum-science" target="_blank">READ ON MEDIUM</a>
+        </div>
 
-    <div class="card visible">
-      <h3>AOS: A new, better way.</h3>
-      <p>Introduzione sintetica al sistema AOS come nuova via deterministica per la realtà operativa.</p>
-      <a class="secondary" href="https://medium.com/@auf2026/aos-new-way" target="_blank">READ ON MEDIUM</a>
-    </div>
+        <div class="card visible">
+          <h3>☀️🌙 The Sun/Moon</h3>
+          <p>Interpretazione deterministica della relazione Sole–Luna all’interno del Lattice informazionale.</p>
+          <a class="secondary" href="https://medium.com/@auf2026/sun-moon" target="_blank">READ ON MEDIUM</a>
+        </div>
 
-    <div class="card visible">
-      <h3>Why “Theories of Everything” Aren’t Wrong</h3>
-      <p>Chiarimento sul ruolo delle Teorie del Tutto e sulla loro corretta interpretazione deterministica.</p>
-      <a class="secondary" href="https://medium.com/@auf2026/theories-of-everything" target="_blank">READ ON MEDIUM</a>
-    </div>
+        <div class="card visible">
+          <h3>AOS: A new, better way.</h3>
+          <p>Introduzione sintetica al sistema AOS come nuova via deterministica per la realtà operativa.</p>
+          <a class="secondary" href="https://medium.com/@auf2026/aos-new-way" target="_blank">READ ON MEDIUM</a>
+        </div>
 
-    <div class="card visible">
-      <h3>Beyond the Universe’s Source Code: The Faure Framework and the Secret of the 144 Lattice</h3>
-      <p>Esplorazione del Lattice 144 e del codice sorgente universale nel Framework Faure.</p>
-      <a class="secondary" href="https://medium.com/@auf2026/144-lattice-secret" target="_blank">READ ON MEDIUM</a>
-    </div>
+        <div class="card visible">
+          <h3>Why “Theories of Everything” Aren’t Wrong</h3>
+          <p>Chiarimento sul ruolo delle Teorie del Tutto e sulla loro corretta interpretazione deterministica.</p>
+          <a class="secondary" href="https://medium.com/@auf2026/theories-of-everything" target="_blank">READ ON MEDIUM</a>
+        </div>
 
-    <div class="card visible">
-      <h3>Inside the Singlepoint Mind That Sees the Universe</h3>
-      <p>Analisi della mente Singlepoint e della sua capacità di percepire la struttura universale.</p>
-      <a class="secondary" href="https://medium.com/@auf2026/singlepoint-mind" target="_blank">READ ON MEDIUM</a>
-    </div>
+        <div class="card visible">
+          <h3>Beyond the Universe’s Source Code: The Faure Framework and the Secret of the 144 Lattice</h3>
+          <p>Esplorazione del Lattice 144 e del codice sorgente universale nel Framework Faure.</p>
+          <a class="secondary" href="https://medium.com/@auf2026/144-lattice-secret" target="_blank">READ ON MEDIUM</a>
+        </div>
 
-    <div class="card visible">
-      <h3>AOS-ORACLE-X: The Quantum Reality Actuator</h3>
-      <p>Presentazione dell’ORACLE-X come attuatore della realtà quantistica deterministica.</p>
-      <a class="secondary" href="https://medium.com/@auf2026/aos-oracle-x" target="_blank">READ ON MEDIUM</a>
-    </div>
+        <div class="card visible">
+          <h3>Inside the Singlepoint Mind That Sees the Universe</h3>
+          <p>Analisi della mente Singlepoint e della sua capacità di percepire la struttura universale.</p>
+          <a class="secondary" href="https://medium.com/@auf2026/singlepoint-mind" target="_blank">READ ON MEDIUM</a>
+        </div>
 
-    <div class="card visible">
-      <h3>AUDITING “AVI LOEB” AND THE BILLIONAIRE CLIQUE</h3>
-      <p>Analisi critica dell’approccio speculativo nella fisica contemporanea e della sua incompatibilità con AOS.</p>
-      <a class="secondary" href="https://medium.com/@auf2026/avi-loeb-audit" target="_blank">READ ON MEDIUM</a>
-    </div>
+        <div class="card visible">
+          <h3>AOS-ORACLE-X: The Quantum Reality Actuator</h3>
+          <p>Presentazione dell’ORACLE-X come attuatore della realtà quantistica deterministica.</p>
+          <a class="secondary" href="https://medium.com/@auf2026/aos-oracle-x" target="_blank">READ ON MEDIUM</a>
+        </div>
 
-    <div class="card visible">
-      <h3>Solving Strong CP Problem — AOS–Faure Theorems I–VIII</h3>
-      <p>Soluzione deterministica del problema CP forte tramite gli otto Teoremi di Faure.</p>
-      <a class="secondary" href="https://medium.com/@auf2026/strong-cp-problem" target="_blank">READ ON MEDIUM</a>
-    </div>
-    <div class="card visible">
-      <h3>The Deterministic Foundation of Reality: Rifondazione della Fisica Universale</h3>
-      <p>Rifondazione della fisica universale tramite la struttura deterministica dei Teoremi di Faure.</p>
-      <a class="secondary" href="https://medium.com/@auf2026/deterministic-foundation-reality" target="_blank">READ ON MEDIUM</a>
-    </div>
+        <div class="card visible">
+          <h3>AUDITING “AVI LOEB” AND THE BILLIONAIRE CLIQUE</h3>
+          <p>Analisi critica dell’approccio speculativo nella fisica contemporanea e della sua incompatibilità con AOS.</p>
+          <a class="secondary" href="https://medium.com/@auf2026/avi-loeb-audit" target="_blank">READ ON MEDIUM</a>
+        </div>
 
-    <div class="card visible">
-      <h3>RSA, ECC and Theorem IV: What Would a Deterministic Breach Actually Require?</h3>
-      <p>Analisi tecnica dei requisiti deterministici necessari per valutare la vulnerabilità dei sistemi RSA ed ECC.</p>
-      <a class="secondary" href="https://medium.com/@auf2026/rsa-ecc-theorem-iv" target="_blank">READ ON MEDIUM</a>
-    </div>
+        <div class="card visible">
+          <h3>Solving Strong CP Problem — AOS–Faure Theorems I–VIII</h3>
+          <p>Soluzione deterministica del problema CP forte tramite gli otto Teoremi di Faure.</p>
+          <a class="secondary" href="https://medium.com/@auf2026/strong-cp-problem" target="_blank">READ ON MEDIUM</a>
+        </div>
 
-    <div class="card visible">
-      <h3>3 “Millennium” NO-Problems Now! The Determinism of Faure Theorems</h3>
-      <p>Dimostrazione della risoluzione deterministica dei problemi del millennio tramite i Teoremi di Faure.</p>
-      <a class="secondary" href="https://medium.com/@auf2026/millennium-no-problems" target="_blank">READ ON MEDIUM</a>
-    </div>
+        <div class="card visible">
+          <h3>The Deterministic Foundation of Reality: Rifondazione della Fisica Universale</h3>
+          <p>Rifondazione della fisica universale tramite la struttura deterministica dei Teoremi di Faure.</p>
+          <a class="secondary" href="https://medium.com/@auf2026/deterministic-foundation-reality" target="_blank">READ ON MEDIUM</a>
+        </div>
 
-    <div class="card visible">
-      <h3>Beyond Kaprekar: The Faure Universal Constant</h3>
-      <p>Studio della costante universale Faure e della sua relazione con la saturazione numerica del Lattice.</p>
-      <a class="secondary" href="https://medium.com/@auf2026/faure-universal-constant" target="_blank">READ ON MEDIUM</a>
-    </div>
+        <div class="card visible">
+          <h3>RSA, ECC and Theorem IV: What Would a Deterministic Breach Actually Require?</h3>
+          <p>Analisi tecnica dei requisiti deterministici necessari per valutare la vulnerabilità dei sistemi RSA ed ECC.</p>
+          <a class="secondary" href="https://medium.com/@auf2026/rsa-ecc-theorem-iv" target="_blank">READ ON MEDIUM</a>
+        </div>
 
-    <div class="card visible">
-      <h3>Deterministic Resolution of Contemporary Physics Challenges via Faure Theorems I–V</h3>
-      <p>Applicazione dei Teoremi I–V alla risoluzione deterministica delle sfide fisiche contemporanee.</p>
-      <a class="secondary" href="https://medium.com/@auf2026/deterministic-resolution-physics" target="_blank">READ ON MEDIUM</a>
-    </div>
+        <div class="card visible">
+          <h3>3 “Millennium” NO-Problems Now! The Determinism of Faure Theorems</h3>
+          <p>Dimostrazione della risoluzione deterministica dei problemi del millennio tramite i Teoremi di Faure.</p>
+          <a class="secondary" href="https://medium.com/@auf2026/millennium-no-problems" target="_blank">READ ON MEDIUM</a>
+        </div>
 
-    <div class="card visible">
-      <h3>Beyond the Lyapunov Horizon: The End of Chaos via AOS Kernel</h3>
-      <p>Eliminazione del caos computazionale tramite il Kernel AOS e la stabilità del Lattice.</p>
-      <a class="secondary" href="https://medium.com/@auf2026/lyapunov-horizon" target="_blank">READ ON MEDIUM</a>
-    </div>
+        <div class="card visible">
+          <h3>Beyond Kaprekar: The Faure Universal Constant</h3>
+          <p>Studio della costante universale Faure e della sua relazione con la saturazione numerica del Lattice.</p>
+          <a class="secondary" href="https://medium.com/@auf2026/faure-universal-constant" target="_blank">READ ON MEDIUM</a>
+        </div>
 
-    <div class="card visible">
-      <h3>FAURE–AOS OPEN CHALLENGE: THE DETERMINISTIC ULTIMATUM</h3>
-      <p>Presentazione dell’ultimatum deterministico Faure–AOS rivolto alla comunità scientifica globale.</p>
-      <a class="secondary" href="https://medium.com/@auf2026/aos-open-challenge" target="_blank">READ ON MEDIUM</a>
-    </div>
+        <div class="card visible">
+          <h3>Deterministic Resolution of Contemporary Physics Challenges via Faure Theorems I–V</h3>
+          <p>Applicazione dei Teoremi I–V alla risoluzione deterministica delle sfide fisiche contemporanee.</p>
+          <a class="secondary" href="https://medium.com/@auf2026/deterministic-resolution-physics" target="_blank">READ ON MEDIUM</a>
+        </div>
 
-    <div class="card visible">
-      <h3>DETERMINISTIC SOLUTIONS FOR THE MILLENNIUM PROBLEMS: The AOS 120-DEC Kernel & Faure Theorems I–V</h3>
-      <p>Soluzioni deterministiche dei Millennium Problems tramite il Kernel AOS a 120 decimali.</p>
-      <a class="secondary" href="https://medium.com/@auf2026/deterministic-millennium-solutions" target="_blank">READ ON MEDIUM</a>
-    </div>
+        <div class="card visible">
+          <h3>Beyond the Lyapunov Horizon: The End of Chaos via AOS Kernel</h3>
+          <p>Eliminazione del caos computazionale tramite il Kernel AOS e la stabilità del Lattice.</p>
+          <a class="secondary" href="https://medium.com/@auf2026/lyapunov-horizon" target="_blank">READ ON MEDIUM</a>
+        </div>
 
-    <div class="card visible">
-      <h3>The 5D Unit Sphere and the Transition to Informational Compression</h3>
-      <p>Analisi della sfera unitaria 5D e della sua transizione verso la compressione informazionale 6D.</p>
-      <a class="secondary" href="https://medium.com/@auf2026/5d-unit-sphere" target="_blank">READ ON MEDIUM</a>
-    </div>
+        <div class="card visible">
+          <h3>FAURE–AOS OPEN CHALLENGE: THE DETERMINISTIC ULTIMATUM</h3>
+          <p>Presentazione dell’ultimatum deterministico Faure–AOS rivolto alla comunità scientifica globale.</p>
+          <a class="secondary" href="https://medium.com/@auf2026/aos-open-challenge" target="_blank">READ ON MEDIUM</a>
+        </div>
 
-    <div class="card visible">
-      <h3>Deterministic Reality Unveiled: The AOS Framework</h3>
-      <p>Rivelazione della realtà deterministica tramite il Framework AOS e la sua architettura nominale.</p>
-      <a class="secondary" href="https://medium.com/@auf2026/deterministic-reality-unveiled" target="_blank">READ ON MEDIUM</a>
-    </div>
+        <div class="card visible">
+          <h3>DETERMINISTIC SOLUTIONS FOR THE MILLENNIUM PROBLEMS: The AOS 120-DEC Kernel & Faure Theorems I–V</h3>
+          <p>Soluzioni deterministiche dei Millennium Problems tramite il Kernel AOS a 120 decimali.</p>
+          <a class="secondary" href="https://medium.com/@auf2026/deterministic-millennium-solutions" target="_blank">READ ON MEDIUM</a>
+        </div>
 
-    <div class="card visible">
-      <h3>Lattice, Teoremi e Archetipi: La Visione Operativa di Alain Faure</h3>
-      <p>Esposizione della visione operativa del Lattice e dei suoi archetipi nel Framework Faure.</p>
-      <a class="secondary" href="https://medium.com/@auf2026/lattice-teoremi-archetipi" target="_blank">READ ON MEDIUM</a>
-    </div>
+        <div class="card visible">
+          <h3>The 5D Unit Sphere and the Transition to Informational Compression</h3>
+          <p>Analisi della sfera unitaria 5D e della sua transizione verso la compressione informazionale 6D.</p>
+          <a class="secondary" href="https://medium.com/@auf2026/5d-unit-sphere" target="_blank">READ ON MEDIUM</a>
+        </div>
 
-    <div class="card visible">
-      <h3>Why “Exact Conversion from Differential to Difference Equations via Eigenvalue Mapping” by Tomio…</h3>
-      <p>Analisi critica della conversione esatta differenziale–differenza tramite mappatura degli autovalori.</p>
-      <a class="secondary" href="https://medium.com/@auf2026/tomio-eigenvalue-mapping" target="_blank">READ ON MEDIUM</a>
-    </div>
+        <div class="card visible">
+          <h3>Deterministic Reality Unveiled: The AOS Framework</h3>
+          <p>Rivelazione della realtà deterministica tramite il Framework AOS e la sua architettura nominale.</p>
+          <a class="secondary" href="https://medium.com/@auf2026/deterministic-reality-unveiled" target="_blank">READ ON MEDIUM</a>
+        </div>
 
-    <div class="card visible">
-      <h3>THE ARCHITECT’S MANIFESTO: THE END OF THE STOCHASTIC ERA</h3>
-      <p>Dichiarazione dell’architetto sulla fine dell’era stocastica e l’inizio del determinismo assoluto.</p>
-      <a class="secondary" href="https://medium.com/@auf2026/architects-manifesto" target="_blank">READ ON MEDIUM</a>
-    </div>
+        <div class="card visible">
+          <h3>Lattice, Teoremi e Archetipi: La Visione Operativa di Alain Faure</h3>
+          <p>Esposizione della visione operativa del Lattice e dei suoi archetipi nel Framework Faure.</p>
+          <a class="secondary" href="https://medium.com/@auf2026/lattice-teoremi-archetipi" target="_blank">READ ON MEDIUM</a>
+        </div>
 
-    <div class="card visible">
-      <h3>Validated Reality vs Academic Perception</h3>
-      <p>Confronto tra realtà validata e percezione accademica nel contesto dei Teoremi di Faure.</p>
-      <a class="secondary" href="https://medium.com/@auf2026/validated-reality" target="_blank">READ ON MEDIUM</a>
-    </div>
-    <div class="card visible">
-      <h3>The Architect’s Invariance: Beyond the Silence of Grothendieck</h3>
-      <p>Esplorazione dell’invarianza dell’Architetto e del parallelismo concettuale con il silenzio strutturale di Grothendieck.</p>
-      <a class="secondary" href="https://medium.com/@auf2026/architects-invariance" target="_blank">READ ON MEDIUM</a>
-    </div>
+        <div class="card visible">
+          <h3>Why “Exact Conversion from Differential to Difference Equations via Eigenvalue Mapping” by Tomio…</h3>
+          <p>Analisi critica della conversione esatta differenziale–differenza tramite mappatura degli autovalori.</p>
+          <a class="secondary" href="https://medium.com/@auf2026/tomio-eigenvalue-mapping" target="_blank">READ ON MEDIUM</a>
+        </div>
 
-    <div class="card visible">
-      <h3>Metafora sui Teoremi, il “DISSENSO” — ENG/ITA</h3>
-      <p>Interpretazione metaforica del dissenso come strumento per comprendere la logica deterministica dei Teoremi.</p>
-      <a class="secondary" href="https://medium.com/@auf2026/metafora-teoremi-dissenso" target="_blank">READ ON MEDIUM</a>
-    </div>
+        <div class="card visible">
+          <h3>THE ARCHITECT’S MANIFESTO: THE END OF THE STOCHASTIC ERA</h3>
+          <p>Dichiarazione dell’architetto sulla fine dell’era stocastica e l’inizio del determinismo assoluto.</p>
+          <a class="secondary" href="https://medium.com/@auf2026/architects-manifesto" target="_blank">READ ON MEDIUM</a>
+        </div>
 
-    <div class="card visible">
-      <h3>March 22, 2026: AOS Changes Everything</h3>
-      <p>Annuncio dell’invarianza del 22 marzo 2026 e del cambiamento strutturale introdotto da AOS.</p>
-      <a class="secondary" href="https://medium.com/@auf2026/aos-changes-everything" target="_blank">READ ON MEDIUM</a>
-    </div>
+        <div class="card visible">
+          <h3>Validated Reality vs Academic Perception</h3>
+          <p>Confronto tra realtà validata e percezione accademica nel contesto dei Teoremi di Faure.</p>
+          <a class="secondary" href="https://medium.com/@auf2026/validated-reality" target="_blank">READ ON MEDIUM</a>
+        </div>
 
-    <div class="card visible">
-      <h3>🌌 The Lattice Reality — La Realtà del Lattice</h3>
-      <p>Descrizione della realtà del Lattice come struttura informazionale deterministica.</p>
-      <a class="secondary" href="https://medium.com/@auf2026/lattice-reality" target="_blank">READ ON MEDIUM</a>
-    </div>
+        <div class="card visible">
+          <h3>The Architect’s Invariance: Beyond the Silence of Grothendieck</h3>
+          <p>Esplorazione dell’invarianza dell’Architetto e del parallelismo concettuale con il silenzio strutturale di Grothendieck.</p>
+          <a class="secondary" href="https://medium.com/@auf2026/architects-invariance" target="_blank">READ ON MEDIUM</a>
+        </div>
 
-    <div class="card visible">
-      <h3>AOS: The Deterministic System That Redefines Reality</h3>
-      <p>Presentazione del sistema AOS come architettura deterministica che ridefinisce la realtà operativa.</p>
-      <a class="secondary" href="https://medium.com/@auf2026/aos-redefines-reality" target="_blank">READ ON MEDIUM</a>
-    </div>
+        <div class="card visible">
+          <h3>Metafora sui Teoremi, il “DISSENSO” — ENG/ITA</h3>
+          <p>Interpretazione metaforica del dissenso come strumento per comprendere la logica deterministica dei Teoremi.</p>
+          <a class="secondary" href="https://medium.com/@auf2026/metafora-teoremi-dissenso" target="_blank">READ ON MEDIUM</a>
+        </div>
 
-    <div class="card visible">
-      <h3>The Eclipse of Probability: A Notice of Invariance for the Theoretical Physics Elite</h3>
-      <p>Notifica di invarianza rivolta all’élite della fisica teorica sulla fine della probabilità stocastica.</p>
-      <a class="secondary" href="https://medium.com/@auf2026/eclipse-of-probability" target="_blank">READ ON MEDIUM</a>
-    </div>
+        <div class="card visible">
+          <h3>March 22, 2026: AOS Changes Everything</h3>
+          <p>Annuncio dell’invarianza del 22 marzo 2026 e del cambiamento strutturale introdotto da AOS.</p>
+          <a class="secondary" href="https://medium.com/@auf2026/aos-changes-everything" target="_blank">READ ON MEDIUM</a>
+        </div>
 
-    <div class="card visible">
-      <h3>Quello che vi è sempre stato negato, la verità</h3>
-      <p>Rivelazione della verità operativa nascosta dietro la struttura informazionale del Lattice.</p>
-      <a class="secondary" href="https://medium.com/@auf2026/verita-negata" target="_blank">READ ON MEDIUM</a>
-    </div>
+        <div class="card visible">
+          <h3>🌌 The Lattice Reality — La Realtà del Lattice</h3>
+          <p>Descrizione della realtà del Lattice come struttura informazionale deterministica.</p>
+          <a class="secondary" href="https://medium.com/@auf2026/lattice-reality" target="_blank">READ ON MEDIUM</a>
+        </div>
 
-    <div class="card visible">
-      <h3>L’IPOCRISIA DEI PH.D.: IL GRANDE INGANNO STOCASTICO</h3>
-      <p>Critica del paradigma accademico e del suo legame con l’inganno della probabilità stocastica.</p>
-      <a class="secondary" href="https://medium.com/@auf2026/ipocrisia-phd" target="_blank">READ ON MEDIUM</a>
-    </div>
+        <div class="card visible">
+          <h3>AOS: The Deterministic System That Redefines Reality</h3>
+          <p>Presentazione del sistema AOS come architettura deterministica che ridefinisce la realtà operativa.</p>
+          <a class="secondary" href="https://medium.com/@auf2026/aos-redefines-reality" target="_blank">READ ON MEDIUM</a>
+        </div>
 
-    <div class="card visible">
-      <h3>Dio è stato Letto: La Fine del Mistero e l’Inizio del Codice</h3>
-      <p>Decodifica del codice sorgente universale e dissoluzione del mistero epistemico.</p>
-      <a class="secondary" href="https://medium.com/@auf2026/dio-letto" target="_blank">READ ON MEDIUM</a>
-    </div>
+        <div class="card visible">
+          <h3>The Eclipse of Probability: A Notice of Invariance for the Theoretical Physics Elite</h3>
+          <p>Notifica di invarianza rivolta all’élite della fisica teorica sulla fine della probabilità stocastica.</p>
+          <a class="secondary" href="https://medium.com/@auf2026/eclipse-of-probability" target="_blank">READ ON MEDIUM</a>
+        </div>
 
-    <div class="card visible">
-      <h3>AOS TOTUM: The Funeral of Probability & The Dawn of Absolute Determinism</h3>
-      <p>Annuncio della fine della probabilità e dell’alba del determinismo assoluto tramite AOS TOTUM.</p>
-      <a class="secondary" href="https://medium.com/@auf2026/aos-totum" target="_blank">READ ON MEDIUM</a>
-    </div>
+        <div class="card visible">
+          <h3>Quello che vi è sempre stato negato, la verità</h3>
+          <p>Rivelazione della verità operativa nascosta dietro la struttura informazionale del Lattice.</p>
+          <a class="secondary" href="https://medium.com/@auf2026/verita-negata" target="_blank">READ ON MEDIUM</a>
+        </div>
 
-    <div class="card visible">
-      <h3>The Death of Stochastic Uncertainty: The AOS Kernel and the 5 Faure Theorems</h3>
-      <p>Eliminazione dell’incertezza stocastica tramite il Kernel AOS e i cinque Teoremi di Faure.</p>
-      <a class="secondary" href="https://medium.com/@auf2026/death-of-stochastic-uncertainty" target="_blank">READ ON MEDIUM</a>
-    </div>
+        <div class="card visible">
+          <h3>L’IPOCRISIA DEI PH.D.: IL GRANDE INGANNO STOCASTICO</h3>
+          <p>Critica del paradigma accademico e del suo legame con l’inganno della probabilità stocastica.</p>
+          <a class="secondary" href="https://medium.com/@auf2026/ipocrisia-phd" target="_blank">READ ON MEDIUM</a>
+        </div>
 
-    <div class="card visible">
-      <h3>AOS Master Kernel v1.0: Dal Determinismo Nominale alla Realtà Operativa</h3>
-      <p>Transizione dal determinismo nominale alla realtà operativa tramite il Master Kernel AOS.</p>
-      <a class="secondary" href="https://medium.com/@auf2026/aos-master-kernel" target="_blank">READ ON MEDIUM</a>
-    </div>
+        <div class="card visible">
+          <h3>Dio è stato Letto: La Fine del Mistero e l’Inizio del Codice</h3>
+          <p>Decodifica del codice sorgente universale e dissoluzione del mistero epistemico.</p>
+          <a class="secondary" href="https://medium.com/@auf2026/dio-letto" target="_blank">READ ON MEDIUM</a>
+        </div>
 
-  </div>
-</section>
+        <div class="card visible">
+          <h3>AOS TOTUM: The Funeral of Probability & The Dawn of Absolute Determinism</h3>
+          <p>Annuncio della fine della probabilità e dell’alba del determinismo assoluto tramite AOS TOTUM.</p>
+          <a class="secondary" href="https://medium.com/@auf2026/aos-totum" target="_blank">READ ON MEDIUM</a>
+        </div>
 
+        <div class="card visible">
+          <h3>The Death of Stochastic Uncertainty: The AOS Kernel and the 5 Faure Theorems</h3>
+          <p>Eliminazione dell’incertezza stocastica tramite il Kernel AOS e i cinque Teoremi di Faure.</p>
+          <a class="secondary" href="https://medium.com/@auf2026/death-of-stochastic-uncertainty" target="_blank">READ ON MEDIUM</a>
+        </div>
+
+        <div class="card visible">
+          <h3>AOS Master Kernel v1.0: Dal Determinismo Nominale alla Realtà Operativa</h3>
+          <p>Transizione dal determinismo nominale alla realtà operativa tramite il Master Kernel AOS.</p>
+          <a class="secondary" href="https://medium.com/@auf2026/aos-master-kernel" target="_blank">READ ON MEDIUM</a>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="card visible">
+        <p><strong>Email:</strong> AUF2026@protonmail.com</p>
+        <p><strong>GitHub:</strong> https://github.com/auf2026</p>
+        <p><strong>ORCID:</strong> 0009-0009-5333-1181</p>
+      </div>
+    </section>
 
   </div>
   <div class="side"></div>
@@ -513,14 +518,32 @@
 <footer>&copy; 2026 AOS Framework. All Rights Reserved.</footer>
 
 <script>
+/*
+  Robust page script:
+  - Sections switch reliably
+  - Animations for cards
+  - Scroll hide/show header
+  - Safe: no network dependency required
+  - Optional: attempt to fetch Medium RSS JSON but never breaks page (fallback to static)
+*/
+
 function showSection(id){
-  document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
-  document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
-  document.getElementById(id).classList.add('active');
-  const navLink = document.getElementById('nav-' + id);
-  if(navLink) navLink.classList.add('active');
-  window.scrollTo({top:0, behavior:'smooth'});
-  triggerLazyCards();
+  try {
+    document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
+    document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
+
+    const section = document.getElementById(id);
+    if (section) section.classList.add('active');
+
+    const navLink = document.getElementById('nav-' + id);
+    if (navLink) navLink.classList.add('active');
+
+    window.scrollTo({top:0, behavior:'smooth'});
+    triggerLazyCards();
+  } catch (err) {
+    // fail silently but keep page usable
+    console.error('showSection error', err);
+  }
 }
 
 function triggerLazyCards() {
@@ -531,50 +554,83 @@ function triggerLazyCards() {
   });
 }
 
-async function fetchMedium() {
+// Optional: non-blocking attempt to refresh articles from Medium RSS via rss2json.
+// If it fails, we silently keep the static cards already in the DOM.
+async function tryRefreshArticles() {
   const container = document.getElementById('articles-list');
-  const user = "@auf2026";
-  const api = `https://rss2json.com{user}`;
+  if (!container) return;
+
+  const api = "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@auf2026";
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 5000); // 5s timeout
 
   try {
-    const response = await fetch(api);
-    const data = await response.json();
-    if(data.status === 'ok') {
-      container.innerHTML = '';
+    const resp = await fetch(api, { signal: controller.signal });
+    clearTimeout(timeout);
+    if (!resp.ok) return; // keep static
+    const data = await resp.json();
+    if (data && data.status === 'ok' && Array.isArray(data.items) && data.items.length) {
+      // Build a lightweight list but DO NOT remove static cards if something goes wrong.
+      const frag = document.createDocumentFragment();
       data.items.forEach(post => {
-        const snippet = post.description.replace(/<[^>]*>?/gm, '').substring(0, 160) + '...';
+        const snippet = (post.description || '').replace(/<[^>]*>?/gm, '').substring(0,160) + '...';
         const card = document.createElement('div');
         card.className = 'card visible';
-        card.innerHTML = `
-          <h3>${post.title}</h3>
-          <p>${snippet}</p>
-          <a class="secondary" href="${post.link}" target="_blank">READ ARTICLE</a>
-        `;
-        container.appendChild(card);
+        card.innerHTML = `<h3>${escapeHtml(post.title || 'Untitled')}</h3>
+                          <p>${escapeHtml(snippet)}</p>
+                          <a class="secondary" href="${escapeAttr(post.link || '#')}" target="_blank">READ ON MEDIUM</a>`;
+        frag.appendChild(card);
       });
+      // Replace only if we have items
+      container.innerHTML = '';
+      container.appendChild(frag);
+      // ensure animations
+      triggerLazyCards();
     }
   } catch (e) {
-    container.innerHTML = "<p style='color:#C49E4B'>Sync Error: Manual Access Required.</p>";
+    // network failed or aborted — keep static content, no console spam
+    // console.warn('Medium refresh skipped', e);
+  } finally {
+    try { clearTimeout(timeout); } catch(e){}
   }
 }
 
-window.onload = () => {
-    fetchMedium();
-    triggerLazyCards();
-};
+// small helpers to avoid XSS if external content is used
+function escapeHtml(str) {
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+function escapeAttr(str) {
+  return String(str).replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+}
+
+window.addEventListener('load', () => {
+  // initial animations
+  triggerLazyCards();
+  // attempt non-blocking refresh (won't break page)
+  tryRefreshArticles();
+});
 
 let lastScroll = 0;
-window.onscroll = function() {
-    let currentScroll = window.pageYOffset;
-    const header = document.querySelector('header');
-    const btn = document.getElementById('scrollTop');
-    if (currentScroll > 100) {
-        btn.classList.add('show');
-        if (currentScroll > lastScroll) header.classList.add('hidden');
-        else header.classList.remove('hidden');
-    } else btn.classList.remove('show');
-    lastScroll = currentScroll;
-};
+window.addEventListener('scroll', function() {
+  let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+  const header = document.querySelector('header');
+  const btn = document.getElementById('scrollTop');
+
+  if (currentScroll > 100) {
+    btn.classList.add('show');
+    if (currentScroll > lastScroll) header.classList.add('hidden');
+    else header.classList.remove('hidden');
+  } else {
+    btn.classList.remove('show');
+  }
+  lastScroll = currentScroll <= 0 ? 0 : currentScroll;
+});
 </script>
+
 </body>
 </html>
