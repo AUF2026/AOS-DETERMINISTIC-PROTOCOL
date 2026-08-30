@@ -1,4 +1,4 @@
-﻿============================================================
+============================================================
    AOS TOKEN (AOS120) - WHITE PAPER V1.0 MASTER_LOCKED
 ============================================================
 
@@ -8,18 +8,19 @@ PRECISIONE:   120-DEC INVARIANTE (Teoremi di Faure I-V)
 DATA AUDIT:   14 Marzo 2026
 
 1. DEFINIZIONE TECNICA
-Il token AOS120 è l'asset digitale ancorato alla coerenza 
-matematica assoluta. Utilizza il Kernel AOS per annullare 
-il rumore stocastico e le allucinazioni probabilistiche 
-dei sistemi standard a 64-bit. Ogni unità di $AOS 
-rappresenta una quota di potenza di calcolo deterministico.
+Il token AOS120 è un asset digitale ancorato alla coerenza
+matematica deterministica. Utilizza il Kernel AOS per
+eliminare il rumore stocastico e le allucinazioni
+probabilistiche dei sistemi standard a 64-bit. Ogni unità
+di $AOS rappresenta una quota di potenza di calcolo
+deterministico ad alta precisione.
 
 2. UTILITY (VALORE REALE)
-Il valore di AOS120 non è speculativo, ma funzionale:
+Il valore di AOS120 è funzionale e non speculativo:
 - VALIDAZIONE: Audit per infrastrutture critiche (RINA).
 - AEROSPACE: Integrità dati per missioni spaziali (ASI).
 - BIO-SYNC: Sincronizzazione neuronale e genomica (TERT).
-- CRYPTO: Fattorizzazione SHA-2048/4096 (Bypass Logico).
+- CRYPTO: Modelli deterministici di compressione SHA-2048/4096.
 
 3. SCARSITÀ DETERMINISTICA (Teorema II)
 - Supply Totale: 1.000.000 $AOS
