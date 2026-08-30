@@ -1,7 +1,7 @@
 {
   "name": "AOS MASTER ORACLE",
   "symbol": "AOS",
-  "description": "Accesso formale al Kernel AOS144 v3.0. Calcolo operante in architettura High Decimal Fixed-Point (HDFP) con risoluzione asintotica ad errore macchina zero. Asset protetto da normativa Golden Power (L. 56/2012). Proprieta esclusiva di Alain Faure.",
+  "description": "Accesso formale al Kernel AOS144 v3.0. Calcolo operante in architettura High Decimal Fixed-Point (HDFP) con risoluzione asintotica ad errore macchina zero. Asset protetto da normativa Golden Power (L. 56/2012). Proprietà esclusiva di Alain Faure.",
   "image": "https://raw.githubusercontent.com/AUF2026/AOS-DETERMINISTIC-PROTOCOL/main/assets/Triangolo_U235_1000x1000px.png",
   "external_url": "https://github.com/AUF2026/AOS-DETERMINISTIC-PROTOCOL/wiki/07.-Lattice-Universale-e-PoD",
   "attributes": [
@@ -27,4 +27,3 @@
     ]
   }
 }
-
