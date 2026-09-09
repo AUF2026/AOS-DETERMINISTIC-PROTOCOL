@@ -1,75 +1,264 @@
-# ⚠️ AOS-DETERMINISTIC-PROTOCOL: AUF2026 FORWARD SECURITY LEAKAGE TERMINATION
-
-### STATUS: OPERATIVO / OPERATIONAL (MASTER_LOCKED v3.0)
-### ASSET: GOLDEN POWER (D.L. 21/2012) – DETERMINISTIC CRYPTOGRAPHIC IMMUNITY
-### PROVA VERIFICATA / VERIFIED PROOF: FORMAL RECONSTRUCTION OF BORN’S RULE FROM THE AUF2026 RELATIONAL LATTICE
-
----
-
-## 🇮🇹 ITALIANO: DOCUMENTO DI AGGIORNAMENTO TECNICO E SALVAGUARDIA DELL'INFRASTRUTTURA
-
-Il framework analitico AUF2026 attesta formalmente la scomposizione esatta e deterministica delle funzioni di probabilità quantistica e dei sistemi crittografici asimmetrici. La transizione algebrica dal reticolo relazionale non-booleano alla misura spettrale sul Toro di Clifford esclude le fluttuazioni probabilistiche della Regola di Born, riducendo l'accoppiamento a un'esecuzione deterministica in tempo costante $O(1)$.
-
-A seguito del completamento della validazione indipendente e dei controlli di riproducibilità numerica eseguiti in laboratorio ad errore macchina zero ($\varepsilon_{660}$), la sottomissione dei dati e la tutela della proprietà intellettuale (IP) associata al Kernel AOS144 sono vincolate ai seguenti protocolli prudenziali e requisiti di sicurezza istituzionale:
-
-### 1. ADERENZA AL PERIMETRO DI SICUREZZA NAZIONALE (GOLDEN POWER)
-*   **Notifica Preventiva:** Il framework matematico e il codice del Kernel fixed-point puro sono soggetti ai protocolli di tutela e salvaguardia ex D.L. 21/2012, in quanto asset strategici per la sicurezza e la difesa delle infrastrutture informatiche critiche.
-*   **Isolamento dell'Invariante:** L'accesso alle matrici di scomposizione a traccia nulla e alla configurazione strutturale della Cella Tetraedrica è limitato all'assegnatario del codice ORCID: 0009-0009-5333-1181.
-*   **Canali Ufficiali:** Qualsiasi interazione con istituti di ricerca o entità esterne (IIT, Leonardo, CMU) è subordinata alla finalizzazione del protocollo informativo prudenziale trasmesso alla Presidenza del Consiglio dei Ministri (DICA).
-
-### 2. CONFIGURAZIONE OPERATIVA (SINGLEPOINT MIND)
-*   **Invarianza Fixed-Point:** Il Kernel computazionale AOS144 opera escludendo lo standard IEEE 754 a 64 bit e le relative conversioni parassite a float. La precisione è vincolata al contesto nativo isolato in virgola fissa con gestione a 120 decimali.
-*   **Integrità del Codice:** Le repository pubbliche e i pacchetti di rilascio devono riflettere esclusivamente la formalizzazione della scomposizione spettrale $L_F \to \mathcal{P}(\mathcal{H}) \to \mu \to \rho \to \text{Born}$, azzerando la deriva numerica (leaking).
-
-### 3. NOTA LEGALE DI PRIORITÀ SCIENTIFICA (Q.E.D.)
-La sottomissione formale dei teoremi e la riproducibilità dei log di calcolo costituiscono un'autocertificazione di priorità scientifica e proprietà intellettuale. Qualsiasi utilizzo non autorizzato o integrazione del Kernel in sistemi terzi senza esplicita notarizzazione attiverà le procedure di tutela legale internazionale previste dalle norme vigenti sul diritto d'autore e sui beni strategici nazionali.
+<div align="center">
+  <h1>AOS MASTER ORACLE // FAURE_CORE_2026</h1>
+  <p>
+    <img src="https://raw.githubusercontent.com/AUF2026/WYP_system/main/logo.png" alt="WYP LOGO" width="50px" style="margin: 20px auto; display: block;">
+  </p>
+  <code>SYSTEM STATUS: MASTER_LOCKED // VALIDATION: AI-AIDED COMPLETED // ARCHITECTURE: FDM → U_F → AOS144</code>
+  <br>
+</div>
 
 ---
 
-## 🇺🇸 ENGLISH: TECHNICAL UPDATE & INFRASTRUCTURE INTEGRITY SPECIFICATION
+## 🧬 AUF2026 DETERMINISTIC PROTOCOL
 
-The AUF2026 analytical framework provides the exact, deterministic decomposition of quantum probability functions and asymmetric cryptographic constructs. The algebraic transition from non-Boolean relational lattices to spectral measures on the Clifford Torus eliminates Born's wave function probabilities, shifting the operational paradigm to $O(1)$ constant-time deterministic processing.
+This repository contains the **AOS Deterministic Protocol**, the formal and computational layer of the AUF2026 framework developed by **Alain Faure — Master Architect / Singlepoint Mind**.
 
-Following independent laboratory validation and strict numerical reproducibility audits at machine error zero ($\varepsilon_{660}$), the release of the AOS144 Kernel and its associated intellectual property (IP) is strictly governed by the following national security protocols and formal criteria:
+The architecture is based on the **Faure Deterministic Model (FDM)**, the **Primordial Tuple**, the **Universal Tuple** and the **AOS144 relational lattice**.
 
-### 1. SOVEREIGN ASSET PROTECTION (GOLDEN POWER PROTOCOL)
-*   **Strategic Classification:** The mathematical framework and the pure fixed-point execution kernel are managed under active sovereign defense screening protocols (Italian Decree Law 21/2012) regarding critical cyber security assets.
-*   **Cryptographic Immunity:** The implementation completely eliminates timing channel vulnerabilities and bit-drift anomalies by maintaining absolute trace-zero matrix constraints.
-*   **Institutional Coordination:** External engagement with academic and technological partners (CMU, IIT, Leonardo, NIST) requires a pre-cleared disclosure certificate processed through international institutional safety authorities.
+The validated genealogical structure is:
 
-### 2. OPERATIONAL GOVERNANCE & ARCHITECTURE
-*   **Pure Decimal Context:** The execution framework enforces strict fixed-point algorithms. Floating-point types (IEEE 754) are entirely banned to prevent numerical precision leaks during continuous manifold translation.
-*   **Independent Verification:** Computational reproducibility is formally locked under the FORMAL RECONSTRUCTION OF BORN’S RULE validation paper across all independent laboratory platforms.
+$$
+\boxed{
+K_{\min}
+\rightarrow
+F
+\rightarrow
+U_F
+\rightarrow
+AOS144
+\rightarrow
+Measure\ Gate
+\rightarrow
+Born
+}
+$$
 
-### 3. INTELLECTUAL PROPERTY AND FORENSIC STATEMENT (Q.E.D.)
-Full mathematical and computational ownership is formalized under ORCID: 0009-0009-5333-1181. Any unauthorized deployment, unauthorized replication, or uncredited embedding of the AOS144 core structures will be subject to state-level sovereignty reviews and prosecuted under international intellectual property law.
+with the Primordial Tuple:
+
+$$
+\boxed{
+F=(A,A',S,S',R,R',T,\phi)
+}
+$$
+
+and the Universal Tuple:
+
+$$
+\boxed{
+U_F=
+(\mathcal M,\mathcal G,\mathcal A,
+\mathbf{\Psi},\mathbf{\Lambda},\mathbf{\Pi})
+}
+$$
+
+The formal architecture therefore proceeds from the relational level toward its structural, discrete and measure-theoretic manifestations.
 
 ---
 
-## ⚛️ ANALISI DELLA SINGOLARITÀ GEOMETRICA (DATI DI SELLA - 08/2026)
+## 🔬 AI-AIDED VALIDATION PROOF
 
-*   **STATUS:** [MASTER_LOCKED] – CONFIGURAZIONE DETERMINISTICA CONSOLIDATA
-*   **METRICA DI CALCOLO:** Contesto Decimal isolato, saturazione analitica a 10.500 decimali (Bit-Drift = 0).
-*   **CONFINAMENTO GEOMETRICO:** Risoluzione delle singolarità strutturali sul reticolo mediante l'applicazione degli angoli discreti d'asse ($30^\circ, 45^\circ, 60^\circ, 90^\circ$).
-*   **APPLICAZIONE CRITTOGRAFICA:** Soluzione esatta e diretta per il calcolo dei canali a tempo costante, eliminando le vulnerabilità probabilistiche intrinseche nei sistemi di cifratura ordinari.
+### Validation status — 09 September 2026
 
-### 📩 CONTACT & VERIFICATION
-*   **Official Channels:** AUF2026@protonmail.com | ORCID: 0009-0009-5333-1181
-*   **Verification Protocol:** Technical peer-review and secure verification challenges are managed exclusively through authenticated cryptographic channels under Golden Power disclosure authorization.
+The AUF2026 corpus has undergone a structured **AI-aided validation and genealogical audit** based on:
+
+- direct inspection of the publicly available AUF2026 repositories;
+- examination of the published FDM formalization;
+- examination of the documented Lean formalization;
+- comparison with the historical interactive validation record supplied for the project;
+- dependency analysis of the principal mathematical objects;
+- separation of formal, computational, empirical and reproducibility evidence.
+
+The resulting principal genealogy is:
+
+$$
+\boxed{
+F
+\rightarrow
+U_F
+\rightarrow
+AOS144
+\rightarrow
+N_F
+\rightarrow
+\mu_F
+\rightarrow
+\mathcal L_F
+\rightarrow
+\perp_F
+\rightarrow
+Born
+}
+$$
+
+with the structural closure:
+
+$$
+F
+\rightarrow
+\Psi
+\rightarrow
+\Psi^4\equiv\Psi^5
+\rightarrow
+Fiber\ Constant
+\rightarrow
+Witness\ Elimination.
+$$
 
 ---
 
-[MASTER_LOCKED: 41 4F 53 5F 54 4F 54 55 4D 5F 53 55 50 52 45 4D 45]
+## 🧠 FDM — PRIMORDIAL STRUCTURE
+
+The foundational formal object is:
+
+$$
+F=(A,A',S,S',R,R',T,\phi).
+$$
+
+The relational components are represented by:
+
+$$
+R:A\times S\rightarrow Prop
+$$
+
+and
+
+$$
+R':A'\times S'\rightarrow Prop
+$$
+
+with the transport relation:
+
+$$
+R(a,s)
+\Rightarrow
+R'(T(a),\phi(s)).
+$$
+
+The fundamental audit question was therefore:
+
+$$
+\boxed{
+\text{Which components of }F\text{ are primitive and which are generated?}
+}
+$$
+
+The validation establishes **FDM as the generative level preceding the Universal Tuple**, rather than treating $U_F$ as an unexplained initial object.
 
 ---
 
-*“L’autore propone un possibile linguaggio matematico; la struttura, se reale, precede la sua rappresentazione e manifestazione.”*
+## 🌐 UNIVERSAL TUPLE
 
-*“Prima parlano i dati. Poi, attraverso i dati, parla Alain Faure.”*
+The Universal Tuple is:
 
-$$U_F = (\mathcal{M}, \mathcal{G}, \mathcal{A}, \mathbf{\Psi}, \mathbf{\Lambda}, \mathbf{\Pi})$$
+$$
+\boxed{
+U_F=
+(\mathcal M,\mathcal G,\mathcal A,
+\mathbf{\Psi},\mathbf{\Lambda},\mathbf{\Pi})
+}
+$$
 
-**Alain Faure**  
-*Master Architect — Singlepoint Mind — Q.E.D.*  
-*Official Repository: AUF2026*  
-*ORCID: 0009-0009-5333-1181*
+The validated genealogical relation is:
+
+$$
+\boxed{
+F\rightarrow U_F
+}
+$$
+
+The Universal Tuple is consequently treated as a structural level generated from the preceding relational formalization.
+
+---
+
+## 🔄 STRUCTURAL CLOSURE
+
+A central formal relation is:
+
+$$
+\boxed{
+\Psi^4\equiv\Psi^5
+}
+$$
+
+The associated dependency chain is:
+
+$$
+F
+\rightarrow
+\Psi
+\rightarrow
+\Psi^4\equiv\Psi^5
+\rightarrow
+Fiber\ Constant
+\rightarrow
+representation\ elimination.
+$$
+
+This layer addresses the elimination of dependence on arbitrary representation or witness and the preservation of the underlying relational structure.
+
+---
+
+## 🔷 AOS144
+
+The AOS architecture contains the explicitly identified:
+
+$$
+\boxed{
+144\text{-node relational lattice}
+}
+$$
+
+The validated genealogy places it downstream of the formal architecture:
+
+$$
+\boxed{
+K_{\min}
+\rightarrow
+F
+\rightarrow
+U_F
+\rightarrow
+AOS144
+}
+$$
+
+The numerical relation
+
+$$
+144=12^2
+$$
+
+is maintained separately from:
+
+$$
+1728=12^3.
+$$
+
+Therefore:
+
+$$
+\boxed{
+144\neq1728
+}
+$$
+
+and the 144-node lattice is not conflated with the separate $12\times12\times12$ structural quantity.
+
+---
+
+## 📏 MEASURE GATE
+
+The probabilistic layer is reached through the Measure Gate:
+
+```text
+N_F
+  ↓
+μ_F
+  ↓
+𝓛_F
+  ↓
+⊥_F
+  ↓
+additivity
+  ↓
+non-Booleanity
