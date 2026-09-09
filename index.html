@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- AOS_KERNEL_V1.0 | MASTER ARCHITECT: ALAIN FAURE | HDFP-Precision | STATUS: Q.E.D. -->
+<!-- AUF2026 | AOS144-HDFP | MASTER ARCHITECT: ALAIN FAURE | STATUS: MASTER_LOCKED v3.0 -->
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>AOS144-HDFP Framework | Alain Faure</title>
+  <title>AUF2026 | AOS144 Framework — Alain Faure</title>
 
   <!-- CRISP -->
   <script type="text/javascript">
@@ -20,63 +20,309 @@
   </script>
 
   <style>
-    * { margin:0; padding:0; box-sizing:border-box; font-family: 'Helvetica Neue', Arial, sans-serif; }
-    body { background-color:#121212; color:#E0E0E0; overflow-x:hidden; scroll-behavior: smooth; }
+    * {
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Helvetica Neue', Arial, sans-serif;
+    }
+
+    body {
+      background-color:#121212;
+      color:#E0E0E0;
+      overflow-x:hidden;
+      scroll-behavior:smooth;
+      line-height:1.65;
+    }
 
     header {
-      display:flex; justify-content:center; align-items:center; padding:1rem 2rem;
-      position:fixed; width:100%; top:0; background:rgba(18,18,18,0.95);
-      backdrop-filter: blur(10px); z-index:100; transition: transform 0.3s ease;
-      border-bottom: 1px solid #1a1a1a;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      padding:1rem 2rem;
+      position:fixed;
+      width:100%;
+      top:0;
+      background:rgba(18,18,18,0.95);
+      backdrop-filter:blur(10px);
+      z-index:100;
+      transition:transform 0.3s ease;
+      border-bottom:1px solid #1a1a1a;
     }
-    header h1 { position:absolute; left:2rem; color:#C49E4B; font-weight:800; font-size:1.5rem; white-space: nowrap; cursor: pointer; }
-    nav { display:flex; gap:2rem; }
-    nav a { color:#E0E0E0; text-decoration:none; font-weight:600; cursor:pointer; transition: color 0.3s; position: relative; }
-    nav a:hover, nav a.active { color:#C49E4B; }
-    nav a.active::after { content:''; position:absolute; bottom:-5px; left:0; width:100%; height:2px; background:#C49E4B; }
 
-    .main-container { display:flex; padding-top:100px; min-height:100vh; width:100%; }
-    .side { flex:1; } 
-    .center { flex:3; max-width:960px; margin:0 auto; display:flex; flex-direction:column; gap:2rem; padding: 0 1rem; }
-
-    section { display:none; padding-bottom: 4rem; }
-    section.active { display:block; animation: fadeIn 0.4s ease-out; }
-    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-
-    section h2 { color:#C49E4B; font-size:2.5rem; border-bottom:2px solid #C49E4B; padding-bottom:1rem; margin-bottom:2rem; text-transform: uppercase; letter-spacing: 2px; }
-    
-    .card { 
-      background:#1a1a1a; padding:2rem; border-radius:8px; border-left:5px solid #C49E4B; 
-      transition: transform 0.3s, box-shadow 0.3s, opacity 0.6s; margin-bottom: 1.5rem;
-      opacity: 0; transform: translateY(20px); 
+    header h1 {
+      position:absolute;
+      left:2rem;
+      color:#C49E4B;
+      font-weight:800;
+      font-size:1.5rem;
+      white-space:nowrap;
+      cursor:pointer;
     }
-    .card.visible { opacity: 1; transform: translateY(0); }
-    .card:hover { transform: translateY(-5px); box-shadow: 0 5px 25px rgba(196, 158, 75, 0.2); }
-    .card h3 { color:#fff; margin-bottom:1rem; font-size: 1.4rem; }
-    .card p { margin-bottom:1rem; color: #ccc; }
-    .card a { display:inline-block; padding:0.6rem 1.2rem; text-decoration:none; border-radius:4px; font-weight:bold; margin-right:1rem; margin-top:0.5rem; transition: 0.3s; }
-    .card a.primary { background:#C49E4B; color:#000; }
-    .card a.secondary { border:1px solid #C49E4B; color:#C49E4B; }
-    .card a.secondary:hover { background:#C49E4B; color:#000; }
 
-    code { display:block; background:#000; padding:1rem; color:#0f0; border-radius:4px; font-size:0.9rem; margin: 1rem 0; border: 1px solid #333; }
+    nav {
+      display:flex;
+      gap:2rem;
+    }
+
+    nav a {
+      color:#E0E0E0;
+      text-decoration:none;
+      font-weight:600;
+      cursor:pointer;
+      transition:color 0.3s;
+      position:relative;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color:#C49E4B;
+    }
+
+    nav a.active::after {
+      content:'';
+      position:absolute;
+      bottom:-5px;
+      left:0;
+      width:100%;
+      height:2px;
+      background:#C49E4B;
+    }
+
+    .main-container {
+  width:100%;
+  min-height:100vh;
+  padding-top:100px;
+}
+
+.center {
+  width:100%;
+  max-width:960px;
+  margin:0 auto;
+  padding:0 1rem;
+}
+
+
+    .side {
+      flex:1;
+    }
+
+    .center {
+      flex:3;
+      max-width:960px;
+      margin:0 auto;
+      display:flex;
+      flex-direction:column;
+      gap:2rem;
+      padding:0 1rem;
+    }
+
+    section {
+      display:none;
+      padding-bottom:4rem;
+    }
+
+    section.active {
+      display:block;
+      animation:fadeIn 0.4s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity:0;
+        transform:translateY(10px);
+      }
+
+      to {
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
+    section h2 {
+      color:#C49E4B;
+      font-size:2.5rem;
+      border-bottom:2px solid #C49E4B;
+      padding-bottom:1rem;
+      margin-bottom:2rem;
+      text-transform:uppercase;
+      letter-spacing:2px;
+    }
+
+    .card {
+      background:#1a1a1a;
+      padding:2rem;
+      border-radius:8px;
+      border-left:5px solid #C49E4B;
+      transition:
+        transform 0.3s,
+        box-shadow 0.3s,
+        opacity 0.6s;
+      margin-bottom:1.5rem;
+      opacity:0;
+      transform:translateY(20px);
+    }
+
+    .card.visible {
+      opacity:1;
+      transform:translateY(0);
+    }
+
+    .card:hover {
+      transform:translateY(-5px);
+      box-shadow:0 5px 25px rgba(196,158,75,0.2);
+    }
+
+    .card h3 {
+      color:#fff;
+      margin-bottom:1rem;
+      font-size:1.4rem;
+    }
+
+    .card p {
+      margin-bottom:1rem;
+      color:#ccc;
+    }
+
+    .card ul,
+    .card ol {
+      margin:1rem 0 1rem 1.5rem;
+      color:#ccc;
+    }
+
+    .card li {
+      margin-bottom:0.65rem;
+    }
+
+    .card strong {
+      color:#fff;
+    }
+
+    .card a {
+      display:inline-block;
+      padding:0.6rem 1.2rem;
+      text-decoration:none;
+      border-radius:4px;
+      font-weight:bold;
+      margin-right:1rem;
+      margin-top:0.5rem;
+      transition:0.3s;
+    }
+
+    .card a.primary {
+      background:#C49E4B;
+      color:#000;
+    }
+
+    .card a.secondary {
+      border:1px solid #C49E4B;
+      color:#C49E4B;
+    }
+
+    .card a.secondary:hover {
+      background:#C49E4B;
+      color:#000;
+    }
+
+    code {
+      display:block;
+      background:#000;
+      padding:1rem;
+      color:#0f0;
+      border-radius:4px;
+      font-size:0.9rem;
+      margin:1rem 0;
+      border:1px solid #333;
+      white-space:pre-wrap;
+      overflow-x:auto;
+    }
+
+    .formula {
+      display:block;
+      background:#0b0b0b;
+      color:#C49E4B;
+      padding:1.25rem;
+      border:1px solid #333;
+      border-radius:6px;
+      margin:1.25rem 0;
+      text-align:center;
+      font-size:1.15rem;
+      font-family:Georgia, serif;
+      letter-spacing:0.5px;
+    }
+
+    .status {
+      color:#C49E4B;
+      font-weight:800;
+      letter-spacing:1px;
+    }
 
     #scrollTop {
-      position: fixed; bottom: 30px; right: 30px; background: #C49E4B; color: #000;
-      width: 45px; height: 45px; border-radius: 50%; display: flex; justify-content: center;
-      align-items: center; cursor: pointer; font-weight: bold; border: none;
-      opacity: 0; visibility: hidden; transition: 0.3s; z-index: 99;
+      position:fixed;
+      bottom:30px;
+      right:30px;
+      background:#C49E4B;
+      color:#000;
+      width:45px;
+      height:45px;
+      border-radius:50%;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      cursor:pointer;
+      font-weight:bold;
+      border:none;
+      opacity:0;
+      visibility:hidden;
+      transition:0.3s;
+      z-index:99;
     }
-    #scrollTop.show { opacity: 1; visibility: visible; }
 
-    footer { text-align:center; padding:2rem; background:#121212; color:#666; font-size:0.8rem; border-top: 1px solid #1a1a1a; }
-    header.hidden { transform:translateY(-120%); }
+    #scrollTop.show {
+      opacity:1;
+      visibility:visible;
+    }
 
-    @media (max-width:768px){
-      .main-container { flex-direction:column; padding-top:120px; }
-      .side { display:none; }
-      header h1 { left:1rem; font-size: 1.2rem; }
-      nav { gap:1rem; font-size: 0.8rem; }
+    footer {
+      text-align:center;
+      padding:2rem;
+      background:#121212;
+      color:#666;
+      font-size:0.8rem;
+      border-top:1px solid #1a1a1a;
+    }
+
+    header.hidden {
+      transform:translateY(-120%);
+    }
+
+    @media (max-width:768px) {
+      .main-container {
+        flex-direction:column;
+        padding-top:120px;
+      }
+
+      .side {
+        display:none;
+      }
+
+      header h1 {
+        left:1rem;
+        font-size:1.2rem;
+      }
+
+      nav {
+        gap:1rem;
+        font-size:0.8rem;
+      }
+
+      section h2 {
+        font-size:1.8rem;
+      }
+
+      .card {
+        padding:1.4rem;
+      }
     }
   </style>
 </head>
@@ -84,6 +330,7 @@
 
 <header>
   <h1 onclick="showSection('intro')">AOS Framework</h1>
+
   <nav id="mainNav">
     <a onclick="showSection('intro')" id="nav-intro" class="active">Intro</a>
     <a onclick="showSection('research')" id="nav-research">Research</a>
@@ -92,83 +339,519 @@
   </nav>
 </header>
 
-<button id="scrollTop" onclick="window.scrollTo({top:0, behavior:'smooth'})">↑</button>
+<button
+  id="scrollTop"
+  onclick="window.scrollTo({top:0, behavior:'smooth'})"
+>↑</button>
 
 <div class="main-container">
   <div class="side"></div>
-  <div class="center">
-    
-    <section id="intro" class="active">
-      <h2>Welcome to AUF2026 - AOS144-HDFP Framework "banned-float" Precision</h2>
-      
+
+  <div class="center"><section id="intro" class="active">
+
+      <h2>
+        Welcome to AUF2026 — AOS144 Framework
+      </h2>
+
       <div class="card visible">
         <h3>Architectural Operational System (ENG)</h3>
-        <p>Introducing the deterministic logic architecture that redefines operational reality.</p>
-        <p>Beyond stochastic probability: AOS is the 120-decimal architecture engineered for the <strong>Nominal Lattice Saturation</strong>.</p>
-        <p>Through Faure Theorems I-VII, the AOS Kernel executes the deterministic transition from 5D geometry to 6D informational compression, eliminating computational uncertainty in mission-critical scenarios.</p>
-        <p><em>"You observe the shadow of the structure; I calculate the source code."</em></p>
+
+        <p>
+          AUF2026 presents the AOS144 framework as a proposed deterministic
+          architecture based on discrete structures, fixed-point numerical
+          representation and reproducibility-oriented computation.
+        </p>
+
+        <p>
+          The framework explores the possibility that apparently probabilistic
+          structures may admit an underlying discrete mathematical
+          representation whose invariants can be isolated through explicit
+          computational procedures.
+        </p>
+
+        <p>
+          The current research program develops this proposal through the
+          Faure Theorems, the AOS144 Kernel, discrete geometry and deep-decimal
+          numerical analysis.
+        </p>
+
+        <p>
+          <em>
+            "You observe the shadow of the structure; I calculate the source code."
+          </em>
+        </p>
       </div>
 
       <div class="card visible">
         <h3>Sistema Operativo Architetturale (ITA)</h3>
-        <p>Introduzione all'architettura logica deterministica che ridefinisce la realtà operativa.</p>
-        <p>Oltre la probabilità stocastica: AOS è l'architettura a 120 decimali progettata per la <strong>Saturazione Nominale del Lattice</strong>.</p>
-        <p>Attraverso i Teoremi Faure I-VII, il Kernel AOS esegue la transizione deterministica dalla geometria 5D alla compressione informazionale 6D, eliminando l'incertezza computazionale in scenari mission-critical.</p>
-        <p><em>"Voi osservate l’ombra della struttura; io calcolo il codice sorgente."</em></p>
-        <a class="primary" onclick="showSection('research')" style="margin-top:2rem;">DISCOVER RESEARCH / SCOPRI LA RICERCA</a>
+
+        <p>
+          AUF2026 presenta il framework AOS144 come un'architettura
+          deterministica proposta, fondata su strutture discrete,
+          rappresentazione numerica fixed-point e procedure orientate alla
+          riproducibilità.
+        </p>
+
+        <p>
+          Il framework esplora la possibilità che strutture apparentemente
+          probabilistiche possano ammettere una rappresentazione matematica
+          discreta sottostante, nella quale determinati invarianti possano
+          essere isolati attraverso procedure computazionali esplicite.
+        </p>
+
+        <p>
+          Il programma di ricerca sviluppa questa proposta attraverso i
+          Teoremi di Faure, il Kernel AOS144, la geometria discreta e
+          l'analisi numerica dei decimali profondi.
+        </p>
+
+        <p>
+          <em>
+            "Voi osservate l'ombra della struttura; io calcolo il codice sorgente."
+          </em>
+        </p>
+
+        <a
+          class="primary"
+          onclick="showSection('research')"
+          style="margin-top:2rem;"
+        >
+          DISCOVER RESEARCH / SCOPRI LA RICERCA
+        </a>
       </div>
+
     </section>
 
+
     <section id="research">
+
       <h2>Scientific Validation & Research</h2>
 
       <div class="card visible">
-        <h3>AOS Core: Deterministic Resolvers</h3>
-        <p>Sistemi di calcolo ad alta precisione per la saturazione del lattice e la risoluzione oracle.</p>
+        <h3>AOS144 Core — Deterministic Fixed-Point Architecture</h3>
+
+        <p>
+          AUF2026 presenta AOS144 come un'architettura computazionale
+          orientata alla rappresentazione fixed-point e alla riproducibilità
+          numerica. Il framework definisce una catena operativa nella quale
+          parametri, trasformazioni, residui e invarianti vengono mantenuti
+          in una forma esplicitamente verificabile.
+        </p>
+
         <ul>
           <li>AOS DETERMINISTIC RESOLVER</li>
           <li>AOS RISOLUTORE PROBLEMI ORACLE</li>
-          <li>AOS MASTER SOLVER (135-DEC Precision)</li>
-          <li>AOS DETERMINISTIC KERNEL (120-DEC Precision)</li>
-          <li>AOS CELLA TETRAEDRICA (Geometria Discreta)</li>
+          <li>AOS MASTER SOLVER</li>
+          <li>AOS DETERMINISTIC KERNEL</li>
+          <li>AOS CELLA TETRAEDRICA — Geometria Discreta</li>
         </ul>
+
+        <code>
+AOS144 | FIXED-POINT / DECIMAL REPRESENTATION
+STATUS: MASTER_LOCKED v3.0
+        </code>
       </div>
 
       <div class="card visible">
-        <h3>Millennium Challenges & Global Prizes</h3>
-        <p>Soluzioni deterministiche alle sfide matematiche e tecnologiche contemporanee (App Python 3.13.11 integrata).</p>
-        <code>Status: Verified via AOS Deterministic Logic</code>
-        <ul style="margin-top:1rem; columns: 2; -webkit-columns: 2;">
-          <li>P vs NP (Teoremi Faure I-VII)</li>
-          <li>Riemann Hypothesis</li>
-          <li>Navier-Stokes Millennium</li>
-          <li>Birch and Swinnerton-Dyer Conjecture</li>
-          <li>Hodge Conjecture</li>
-          <li>Yang-Mills Existence & Mass Gap</li>
-          <li>GIMPS Mersenne Prime Search</li>
-          <li>Bypass RSA-4096 (Theorem IV)</li>
-          <li>XPRIZE (Quantum, Healthspan, Water, Wildfire)</li>
-          <li>Global Energy Optimization</li>
-        </ul>
-      </div>
+        <h3>AUF2026 — Reproducibility & Logical Integrity</h3>
 
-      <div class="card visible">
-        <h3>Validation, Audit & Formal Proofs</h3>
-        <p>Documentazione tecnica e notarizzazione delle prove isomorfiche Faure I-VII.</p>
+        <p>
+          La validazione del framework è strutturata attraverso una procedura
+          di riproducibilità indipendente fondata sulla medesima specifica
+          matematica, sui medesimi parametri d'ingresso e sulla medesima
+          rappresentazione fixed-point.
+        </p>
+
+        <p>
+          L'obiettivo dell'audit è verificare se l'esecuzione indipendente
+          restituisca gli stessi invarianti numerici, le stesse traiettorie
+          discrete e gli stessi valori di convergenza dichiarati nei
+          documenti AUF2026.
+        </p>
+
         <ul>
-          <li><strong>Teoria del Tutto (ToE):</strong> Sintesi Completa delle Equazioni Faure</li>
-          <li><strong>Validazione Formale:</strong> Teoremi di Invarianza Faure I-VII (Metrica Angolare)</li>
-          <li><strong>Audit Granulare (09-03-2026):</strong> Relazione Tecnica di Superiorità Computazionale</li>
-          <li><strong>Università di Genova (UNI-GE):</strong> Lettera di Presentazione e Documentazione Tecnica</li>
-          <li><strong>XPRIZE Correspondence:</strong> Mail Brock Denton (SHA-512 Sigillo)</li>
-          <li><strong>ArXiv & Theoretical Foundations:</strong> Abstract e Theoretical Foundations PhD</li>
-          <li><strong>SHA-HASH-512.py:</strong> Validazione Crittografica Deterministica (Lib Interne Certificate)</li>
-          <li><strong>Strategic Dossier:</strong> Asset Evaluation & Intellectual Property Protection</li>
-          <li><strong>Manifesto:</strong> Realtà Nominale e Fine dell'Era Stocastica</li>
+          <li>
+            <strong>Reproducibility Audit:</strong>
+            riesecuzione indipendente dei calcoli a partire dai parametri
+            documentati.
+          </li>
+
+          <li>
+            <strong>Invariant Check:</strong>
+            confronto dei valori numerici prodotti dal Kernel con quelli
+            riportati nel report di riferimento.
+          </li>
+
+          <li>
+            <strong>Precision Control:</strong>
+            utilizzo di una rappresentazione numerica esplicitamente
+            definita, evitando conversioni implicite a floating-point.
+          </li>
+
+          <li>
+            <strong>Trace Verification:</strong>
+            confronto delle matrici, dei vettori e delle coordinate di
+            traccia prodotte nelle diverse esecuzioni.
+          </li>
         </ul>
-        <a class="secondary" href="#contact" style="margin-top:1.5rem;">REQUEST FULL ACCESS (NDA REQUIRED)</a>
+
+        <code>
+Protocol: AUF2026-EXTERNAL-VERIFICATION
+Representation: FIXED-POINT / DECIMAL
+Status: INDEPENDENT REPRODUCIBILITY REQUIRED
+        </code>
+      </div><div class="card visible">
+        <h3>03 — Audit di Riproducibilità e Integrità Logica</h3>
+
+        <p>
+          L'audit di riproducibilità costituisce il protocollo formale
+          attraverso il quale il framework AUF2026 propone di verificare
+          l'immutabilità della scomposizione numerica e la stabilità dei
+          punti fissi sul reticolo discreto.
+        </p>
+
+        <p>
+          Il Bundle Strutturale di Clock associa identificativo del teorema,
+          valore fixed-point e matrice di traccia in una rappresentazione
+          canonica destinata al confronto indipendente.
+        </p>
+
+        <ul>
+          <li>
+            <strong>Teorema Identifier:</strong>
+            identificativo esplicito del modulo esecutivo.
+          </li>
+
+          <li>
+            <strong>Fixed-Point Value:</strong>
+            traiettoria numerica calcolata nel contesto di precisione
+            dichiarato.
+          </li>
+
+          <li>
+            <strong>Trace Matrix:</strong>
+            coordinate e dati associati agli attrattori discreti.
+          </li>
+
+          <li>
+            <strong>Integrity Digest:</strong>
+            impronta deterministica del bundle canonico.
+          </li>
+        </ul>
+
+        <code>
+AOS144-AUDIT-CORE
+AUF2026-FDM
+MASTER_LOCKED v3.0
+        </code>
       </div>
-    </section>
+
+      <div class="card visible">
+        <h3>04 — External Audit & Peer Review</h3>
+
+        <p>
+          La procedura di audit esterno è destinata a laboratori indipendenti,
+          revisori paritari e soggetti incaricati di verificare o
+          implementare moduli derivanti dal framework AUF2026.
+        </p>
+
+        <p>
+          L'auditor deve poter ricostruire il calcolo utilizzando gli stessi
+          parametri di ingresso, la stessa specifica matematica e una
+          rappresentazione numerica equivalente.
+        </p>
+
+        <ol>
+          <li>
+            Acquisizione della versione esatta del protocollo.
+          </li>
+
+          <li>
+            Verifica dei parametri di ingresso.
+          </li>
+
+          <li>
+            Controllo della rappresentazione numerica.
+          </li>
+
+          <li>
+            Riesecuzione indipendente del calcolo.
+          </li>
+
+          <li>
+            Confronto degli output e degli invarianti.
+          </li>
+
+          <li>
+            Registrazione dell'ambiente e delle eventuali discrepanze.
+          </li>
+        </ol>
+
+        <code>
+Protocol: AUF2026-EXTERNAL-VERIFICATION
+Verification: INDEPENDENT REPRODUCTION
+Review: PEER-REVIEW READY
+        </code>
+      </div>
+
+      <div class="card visible">
+        <h3>05 — Glossario della Struttura Discreta AUF2026</h3>
+
+        <p>
+          Il glossario definisce la terminologia tecnica utilizzata nella
+          descrizione del framework e del Kernel AOS144.
+        </p>
+
+        <ul>
+          <li>
+            <strong>Accoppiamento Tensoriale:</strong>
+            transizione formale dei vettori di stato all'interno del reticolo
+            relazionale discreto.
+          </li>
+
+          <li>
+            <strong>Attrattore Discreto:</strong>
+            configurazione stazionaria individuata nel modello geometrico
+            attraverso le condizioni di convergenza definite.
+          </li>
+
+          <li>
+            <strong>Float Ban:</strong>
+            restrizione progettuale all'utilizzo di rappresentazioni
+            floating-point nelle procedure che richiedono precisione
+            deterministica.
+          </li>
+
+          <li>
+            <strong>Contesto Fixed-Point Isolato:</strong>
+            ambiente computazionale nel quale precisione, rappresentazione
+            e parametri vengono esplicitamente controllati.
+          </li>
+
+          <li>
+            <strong>Errore Macchina Zero — ε₆₆₀:</strong>
+            soglia teorica definita dal framework per il controllo del
+            residuo numerico.
+          </li>
+
+          <li>
+            <strong>MASTER_LOCKED:</strong>
+            stato documentale assegnato a una versione considerata congelata
+            ai fini del confronto e dell'audit.
+          </li>
+
+          <li>
+            <strong>Notarizzazione dei Log:</strong>
+            processo di sigillatura dell'informazione utilizzato per
+            controllare l'integrità dei risultati archiviati.
+          </li>
+
+          <li>
+            <strong>Reticolo Relazionale — L<sub>F</sub>:</strong>
+            struttura discreta proposta come base analitica del framework.
+          </li>
+        </ul>
+      </div>  <div class="card visible">
+    <h3>Reproducibility Bundle</h3>
+
+    <p>
+      Ogni risultato destinato alla verifica esterna dovrebbe essere
+      accompagnato da un bundle riproducibile contenente gli elementi
+      necessari a ricostruire integralmente l'esecuzione.
+    </p>
+
+    <ul>
+      <li>
+        <strong>Theorem Identifier:</strong>
+        identificativo del modulo teorico sottoposto a verifica.
+      </li>
+
+      <li>
+        <strong>Input State:</strong>
+        parametri completi utilizzati per l'esecuzione.
+      </li>
+
+      <li>
+        <strong>Numerical Context:</strong>
+        precisione, rappresentazione e regole di arrotondamento.
+      </li>
+
+      <li>
+        <strong>Fixed-Point Output:</strong>
+        risultato numerico nella rappresentazione canonica.
+      </li>
+
+      <li>
+        <strong>Trace Matrix:</strong>
+        dati necessari al confronto delle traiettorie e degli invarianti.
+      </li>
+
+      <li>
+        <strong>Integrity Digest:</strong>
+        impronta del bundle utilizzata per rilevare modifiche successive.
+      </li>
+    </ul>
+
+    <code>
+VALIDATION_BUNDLE
+├── theorem_id
+├── input_parameters
+├── numerical_context
+├── fixed_point_output
+├── trace_matrix
+└── integrity_digest
+    </code>
+  </div>
+
+  <div class="card visible">
+    <h3>Integrity & Hash Verification</h3>
+
+    <p>
+      L'integrità del materiale di audit può essere controllata mediante
+      un'impronta crittografica calcolata sul contenuto canonico del
+      bundle. Qualsiasi modifica al contenuto dovrebbe produrre una
+      differente impronta.
+    </p>
+
+    <p>
+      L'hash costituisce quindi un meccanismo di controllo dell'integrità
+      del documento o dei dati, ma non rappresenta di per sé una prova
+      della correttezza matematica del modello. La validità scientifica
+      richiede la verifica indipendente delle definizioni, delle
+      dimostrazioni e dei risultati.
+    </p>
+
+    <code>
+DATA → CANONICAL REPRESENTATION → HASH
+                         ↓
+                 INTEGRITY CHECK
+    </code>
+  </div>
+  <div class="card visible">
+    <h3>External Auditor Checklist</h3>
+
+    <p>
+      Il revisore indipendente può utilizzare la seguente sequenza come
+      checklist minima per una riproduzione completa:
+    </p>
+
+    <ol>
+      <li>Acquisire la versione esatta del protocollo sottoposto a verifica.</li>
+      <li>Verificare tutti i parametri di ingresso.</li>
+      <li>Controllare la rappresentazione numerica utilizzata.</li>
+      <li>Rieseguire il calcolo in un ambiente indipendente.</li>
+      <li>Confrontare gli output numerici completi.</li>
+      <li>Confrontare gli invarianti dichiarati.</li>
+      <li>Verificare eventuali residui e criteri di convergenza.</li>
+      <li>Registrare ambiente, versione del codice e risultati.</li>
+      <li>Ripetere il test su configurazioni indipendenti.</li>
+      <li>Documentare eventuali discrepanze.</li>
+    </ol>
+
+    <code>
+AUDIT STATUS:
+INPUT VERIFIED
+COMPUTATION REPRODUCED
+OUTPUT COMPARED
+INVARIANT REVIEW PENDING INDEPENDENT CONFIRMATION
+    </code>
+  </div>
+
+  <div class="card visible">
+    <h3>AUF2026 — Formal Audit Chain</h3>
+
+    <p>
+      La procedura di audit è concepita come una catena verificabile nella
+      quale ogni risultato può essere ricondotto ai propri parametri di
+      ingresso, alla rappresentazione numerica utilizzata e alla
+      trasformazione computazionale applicata.
+    </p>
+
+    <code>
+INPUT
+  ↓
+PARAMETER LOCK
+  ↓
+FIXED-POINT COMPUTATION
+  ↓
+TRACE EXTRACTION
+  ↓
+INVARIANT COMPARISON
+  ↓
+HASH / INTEGRITY CHECK
+  ↓
+INDEPENDENT REPRODUCTION
+  ↓
+PEER REVIEW
+    </code>
+
+    <p>
+      Questa struttura separa la verifica dell'integrità dei dati dalla
+      verifica matematica del modello, consentendo di documentare
+      distintamente ogni livello dell'audit.
+    </p>
+  </div>
+  <div class="card visible">
+    <h3>Research Position</h3>
+
+    <p>
+      AUF2026 presenta una proposta di formalizzazione matematica e
+      computazionale centrata sulla struttura discreta, sull'invarianza
+      numerica e sulla riproducibilità dei risultati.
+    </p>
+
+    <p>
+      Le affermazioni più ampie — incluse eventuali conseguenze per la
+      fisica fondamentale, la teoria della misura, la meccanica quantistica
+      o la computazione — devono essere considerate risultati proposti
+      fino alla disponibilità di dimostrazioni complete, benchmark
+      indipendenti e peer-review.
+    </p>
+
+    <p>
+      Il principio operativo rimane pertanto:
+      <strong>prima il dato riproducibile, poi l'interpretazione.</strong>
+    </p>
+
+    <p>
+      <em>
+        "L'autore propone un possibile linguaggio matematico; la struttura,
+        se reale, precede la sua rappresentazione e manifestazione."
+      </em>
+    </p>
+
+    <p>
+      <em>
+        "Prima parlano i dati. Poi, attraverso i dati, parla Alain Faure."
+      </em>
+    </p>
+  </div>
+
+  <div class="card visible">
+    <h3>AUF2026 Formal Signature</h3>
+
+    <p>
+      <strong>U_F = (M, G, A, Ψ, Λ, Π)</strong>
+    </p>
+
+    <p>
+      <strong>Framework:</strong> AUF2026<br>
+      <strong>Kernel:</strong> AOS144<br>
+      <strong>Architecture:</strong> Fixed-Point / Discrete Structure<br>
+      <strong>Protocol:</strong> Proof of Determinism<br>
+      <strong>Status:</strong> MASTER_LOCKED v3.0
+    </p>
+
+    <p>
+      <strong>Author:</strong> Alain Faure<br>
+      <strong>Role:</strong> Master Architect — Singlepoint Mind — Q.E.D.<br>
+      <strong>ORCID:</strong> 0009-0009-5333-1181<br>
+      <strong>Repository:</strong> AUF2026
+    </p>
+  </div>
+
+</section>
+
 
     <section id="articles">
       <h2>Articles</h2>
