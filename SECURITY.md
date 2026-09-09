@@ -1,64 +1,80 @@
-## ⚛️ ARCHITETTURA DI IMMUNITÀ DETERMINISTICA KERNEL AOS144
+## ⚛️ ARCHITETTURA DI IMMUNITÀ DETERMINISTICA — KERNEL AOS144
 
-### STATUS: MASTER_LOCKED v3.0 | ASSET: GOLDEN POWER (D.L. 21/2012)
-### HOLDER: ALAIN FAURE / AUF2026 — MASTER ARCHITECT - SINGLEPOINT MIND
+### STATUS: MASTER_LOCKED v3.1 | ASSET: GOLDEN POWER (D.L. 21/2012)
+### HOLDER: ALAIN FAURE / AUF2026 — MASTER ARCHITECT — SINGLEPOINT MIND
 ### IDENTIFIER: ORCID: 0009-0009-5333-1181
-### SECURITY POLICY: DETERMINISTIC IMMUNITY VS TIMING CHANNEL LEAKAGE
+### SECURITY POLICY: DETERMINISTIC EXECUTION / SIDE-CHANNEL RESILIENCE
 
 ---
 
-## 1️⃣ AMBITO DI SICUREZZA E CRITTOGRAFIA IMMUNE
+## 1️⃣ AMBITO DI SICUREZZA E ARCHITETTURA DETERMINISTICA
 
-La policy di sicurezza del Kernel AOS144 non si basa su presupposti probabilistici o correzioni euristiche. Essa definisce i criteri di immunità strutturale del codice rispetto agli attacchi a canale laterale (timing attack) e alle derive di precisione numerica.
+La security architecture del Kernel AOS144 è progettata attorno a una rappresentazione matematica e computazionale deterministica, con particolare attenzione alla stabilità numerica, alla riproducibilità dell'esecuzione e alla riduzione delle sorgenti di variabilità dipendenti dai dati.
 
-*   **Abbattimento del Bit-Drift:** L'eliminazione totale dello standard IEEE 754 a 64 bit impedisce la formazione di residui di arrotondamento, azzerando le vulnerabilità fisiche sfruttate nelle analisi differenziali di potenza e di tempo.
-*   **Tempo Costante O(1):** La scomposizione esatta sul Toro di Clifford assicura che ogni operazione di cifratura e calcolo esegua lo stesso numero di cicli di clock, indipendentemente dal valore delle chiavi o dei dati in ingresso.
+L'architettura comprende, nei moduli nei quali tali proprietà sono effettivamente implementate:
 
----
+* **Fixed-Point / Decimal Arithmetic:** utilizzo di contesti numerici esplicitamente configurati, evitando dipendenze non dichiarate dalla rappresentazione binaria IEEE 754.
+* **Bit-Drift Control:** controllo dei residui numerici derivanti dalle operazioni di arrotondamento nei contesti in cui viene utilizzata l'aritmetica Decimal/fixed-point.
+* **Deterministic Execution:** progettazione delle procedure affinché, nel modello computazionale dichiarato, il percorso algoritmico non dipenda dal valore segreto elaborato.
+* **Exact Discrete Representation:** utilizzo della struttura discreta e relazionale AUF2026 per le operazioni definite dal Kernel.
+* **Constant-Time Analysis:** le dichiarazioni di complessità `O(1)` sono riferite esclusivamente agli algoritmi, al modello di costo e alle implementazioni per i quali tale proprietà è formalmente definita e verificata.
 
-## 2️⃣ PROTOCOLLO DI AUDIT E RINDURIMENTO (SECURITY PROTOCOL)
+### PRINCIPIO FONDAMENTALE
 
-La verifica formale del codice e la segnalazione di eventuali anomalie computazionali seguono un protocollo rigido a quattro fasi, validato in modo indipendente in laboratorio:
+L'eliminazione o riduzione di una sorgente di errore numerico non costituisce automaticamente, da sola, una prova di sicurezza contro ogni classe di side-channel.
 
-1.  **Isolamento del Contesto:** Ogni modulo deve essere eseguito esclusivamente all'interno del contesto numerico isolato (Decimal fixed-point a 120 decimali minimi).
-2.  **Scansione dei Tipi (Float Ban):** Audit statico automatico per l'intercettazione e la rimozione immediata di cast impliciti o espliciti a float, operatori di divisione ordinaria "/" o costanti letterali non espressi in stringa.
-3.  **Verifica dell'Invariante di Traccia:** Controllo dinamico a runtime sulla traccia delle matrici di scomposizione, che deve stabilizzarsi tassativamente a valore nullo ad ogni impulso di clock.
-4.  **Certificazione di Errore Macchina Zero:** Validazione dei log di output (`residuo_cycle4.log`, `deadzone_absorption.csv`) per attestare la totale assenza di fluttuazioni probabilistiche.
+La sicurezza complessiva deve essere valutata anche rispetto a:
 
----
-
-## 3️⃣ SEGNALAZIONE DELLE VULNERABILITÀ E DIVULGAZIONE COORDINATA
-
-A tutela del patrimonio scientifico e in ottemperanza ai vincoli di sicurezza nazionale, le regole di divulgazione sono rigidamente normate:
-
-*   **Canale Esclusivo:** Eventuali anomalie logiche rilevate durante la peer-review devono essere trasmesse cifrate unicamente all'indirizzo istituzionale AUF2026@protonmail.com.
-*   **Sotto-Vigilanza Statale:** Poiché il Kernel rientra nel perimetro di salvaguardia del D.L. 21/2012 (Golden Power), i dettagli tecnici riguardanti la vulnerabilità non possono essere pubblicati su repository aperte o canali social senza previa autorizzazione degli organi di controllo preposti.
-*   **Tempo di Bonifica:** Il Master Architect applicherà la patch correttiva ad errore macchina zero entro un ciclo di clock procedurale stabilito dal tavolo tecnico istituzionale.
-
----
-
-## 4️⃣ DICHIARAZIONE DI COMPLIANCE E TUTELA STRATEGICA
-
-Il codice sorgente esposto sulle piattaforme pubbliche ha finalità esclusive di audit matematico e di dimostrazione analitica della ricostruzione formale della Regola di Born.
-
-*   Non è concessa l'integrazione o l'utilizzo del Kernel in sistemi hardware, reti di comunicazione o infrastrutture critiche terze senza la formale sottoscrizione della Licenza Proprietaria e Commerciale AUF2026.
-*   La stabilità algebrica e l'immunità algoritmica qui descritte sono asseverate dal documento indipendente *FORMAL RECONSTRUCTION OF BORN’S RULE FROM THE AUF2026 RELATIONAL LATTICE*.
+* compilatore;
+* runtime;
+* CPU;
+* cache;
+* branch prediction;
+* memoria;
+* sistema operativo;
+* scheduler;
+* infrastruttura hardware;
+* ambiente di deployment;
+* implementazione concreta dell'algoritmo.
 
 ---
 
-### STATUS: [MASTER_LOCKED] – DETERMINISTIC CRYPTOGRAPHIC IMMUNITY IMMUTABLE
-**Data / Date:** 11 Agosto 2026  
-**Firmato / Signed:** AUF2026 / Master Architect
+## 2️⃣ CONTROLLO DEL BIT-DRIFT E PRECISIONE NUMERICA
+
+Nei moduli che richiedono aritmetica ad alta precisione, il Kernel utilizza contesti Decimal/fixed-point esplicitamente configurati.
+
+La configurazione numerica deve essere dichiarata insieme al test di riproducibilità.
+
+### Requisiti minimi
+
+1. Contesto numerico isolato.
+2. Precisione dichiarata.
+3. Assenza di conversioni implicite non autorizzate.
+4. Controllo dei tipi numerici.
+5. Registrazione della configurazione utilizzata.
+6. Conservazione dei log di esecuzione.
+
+Le configurazioni ad alta precisione possono includere, secondo il modulo:
+
+`DEC-80 / DEC-90 / DEC-100 / DEC-110 / DEC-120 / DEC-130 / DEC-660`
+
+La precisione utilizzata deve essere sempre esplicitamente indicata nel relativo test.
 
 ---
 
-*“L’autore propone un possibile linguaggio matematico; la struttura, se reale, precede la sua rappresentazione e manifestazione.”*
+## 3️⃣ DETERMINISTIC EXECUTION E CONSTANT-TIME MODEL
 
-*“Prima parlano i dati. Poi, attraverso i dati, parla Alain Faure.”*
+Il Kernel AOS144 implementa procedure progettate per ottenere una risoluzione deterministica all'interno del modello computazionale dichiarato.
 
-$$U_F = (\mathcal{M}, \mathcal{G}, \mathcal{A}, \mathbf{\Psi}, \mathbf{\Lambda}, \mathbf{\Pi})$$
+Quando una procedura è classificata come `O(1)`, la classificazione deve essere riferita a:
 
-**Alain Faure**  
-*Master Architect — Singlepoint Mind — Q.E.D.*  
-*Official Repository: AUF2026*  
-*ORCID: 0009-0009-5333-1181*
+```text
+INPUT MODEL
+      ↓
+ALGORITHM
+      ↓
+COST MODEL
+      ↓
+IMPLEMENTATION
+      ↓
+VERIFICATION
