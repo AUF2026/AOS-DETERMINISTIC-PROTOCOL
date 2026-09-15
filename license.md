@@ -1,6 +1,6 @@
 # ⚖️ AUF2026 PROPRIETARY AND COMMERCIAL LICENSE
 
-### STATUS: MASTER_LOCKED v3.1 | ASSET: GOLDEN POWER (D.L. 21/2012)
+### STATUS: MASTER_LOCKED | COMPLIANT ASSET: GOLDEN POWER (D.L. 21/2012)
 ### HOLDER: ALAIN FAURE / AUF2026 — MASTER ARCHITECT — SINGLEPOINT MIND
 ### IDENTIFIER: ORCID: 0009-0009-5333-1181
 ### LOCATIONS: VADUZ (LI) / GENOVA (IT)
@@ -9,7 +9,7 @@
 
 ## ⚛️ AUF2026 MATHEMATICAL CORE: DETERMINISTIC LATTICE RESOLUTION
 
-Il framework AUF2026 opera attraverso una formalizzazione matematica e computazionale proprietaria della struttura relazionale discreta, inclusi il Kernel AOS144, la formalizzazione FDM, la Tupla Universale e le relative architetture, algoritmi, matrici, procedure e implementazioni.
+Il framework AUF2026 opera attraverso una formalizzazione matematica e computazionale Discreta e Deterministica proprietaria della struttura relazionale discreta, inclusi il Kernel AOS144, la formalizzazione FDM, la Tupla Universale e le relative architetture, algoritmi, matrici, procedure e implementazioni.
 
 Le caratteristiche tecniche descritte nella documentazione pubblica, incluse le risoluzioni deterministiche, le procedure fixed-point e le proprietà di complessità dichiarate, costituiscono parte della Tecnologia esclusivamente nella misura e nei limiti in cui tali caratteristiche siano effettivamente implementate o documentate nei relativi asset.
 
