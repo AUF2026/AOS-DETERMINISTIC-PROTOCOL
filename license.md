@@ -33,15 +33,15 @@ Il presente contratto di licenza (la **"Licenza"**) disciplina l'utilizzo degli 
 
 La **"Tecnologia"** comprende, a titolo esemplificativo e non esaustivo:
 
-* il Kernel computazionale **AOS144**;
+* il Kernel computazionale **AOS144-HDFP Banned-float**;
 * la formalizzazione **FDM (Faure Deterministic Mathematics)**;
 * la **Tupla Universale** e le relative strutture matematiche;
 * algoritmi e procedure computazionali;
 * matrici, strutture dati e rappresentazioni discrete;
 * implementazioni Python, Lean, LaTeX e altri linguaggi;
-* procedure fixed-point e configurazioni numeriche;
-* documentazione tecnica, specifiche, audit e materiali di validazione;
-* risultati, architetture e metodologie proprietarie sviluppate nell'ambito AUF2026.
+* procedure fixed-point e configurazioni numeriche, configurazioni float classiche;
+* documentazione tecnica, specifiche, audit e materiali di validazione, ROI, Valutazione rischi/benefici;
+* risultati, architetture e metodologie proprietarie sviluppate nell'ambito AUF2026/FDM - Struttura Matematica Deterministica Primitiva.
 
 L'utilizzo della Tecnologia è consentito esclusivamente nei termini espressamente previsti dalla presente Licenza.
 
@@ -49,7 +49,7 @@ L'utilizzo della Tecnologia è consentito esclusivamente nei termini espressamen
 
 ## 2. DEFINIZIONI
 
-* **2.1 Licenziante:** AUF2026 / Alain Faure, Master Architect — Singlepoint Mind.
+* **2.1 Licenziante:** AUF2026-AOS-AOS144-HDFP / Alain Faure, Lead & Master Architect — Singlepoint Mind.
 * **2.2 Licenziatario:** qualsiasi persona fisica o giuridica che acceda, visualizzi, scarichi, copi, utilizzi, integri o distribuisca la Tecnologia.
 * **2.3 Uso Commerciale:** qualsiasi utilizzo finalizzato direttamente o indirettamente alla produzione di ricavi, inclusi produzione, integrazione industriale, deployment, distribuzione, vendita, concessione di servizi o sfruttamento commerciale.
 * **2.4 Uso Non Commerciale:** esclusivamente attività accademiche, scientifiche, di ricerca, audit o peer review prive di finalità commerciali, nei limiti consentiti dalla presente Licenza.
@@ -139,11 +139,11 @@ Il Licenziante si riserva ogni ulteriore diritto e rimedio previsto dalla legge 
 
 ---
 
-## 7. GOLDEN POWER E ASSET STRATEGICI
+## 7. GOLDEN POWER E ASSET STRATEGICI COMPLIANT - DUAL-USE COMPLIANT
 
-Qualora specifici Asset AUF2026 rientrino effettivamente nell'ambito di applicazione della normativa italiana relativa ai poteri speciali dello Stato (**Golden Power**) o di altra normativa applicabile in materia di asset strategici, tali disposizioni si applicheranno nei limiti e secondo le condizioni previste dalla legge.
+Qualora specifici Asset AUF2026/AOS/AOS144-HDFP rientrino nell'ambito di applicazione della normativa italiana relativa ai poteri speciali dello Stato (**Golden Power**) o di altra normativa applicabile in materia di asset strategici, tali disposizioni si applicheranno nei limiti e secondo le condizioni previste dalla legge.
 
-Il riferimento al **D.L. 21/2012** non costituisce, di per sé, una dichiarazione che ogni singolo Asset del repository rientri automaticamente nell'ambito oggettivo della normativa Golden Power.
+Il riferimento al **D.L. 21/2012** non costituisce, di per sé, una dichiarazione che ogni singolo Asset del repository rientri automaticamente nell'ambito oggettivo della normativa Golden Power, si rimette agli organi competenti la valutazione del corpus matematico e del framework AUF2026.
 
 ---
 
@@ -187,15 +187,19 @@ Le proprietà matematiche, algoritmiche e computazionali sono quelle definite ne
 
 ## 10. VALIDAZIONE SCIENTIFICA
 
-La pubblicazione degli Asset AUF2026 può avere finalità di:
+La pubblicazione degli Asset AUF2026/AOS/AOS144-HDFP può avere finalità di:
 
 * verifica matematica;
 * audit formale;
 * peer review;
 * riproducibilità;
-* ricerca scientifica indipendente.
+* ricerca scientifica indipendente:
+* notarizzazione digitale;
+* analisi scientifica;
+* Dimostrazione matematica, logica, formale;
+* Formalizzazione/Comparazione/Analisi/Soluzione.
 
-L'accesso per tali finalità non costituisce autorizzazione automatica allo sfruttamento commerciale della Tecnologia.
+L'accesso per tali finalità NON costituisce autorizzazione automatica allo sfruttamento commerciale della Tecnologia.
 
 Qualsiasi risultato scientifico derivante dall'analisi della Tecnologia deve distinguere tra:
 
@@ -208,9 +212,9 @@ Qualsiasi risultato scientifico derivante dall'analisi della Tecnologia deve dis
 
 ## 11. ATTRIBUZIONE
 
-Qualsiasi riferimento pubblico alla Tecnologia, quando consentito dalla Licenza, deve mantenere l'attribuzione corretta ad **Alain Faure / AUF2026** e non deve presentare come autonomamente sviluppata da terzi una struttura, implementazione o metodologia originariamente appartenente al corpus AUF2026.
+Qualsiasi riferimento pubblico alla Tecnologia, quando consentito dalla Licenza, deve mantenere l'attribuzione corretta ad **Alain Faure / AUF2026/AOS/AOS144-HDFP** e non deve presentare come autonomamente sviluppata da terzi una struttura, implementazione o metodologia originariamente appartenente al corpus AUF2026 Framework.
 
-L'attribuzione non costituisce concessione di diritti commerciali.
+L'attribuzione NON costituisce concessione di diritti commerciali.
 
 ---
 
@@ -225,6 +229,9 @@ Per richieste relative a:
 * ricerca congiunta;
 * due diligence tecnica;
 * autorizzazione alla modifica o redistribuzione;
+* collaborazione;
+* sviluppo;
+* ingegnerizzazione
 
 è necessario contattare il Licenziante tramite i canali ufficiali AUF2026.
 
@@ -237,11 +244,11 @@ Per richieste relative a:
 
 ## 1. PREAMBLE
 
-This license agreement (the **"License"**) governs the use of software assets, source code, technical documentation, computational implementations and technologies developed under **AUF2026**.
+This license agreement (the **"License"**) governs the use of software assets, source code, technical documentation, computational implementations and technologies developed under **AUF2026/AOS/APS144-HDFP**.
 
 The **"Technology"** includes, without limitation:
 
-* the **AOS144 Computational Kernel**;
+* the **AOS144-HDFP Computational Kernel**;
 * **FDM (Faure Deterministic Mathematics)**;
 * the **Universal Tuple** and related mathematical structures;
 * algorithms and computational procedures;
@@ -249,7 +256,7 @@ The **"Technology"** includes, without limitation:
 * Python, Lean, LaTeX and other implementations;
 * fixed-point procedures and numerical configurations;
 * technical documentation, specifications, audits and validation materials;
-* proprietary architectures, methodologies and results developed under AUF2026.
+* proprietary architectures, methodologies and results developed under AUF2026 Framework.
 
 Use of the Technology is permitted solely under the terms expressly set forth in this License.
 
@@ -257,12 +264,12 @@ Use of the Technology is permitted solely under the terms expressly set forth in
 
 ## 2. DEFINITIONS
 
-* **2.1 Licensor:** AUF2026 / Alain Faure, Master Architect — Singlepoint Mind.
+* **2.1 Licensor:** AUF2026/AOS/AOS144-HDFP / Alain Faure, Lead & Master Architect — Singlepoint Mind.
 * **2.2 Licensee:** Any individual or legal entity accessing, viewing, downloading, copying, using, integrating or distributing the Technology.
 * **2.3 Commercial Use:** Any use directly or indirectly intended to generate revenue, including production, industrial integration, deployment, distribution, sale or commercial service provision.
 * **2.4 Non-Commercial Use:** Academic, scientific, research, audit or peer-review activity without commercial purpose, subject to the limits of this License.
 * **2.5 Asset:** Any file, source code, document, model, algorithm, matrix, dataset, configuration or other material belonging to the AUF2026 corpus.
-* **2.6 Technology:** The Assets and proprietary technical knowledge expressly identified or documented as belonging to AUF2026.
+* **2.6 Technology:** The Assets and proprietary technical knowledge expressly identified or documented as belonging to AUF2026 Framework.
 
 ---
 
@@ -349,7 +356,7 @@ The Licensor reserves all other rights and remedies available under applicable l
 
 ## 7. GOLDEN POWER AND STRATEGIC ASSETS
 
-Where specific AUF2026 Assets actually fall within the scope of Italian **Golden Power** legislation or other applicable strategic-asset regulations, such provisions shall apply to the extent and under the conditions established by law.
+Where specific AUF2026/AOS/AOS144-HDFP Framework Assets fall within the scope of Italian **Golden Power** legislation or other applicable strategic-asset regulations, such provisions shall apply to the extent and under the conditions established by law.
 
 Reference to **Italian Decree Law 21/2012** does not by itself constitute a declaration that every individual repository Asset automatically falls within the objective scope of Golden Power legislation.
 
@@ -402,6 +409,10 @@ Publication of AUF2026 Assets may serve purposes including:
 * peer review;
 * reproducibility;
 * independent scientific research.
+* Digital notarization
+* Scientific analysis
+* Formal logic proof
+* Formalization / Comparison / Analysis / Solution
 
 Access for such purposes does not automatically constitute authorization for commercial exploitation of the Technology.
 
