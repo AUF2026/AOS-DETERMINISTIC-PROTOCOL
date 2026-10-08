@@ -5,7 +5,7 @@
     <img
       src="https://raw.githubusercontent.com/AUF2026/AOS-DETERMINISTIC-PROTOCOL/main/assets/Logo%20AOS%20Dec-120_256x256pxRisorsa%207%40300x.png"
       alt="AOS MASTER ORACLE"
-      width="120"
+      width="50"
     />
   </p>
 
