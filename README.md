@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>AOS MASTER ORACLE // FAURECORE2026</h1>
+  <h1>AUF2026 — AOS DETERMINISTIC PROTOCOL // FAURECORE2026</h1>
 
   <p>
     <img
