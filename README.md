@@ -1,4 +1,20 @@
-<div align="center"> <h1>AOS MASTER ORACLE // FAURECORE2026</h1> <p> <img src="https://raw.githubusercontent.com/AUF2026/WYPsystem/main/logo.png" alt="WYP LOGO" width="50px" style="margin: 20px auto; display: block;"> </p> <code>SYSTEM STATUS: MASTERLOCKED // VALIDATION: AI-AIDED COMPLETED // ARCHITECTURE: FDM → U_F → AOS144</code> <br> </div>
+<div align="center">
+  <h1>AOS MASTER ORACLE // FAURECORE2026</h1>
+
+  <p>
+    <img
+      src="https://raw.githubusercontent.com/AUF2026/AOS-DETERMINISTIC-PROTOCOL/main/assets/Logo%20AOS%20Dec-120_256x256pxRisorsa%207%40300x.png"
+      alt="AOS MASTER ORACLE"
+      width="120"
+    />
+  </p>
+
+  <code>
+    SYSTEM STATUS: MASTERLOCKED //
+    VALIDATION: AI-AIDED COMPLETED //
+    ARCHITECTURE: FDM → U_F → AOS144
+  </code>
+</div>
 
 AUF2026 — AOS DETERMINISTIC PROTOCOL
 
